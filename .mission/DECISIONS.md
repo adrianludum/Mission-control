@@ -165,3 +165,9 @@
 - **Why**: Adrian's call, costs on record: 3.6's zero-ceremony birth dies — the sofa moment now has a ~90-second GitHub detour, and an idea whose detour is deferred lives undisciplined in a chat that reconstruction cannot reach (4.1). Buys: no new permissions, no incubator machinery, Mac mini stays read-only.
 - **Date**: 2026-08-10
 - **Supersedes**: 3.6's birth mechanics (born-thin, chat-flows-into-repo, fresh-window handover all survive). Q17 closed.
+
+### Decision 4.3 — Reporter spec: hourly launchd scan of the Projects folder, dumb reporter / smart skill
+- **What**: The Mac mini reporter scans the repos subfolder of `~/Projects` hourly (launchd), and pushes a self-timestamped snapshot to this repo listing every git repo found: uncommitted files, untracked files, unpushed branches, missing remotes, last-commit times. The reporter is deliberately dumb — it reports raw facts on everything it finds; /mission does the thinking (filters by the index, flags unregistered repos as candidates, computes risk). Local folders are linked to their GitHub twins during enrolment by a Claude Code session (survey → pairing table → wire remotes → reconcile → push), not by hand.
+- **Why**: Hourly matches a briefing read a few times daily; the staleness banner covers the gap. Dumb-reporter/smart-skill keeps the only daemon trivial enough to never need maintenance (its reliability worry from 2.5 shrinks with its ambition).
+- **Date**: 2026-08-10
+- **Supersedes**: — (implements 2.5)
