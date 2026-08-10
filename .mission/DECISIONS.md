@@ -140,3 +140,10 @@
 - **Why**: Decision 1.6's "automatic at session end" was written against a moment that never arrives. Continuous capture is the "capture at source, at the moment of knowing" principle taken to its conclusion; it eliminates both the missed-save failure mode and any end-of-day typing ritual. Cost accepted: more commits (noise nobody reads) and discipline pushed into session instructions.
 - **Date**: 2026-08-10
 - **Supersedes**: Amends 1.6 (auto-checkpoint timing: continuous, not at session end; trigger phrase demoted accordingly)
+
+### Decision 3.5 — Corrections happen in repo-connected chats, at the layer where the error lives
+- **What**: When a briefing is wrong: project-content errors are fixed by opening a chat connected to that project's repo and correcting its `.mission/` files; system-level errors (index, cross-project logic, briefing machinery) are fixed in a chat connected to the Mission-control repo. /mission itself stays a reading room — writes always happen where the files live. During break-in, every correction also appends a FEEDBACK-LOG line in the repo that got fixed, with the cause when diagnosable (undisciplined chat vs broken checkpoint) — the tuning record.
+- **Why**: Adrian's own instinct for both cases; keeps the write path uniform (repo-connected sessions are the only writers). The FEEDBACK-LOG trail is what makes week-two misses fixable rather than repeatable (Decision 1.7).
+- **Date**: 2026-08-10
+- **Supersedes**: —
+- **Note**: No numeric trust budget given — Adrian commits to break-in "till it works". Acceptance threshold graduates to a beta-stage test (parked with Q10/Q11 tier).
