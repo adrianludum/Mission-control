@@ -134,3 +134,9 @@
 - **Why**: Adrian's sort key was "risk and incompleteness of planning"; intent gaps are open loops just as much as unpushed branches. Exact scoring folds into the staleness/risk definition (Q8).
 - **Date**: 2026-08-10
 - **Supersedes**: —
+
+### Decision 3.4 — Continuous checkpoint: capture as things happen; "session end" is dead
+- **What**: Mission-disciplined sessions write to `.mission/` *the moment* something worth capturing happens — a decision made mid-conversation is committed mid-conversation. There is no end-of-session save event, because "session end" doesn't exist in chat (you just stop replying, and nothing runs afterwards). "update log" is demoted from load-bearing to comfort word: a way to force a save right now, never a daily ritual Adrian owes the system. Scope note: the trigger is inherently per-chat — a session can only write what it knows; there is no cross-chat broadcast. Chats not following the discipline are reconstruction territory (Q15).
+- **Why**: Decision 1.6's "automatic at session end" was written against a moment that never arrives. Continuous capture is the "capture at source, at the moment of knowing" principle taken to its conclusion; it eliminates both the missed-save failure mode and any end-of-day typing ritual. Cost accepted: more commits (noise nobody reads) and discipline pushed into session instructions.
+- **Date**: 2026-08-10
+- **Supersedes**: Amends 1.6 (auto-checkpoint timing: continuous, not at session end; trigger phrase demoted accordingly)
