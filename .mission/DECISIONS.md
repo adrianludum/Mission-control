@@ -153,3 +153,9 @@
 - **Why**: Ceremony kills promotion frequency (1.8). Waiting-for-meat leaves ideas living only in a closeable chat — the exact loss mode this product exists to end. Fresh-window handover is the files-as-truth architecture paying for itself.
 - **Date**: 2026-08-10
 - **Supersedes**: —
+
+### Decision 4.1 — Reconstruction coverage honestly downgraded: git + Claude Code transcripts only
+- **What**: The reconstruction safety net (1.6) covers: git history/diffs, and Claude Code session transcripts on the Mac mini (`~/.claude` — readable on disk). It does NOT cover claude.ai chats (phone/web): the platform exposes no programmatic chat-history API, so an undisciplined phone chat that never wrote files is unreachable except by manual bulk export. Q15 answered without a spike.
+- **Why**: Engineering reality. The architecture already absorbed the blow: continuous checkpointing (3.4) means disciplined chats leave nothing to reconstruct, and ceremony-free promotion (3.6) makes discipline cheap to start. Accepted residual loss: forgotten, undisciplined phone riffs.
+- **Date**: 2026-08-10
+- **Supersedes**: Narrows 1.6's reconstruction clause
