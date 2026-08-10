@@ -88,3 +88,10 @@
 - **Date**: 2026-08-10
 - **Supersedes**: —
 - **Note**: No index-entry-only exception repo (one Adrian can't drop state files into) was named; if one appears, its tile can only promise git state.
+
+### Decision 2.4 — Trigger phrase: "update log", universal checkpoint semantics
+- **What**: The mid-session save trigger (Decision 1.6's bonus save) is the single phrase **"update log"**. On hearing it, the working session writes everything it currently knows to the project's state files — decisions since last save, new/answered open questions, Adrian's blockers, task movement — classifying items itself. No verb vocabulary; plain English may add routing hints ("update log — that last one's a blocker") but no grammar is required.
+- **Why**: Per-item verbs ("log that" / "park that" / "job for me") solve a classification problem the session must already solve for auto-checkpoint to work; a command grammar remembered for years is friction. One word, identical in every project. Accidental utterance is harmless — a checkpoint is idempotent.
+- **Date**: 2026-08-10
+- **Supersedes**: —
+- **Note**: Resolves Q13. Promotion ("track this", Decision 2.2) remains a distinct verb: it creates and registers a repo; "update log" saves state into an existing one.
