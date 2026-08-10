@@ -147,3 +147,9 @@
 - **Date**: 2026-08-10
 - **Supersedes**: —
 - **Note**: No numeric trust budget given — Adrian commits to break-in "till it works". Acceptance threshold graduates to a beta-stage test (parked with Q10/Q11 tier).
+
+### Decision 3.6 — Promotion journey: no ceremony, born thin, chat flows into the repo
+- **What**: On "track this": the session asks nothing — it picks the repo name, creates it private, seeds `.mission/` from the chat so far, appends to the index, and reports afterwards ("Created pace-predictor-2, tracked. Carry on."). Thin ideas promote immediately (option B): empty-shell files are fine, the tile honestly shows "just born, planning 5%", and the incompleteness signal (3.3) nags it toward meat. The sofa chat keeps continuous-checkpointing into the new repo; when it gets long, Adrian opens a fresh Claude Code window connected to the repo — the handover costs nothing because the files are the memory.
+- **Why**: Ceremony kills promotion frequency (1.8). Waiting-for-meat leaves ideas living only in a closeable chat — the exact loss mode this product exists to end. Fresh-window handover is the files-as-truth architecture paying for itself.
+- **Date**: 2026-08-10
+- **Supersedes**: —
