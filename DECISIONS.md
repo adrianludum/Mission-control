@@ -95,3 +95,10 @@
 - **Date**: 2026-08-10
 - **Supersedes**: —
 - **Note**: Resolves Q13. Promotion ("track this", Decision 2.2) remains a distinct verb: it creates and registers a repo; "update log" saves state into an existing one.
+
+### Decision 2.5 — Mac mini state reporter: scheduled snapshot pushed to the hub, loud staleness degradation
+- **What**: A small launchd/cron job on the Mac mini (always-on machine) periodically scans local repos and pushes a state snapshot (uncommitted files, unpushed branches, no-remote repos, per-repo timestamps) to the Mission-control repo. /mission reads the snapshot like any other file. **Hard requirement**: the snapshot carries its own generation timestamp, and when it is stale the briefing degrades loudly — "Mac mini last reported N days ago, local state unknown" — never a confident answer from stale data.
+- **Why**: Local git truth (the "git risk" tiles promise, Decision 1.3) exists only on that disk; a pushed snapshot needs zero servers and fits the files-as-truth architecture. Adrian: "no system is perfect" — the failure mode (silent job death, sleep) is handled by honest degradation rather than pretending the reporter is reliable, per the trust bar in Decision 1.7.
+- **Date**: 2026-08-10
+- **Supersedes**: —
+- **Note**: Resolves Q16. Reporter cadence, snapshot format, and which folders it scans are Phase 4 build details.

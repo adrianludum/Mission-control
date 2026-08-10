@@ -7,7 +7,7 @@
 - ~~Q2: What counts as a "project"?~~ → **Answered**: a project = a repo (Decision 2.1); chat-only ideas are promoted manually — Claude creates and seeds the repo from the chat (Decision 2.2).
 - Q17 (new): Can a Claude session — especially on mobile — actually create a GitHub repo and push seed files? Promotion (Decision 2.2) depends on it. Riskiest-assumption class alongside Q15; test early in Phase 4.
 - ~~Q4: Where does this run?~~ → Answered in part: generated on demand by a /mission skill (Decision 1.9). Remaining half is Q16.
-- Q16 (new): When /mission runs from a phone (cloud session, no device bridge), how does it read Mac mini local repo state — uncommitted files, unpushed branches, repos with no remote? Candidates: (a) a small cron on the Mac mini pushes a state snapshot (JSON/md) to a private GitHub repo on a schedule, (b) GitHub-only data when mobile + full data when desktop app is open, (c) require everything to have a remote. Likely Phase 4's first design task.
+- ~~Q16: How does /mission read Mac mini local state from a cloud/phone session?~~ → **Answered**: launchd/cron snapshot pushed to the Mission-control repo; self-timestamped; briefing degrades loudly when stale (Decision 2.5). Cadence/format are Phase 4 details.
 
 ## Tier 2 — Can decide during build
 - ~~Q6: How are projects registered?~~ → **Answered**: repo creation registers the project in a curated index in the Mission-control repo, maintained by Claude at promotion/retirement (Decisions 2.1–2.3).
