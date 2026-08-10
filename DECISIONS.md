@@ -68,3 +68,16 @@
 - **Date**: 2026-08-10
 - **Supersedes**: —
 - **Consequence**: Q4 sharpens into a data-reachability question — when /mission runs (possibly from a phone, in the cloud), how does it see Mac mini local repo state? See Q16.
+
+### Decision 2.1 — A project = a repo
+- **What**: Mission Control tracks repos, full stop. A chat-only idea is invisible to Mission Control until it is promoted to a repo. State files live in the project's repo — one code path, one place state lives, no separate registry.
+- **Why**: Considered a registry model (repos as one source among several) and pure discovery (scan everything); both create a second home for state or make the reconstruction safety net the foundation. Repo-as-project keeps /mission's read path uniform.
+- **Date**: 2026-08-10
+- **Supersedes**: —
+
+### Decision 2.2 — Promotion is manual, executed by Claude
+- **What**: Adrian decides the promotion moment and says so in the session ("track this" or similar). The Claude session he's already in creates the GitHub repo and seeds it from the conversation: decision docs and the standard .md state files. No deferred "set it up at the Mac mini" step.
+- **Why**: Keeps promotion at near-zero friction from any device (Decision 1.8) without auto-registration noise. Accepted cost: ideas never promoted die invisible — deliberate curation chosen over automatic capture.
+- **Date**: 2026-08-10
+- **Supersedes**: —
+- **Consequence**: New Tier-1 technical assumption Q17 — a Claude session (including mobile) must be able to create a repo and push seed files. Possible unification of promotion with the trigger phrase parked in Q13.
