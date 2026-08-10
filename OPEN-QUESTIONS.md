@@ -10,7 +10,7 @@
 - Q16 (new): When /mission runs from a phone (cloud session, no device bridge), how does it read Mac mini local repo state — uncommitted files, unpushed branches, repos with no remote? Candidates: (a) a small cron on the Mac mini pushes a state snapshot (JSON/md) to a private GitHub repo on a schedule, (b) GitHub-only data when mobile + full data when desktop app is open, (c) require everything to have a remote. Likely Phase 4's first design task.
 
 ## Tier 2 — Can decide during build
-- Q6: ~~How are projects registered~~ → Mostly answered: registration = repo creation (Decisions 2.1/2.2). Remaining sliver: does /mission auto-discover all repos, or read a curated list (some repos aren't projects)?
+- ~~Q6: How are projects registered?~~ → **Answered**: repo creation registers the project in a curated index in the Mission-control repo, maintained by Claude at promotion/retirement (Decisions 2.1–2.3).
 - Q7: User-count sources: Vercel analytics? Supabase? App telemetry? Per-product mapping needed. (Panel confirmed in v1, project view only.)
 - Q8: How is "staleness" defined and displayed?
 - Q9: Mobile access needed, or Mac-only?

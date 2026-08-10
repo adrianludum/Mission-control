@@ -81,3 +81,10 @@
 - **Date**: 2026-08-10
 - **Supersedes**: —
 - **Consequence**: New Tier-1 technical assumption Q17 — a Claude session (including mobile) must be able to create a repo and push seed files. Possible unification of promotion with the trigger phrase parked in Q13.
+
+### Decision 2.3 — Project registry: curated index in the Mission-control repo, machine-maintained
+- **What**: /mission reads a curated index file living in the Mission-control repo itself — no auto-scan of all repos. Claude maintains the index: promotion (Decision 2.2) appends the entry when it creates the repo; retirement is Adrian telling a session "retire X" and it edits the index. Hand-editable, but no workflow requires Adrian to remember to. Index rows may carry metadata state files can't (display name, host machine, analytics source mapping, chat-heritage links).
+- **Why**: Adrian wants an explicit list over marker-file discovery (rejects every-repo scanning). Staleness risk of a curated list is neutralised by making the same automated hand that creates projects register them. Makes Mission-control the hub /mission fetches first.
+- **Date**: 2026-08-10
+- **Supersedes**: —
+- **Note**: No index-entry-only exception repo (one Adrian can't drop state files into) was named; if one appears, its tile can only promise git state.
