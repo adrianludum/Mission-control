@@ -171,3 +171,10 @@
 - **Why**: Hourly matches a briefing read a few times daily; the staleness banner covers the gap. Dumb-reporter/smart-skill keeps the only daemon trivial enough to never need maintenance (its reliability worry from 2.5 shrinks with its ambition).
 - **Date**: 2026-08-10
 - **Supersedes**: — (implements 2.5)
+
+### Decision 4.4 — /mission renders the wall: a visual dashboard artifact with in-page drill-down
+- **What**: /mission's answer is a rendered visual dashboard (HTML artifact), not a text memo: tile grid in the two bands (3.1), colour-coded risk, "MISSION CONTROL" wordmark in a NASA-style font. Tapping a tile drills into the project detail view — implemented as in-page navigation within a single artifact (all project detail ships in one render), so drill-down costs zero extra generation time. Text fallback only if artifact rendering is unavailable on a surface.
+- **Why**: Adrian's call, consistent with Decision 0.2 (thinks visually) and the prototype-first instinct. Single-artifact drill-down reconciles the wall aesthetic with J1's ninety-second budget — one generation, then instant taps. NASA-style wordmark seeds Phase 5's visual direction.
+- **Date**: 2026-08-10
+- **Supersedes**: —
+- **Note**: Font must be embedded/self-contained in the artifact (no external font loading); pick a NASA-worm-alike with a clean licence in Phase 5.
