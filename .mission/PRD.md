@@ -1,5 +1,5 @@
 # Mission Control — Product Requirements Document
-*Status: In Progress — Phases 1–3 complete*
+*Status: In Progress — Phases 1–4 complete*
 *Last synthesised: 2026-08-10*
 
 ## 1. Overview
@@ -42,19 +42,21 @@ None in v1 (strictly personal; sharing is Tier-3).
 ### 6.1 The `/mission` skill (the door)
 Reads, in order: project index (this repo) → each project's `.mission/` folder → Mac mini snapshot → analytics sources. Assembles stored synopses; thinks live only for the cross-project layer and any project whose git snapshot contradicts its stored synopsis. Degrades loudly when the Mac mini snapshot is stale: "Mac mini last reported N days ago — local state unknown," never a confident stale answer (2.5).
 
+**Form (4.4)**: the answer is a rendered visual dashboard — a single self-contained HTML artifact: "MISSION CONTROL" wordmark in a NASA-style font, two-band tile grid, colour-coded risk, tap a tile → in-page drill-down to the project detail view (all detail ships in the one render, so drilling costs no extra generation). Text fallback only where artifacts can't render.
+
 ### 6.2 The `.mission/` standard (the contract) — ten files per tracked repo
 README (mission overview), DECISIONS, OPEN-QUESTIONS, LEARNINGS, CHANGELOG, FEEDBACK-LOG, PRD, TASKS (blockers = entries tagged "owner: Adrian"), AGENT-LOG (append-only), SYNOPSIS (overwritten at every checkpoint) (2.6, 2.7). Existing repos are enrolled by back-fill: a Claude session reads the repo and seeds what it can.
 
 ### 6.3 Capture (how state stays true)
 1. **Continuous checkpoint** (primary) — mission-disciplined sessions write to `.mission/` *as things happen*; a decision made mid-conversation is committed mid-conversation. "Session end" does not exist as a save moment (3.4, amending 1.6).
 2. **"update log"** — comfort word forcing a save right now; per-chat by nature; never a required ritual (2.4, 3.4).
-3. **Reconstruction** — for work done outside disciplined sessions, an agent rebuilds state from git diffs + whatever chat history is reachable (safety net; 1.6, Q15).
+3. **Reconstruction** — for work done outside disciplined sessions, an agent rebuilds state from git diffs and Claude Code transcripts on the Mac mini (`~/.claude`). claude.ai chats are unreachable (no API) — an undisciplined phone riff that never wrote files is beyond the net (4.1). Accepted residual loss.
 
 ### 6.4 Promotion (how projects are born)
-Adrian says "track this" in any session → no ceremony: the session picks a name, creates the repo private, seeds `.mission/` from the chat so far, appends to the index, reports afterwards (2.2, 2.3, 3.6). Thin ideas promote immediately — empty-shell files are honest ("just born, planning 5%"); the incompleteness signal nags them toward meat (3.3, 3.6). The same chat keeps checkpointing into the new repo; moving to a fresh repo-connected window later costs nothing because the files are the memory. Retirement: "retire X" → index edited.
+Sessions cannot create repos (Q17 spike: installation tokens are repo-scoped; 403 confirmed). The flow (4.2, PLAYBOOK.md): Adrian creates the repo at github.com/new (private) and grants the Claude GitHub App access (~90 seconds, the only manual step), then pastes the URL and says **"sync with git X"** — the session seeds `.mission/` from the chat, pushes, and adds the index entry. Thin ideas promote immediately — empty shells are honest ("just born, planning 5%"); the incompleteness signal nags them toward meat (3.3, 3.6). The chat keeps checkpointing into the new repo; a fresh repo-connected window later costs nothing because the files are the memory. Retirement: "retire X" → index edited.
 
 ### 6.5 Mac mini state reporter
-launchd/cron job on the always-on Mac mini scans local repos, pushes a self-timestamped snapshot (uncommitted files, unpushed branches, no-remote repos) to this repo (2.5). Cadence/format: Phase 4.
+launchd job on the always-on Mac mini scans the repos subfolder of `~/Projects` **hourly** and pushes a self-timestamped snapshot to this repo: per-repo uncommitted/untracked files, unpushed branches, missing remotes, last-commit times (2.5, 4.3). Deliberately dumb — reports raw facts on every repo found; /mission filters by the index, flags unregistered repos, computes risk. Local folders get wired to their GitHub twins during enrolment by a Claude Code session (pairing table → remotes → reconcile → push — prompt in PLAYBOOK.md).
 
 ## 7. User Journeys
 
@@ -76,7 +78,13 @@ Ten minutes into riffing on a new idea: "track this." The session creates a priv
 - **External**: GitHub API (remote git state), analytics per product (Q7 mapping TBD), Claude chat history (reachability = Q15).
 
 ## 9. Technical Architecture
-Serverless in the literal sense: no hosted app. GitHub is the database, Claude sessions are the compute, the skill is the UI, the Mac mini cron job is the only daemon. Phase 4 details open: snapshot cadence/format, skill implementation, spikes Q15/Q17.
+Serverless in the literal sense: no hosted app. **GitHub is the database, Claude sessions are the compute, the /mission skill is the UI, one dumb hourly script on the Mac mini is the only daemon.** Nothing to deploy, nothing to host, one thing to keep alive.
+
+- **Auth reality (Phase 4 spikes)**: sessions hold repo-scoped GitHub App tokens — they can read/write granted repos but never create repos (hence manual birth, 4.2) . Each new repo needs the app granted access at creation (part of the PLAYBOOK flow).
+- **Reader path**: /mission (a Claude skill available on all surfaces) → GitHub API for index + snapshots + `.mission/` folders → single-artifact render (4.4).
+- **Writer paths**: mission-disciplined sessions (continuous checkpoint, 3.4); the hourly reporter (4.3); enrolment/back-fill sessions in Claude Code (2.6).
+- **Reconstruction inputs**: git history + `~/.claude` transcripts on the Mac mini only (4.1).
+- **Ops reference**: PLAYBOOK.md at repo root — paste-ready commands, enrolment prompt, promotion flow, phrase glossary.
 
 ## 10. Visual Direction & Tone
 (Phase 5. Prototype v0 is a placeholder, not a direction decision.)
@@ -84,8 +92,8 @@ Serverless in the literal sense: no hosted app. GitHub is the database, Claude s
 ## 11. Risks & Dependencies
 - **Trust-decay** (named killer): briefings that stay ~90% right after the tuning window kill the product (1.7). Mitigations: capture at source, loud degradation, reconstruction backstop.
 - **Silent reporter death**: mitigated by self-timestamped snapshots + loud staleness (2.5).
-- **Q17**: promotion assumes a phone Claude session can create a repo and push files — untested, Phase 4 spike.
-- **Q15**: reconstruction and chat-seeded promotion assume chat history is reachable — untested, Phase 4 spike.
+- **Promotion friction** (was Q17): birth now includes a ~90-second GitHub detour; a deferred detour leaves the idea in an unreachable chat (4.1 + 4.2). Accepted, eyes open.
+- **Unreachable phone chats** (was Q15): undisciplined claude.ai riffs are beyond the reconstruction net — permanently (4.1). Mitigated by cheap promotion + continuous checkpoint, not eliminated.
 - **Unpromoted ideas die invisible** — accepted cost of manual curation (2.2).
 
 ## 12. Open Questions
