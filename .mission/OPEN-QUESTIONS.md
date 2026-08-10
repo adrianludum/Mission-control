@@ -2,7 +2,7 @@
 
 ## Tier 1 — Blocks code
 - ~~Q3: What is the exact standard artefact set per project?~~ → **Answered**: nine .md files in `.mission/` — README, DECISIONS, OPEN-QUESTIONS, LEARNINGS, CHANGELOG, FEEDBACK-LOG, PRD, TASKS (blockers tagged "owner: Adrian"), AGENT-LOG (Decision 2.6). Existing repos enrolled by back-fill.
-- Q5: How does the AI synopsis get generated — on demand, on a schedule, by which model/agent, at what cost?
+- ~~Q5: How does the AI synopsis get generated?~~ → **Answered**: pre-computed at source — sessions write `.mission/SYNOPSIS.md` at every checkpoint; /mission assembles, thinks live only cross-project and where the git snapshot contradicts a stored synopsis (Decision 2.7).
 - ~~Q13: What is the trigger phrase and what does it write?~~ → **Answered**: "update log" — universal checkpoint, session classifies, plain-English routing hints allowed (Decision 2.4). Promotion stays a distinct verb ("track this").
 - ~~Q2: What counts as a "project"?~~ → **Answered**: a project = a repo (Decision 2.1); chat-only ideas are promoted manually — Claude creates and seeds the repo from the chat (Decision 2.2).
 - Q17 (new): Can a Claude session — especially on mobile — actually create a GitHub repo and push seed files? Promotion (Decision 2.2) depends on it. Riskiest-assumption class alongside Q15; test early in Phase 4.

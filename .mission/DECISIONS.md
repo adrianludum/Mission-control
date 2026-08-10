@@ -109,3 +109,10 @@
 - **Date**: 2026-08-10
 - **Supersedes**: —
 - **Note**: Resolves Q3. Mission-control itself is dogfooded as tracked project #1 — its files migrate to `.mission/`. FEEDBACK-LOG carried empty until a product has users.
+
+### Decision 2.7 — Synopsis pre-computed at the source; /mission assembles
+- **What**: The re-entry synopsis is part of the state files: every auto-checkpoint and "update log" ends with the session writing/overwriting `.mission/SYNOPSIS.md` — where this stands, what's open, what only Adrian can unblock. /mission mostly assembles stored synopses (fast), does live thinking only for the cross-project layer, and re-synthesises a project on the spot when the git snapshot contradicts its stored synopsis (activity after the last checkpoint).
+- **Why**: Decision 1.6's logic applied to the synopsis — the session knows intent now; capture at source. Fully-live synthesis across ~10 projects costs 30–90s on the phone; a scheduled synthesiser adds silently-dying infrastructure. The git snapshot gives /mission the means to detect stale synopses and re-think only those.
+- **Date**: 2026-08-10
+- **Supersedes**: — (amends 2.6: standard set becomes **ten** files, adding SYNOPSIS.md)
+- **Note**: Resolves Q5. Model/cost of the assembly pass: whatever model the /mission session runs on — no separate pipeline.
