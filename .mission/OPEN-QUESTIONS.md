@@ -1,7 +1,7 @@
 # Mission Control — Open Questions
 
 ## Tier 1 — Blocks code
-- Q3 (sharpened): What is the exact standard artefact set per project? File names, format, where they live in the repo (e.g. `.mission/` folder vs root-level .md files). → Phase 2/4
+- ~~Q3: What is the exact standard artefact set per project?~~ → **Answered**: nine .md files in `.mission/` — README, DECISIONS, OPEN-QUESTIONS, LEARNINGS, CHANGELOG, FEEDBACK-LOG, PRD, TASKS (blockers tagged "owner: Adrian"), AGENT-LOG (Decision 2.6). Existing repos enrolled by back-fill.
 - Q5: How does the AI synopsis get generated — on demand, on a schedule, by which model/agent, at what cost?
 - ~~Q13: What is the trigger phrase and what does it write?~~ → **Answered**: "update log" — universal checkpoint, session classifies, plain-English routing hints allowed (Decision 2.4). Promotion stays a distinct verb ("track this").
 - ~~Q2: What counts as a "project"?~~ → **Answered**: a project = a repo (Decision 2.1); chat-only ideas are promoted manually — Claude creates and seeds the repo from the chat (Decision 2.2).

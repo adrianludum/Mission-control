@@ -102,3 +102,10 @@
 - **Date**: 2026-08-10
 - **Supersedes**: —
 - **Note**: Resolves Q16. Reporter cadence, snapshot format, and which folders it scans are Phase 4 build details.
+
+### Decision 2.6 — Standard artefact set: nine .md files in a `.mission/` folder per repo
+- **What**: Every tracked project carries a `.mission/` folder containing: README.md (mission overview/doc map), DECISIONS.md, OPEN-QUESTIONS.md, LEARNINGS.md, CHANGELOG.md, FEEDBACK-LOG.md, PRD.md, TASKS.md (task ledger; blockers are entries marked "owner: Adrian" — no separate blockers file), AGENT-LOG.md (append-only, one line per agent run; read-only surface per Decision 1.4). This is the contract: "update log" writes it, promotion seeds it, /mission parses it.
+- **Why**: `.mission/` gives Mission Control a clean namespace — root README/CHANGELOG belong to the product, not the dashboard — and makes discovery logic trivial (look for `.mission/`). Blockers-as-tagged-tasks avoids two half-maintained lists. Existing repos mostly lack this structure (Adrian confirmed); they are enrolled by back-fill — a Claude session reads the repo and seeds what it can.
+- **Date**: 2026-08-10
+- **Supersedes**: —
+- **Note**: Resolves Q3. Mission-control itself is dogfooded as tracked project #1 — its files migrate to `.mission/`. FEEDBACK-LOG carried empty until a product has users.
