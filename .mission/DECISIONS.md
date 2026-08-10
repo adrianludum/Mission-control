@@ -159,3 +159,9 @@
 - **Why**: Engineering reality. The architecture already absorbed the blow: continuous checkpointing (3.4) means disciplined chats leave nothing to reconstruct, and ceremony-free promotion (3.6) makes discipline cheap to start. Accepted residual loss: forgotten, undisciplined phone riffs.
 - **Date**: 2026-08-10
 - **Supersedes**: Narrows 1.6's reconstruction clause
+
+### Decision 4.2 — Promotion mechanics: Adrian creates the repo, session does everything else
+- **What**: Q17 spike result — a Claude session cannot create repos (GitHub App installation tokens are repo-scoped; creation needs user credentials; 403 confirmed in test). Chosen fix: promotion is manual-birth, automated-everything-else. Adrian creates the repo at github.com/new (private), grants the Claude GitHub App access, pastes the URL and says "sync with git X". The session then seeds `.mission/` from the chat, pushes, and adds the index entry. Rejected alternatives: broadening app permissions to repo-admin (bad trade), and an incubator-in-hub + Mac-mini-births-the-repo pipeline (keeps Mac mini read-only instead; no load-bearing write daemon).
+- **Why**: Adrian's call, costs on record: 3.6's zero-ceremony birth dies — the sofa moment now has a ~90-second GitHub detour, and an idea whose detour is deferred lives undisciplined in a chat that reconstruction cannot reach (4.1). Buys: no new permissions, no incubator machinery, Mac mini stays read-only.
+- **Date**: 2026-08-10
+- **Supersedes**: 3.6's birth mechanics (born-thin, chat-flows-into-repo, fresh-window handover all survive). Q17 closed.

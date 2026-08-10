@@ -5,7 +5,7 @@
 - ~~Q5: How does the AI synopsis get generated?~~ → **Answered**: pre-computed at source — sessions write `.mission/SYNOPSIS.md` at every checkpoint; /mission assembles, thinks live only cross-project and where the git snapshot contradicts a stored synopsis (Decision 2.7).
 - ~~Q13: What is the trigger phrase and what does it write?~~ → **Answered**: "update log" — universal checkpoint, session classifies, plain-English routing hints allowed (Decision 2.4). Promotion stays a distinct verb ("track this").
 - ~~Q2: What counts as a "project"?~~ → **Answered**: a project = a repo (Decision 2.1); chat-only ideas are promoted manually — Claude creates and seeds the repo from the chat (Decision 2.2).
-- Q17 (new): Can a Claude session — especially on mobile — actually create a GitHub repo and push seed files? Promotion (Decision 2.2) depends on it. Riskiest-assumption class alongside Q15; test early in Phase 4.
+- ~~Q17: Can a Claude session create a GitHub repo?~~ → **Answered by spike: no** (403, installation tokens are repo-scoped). Promotion redesigned: Adrian creates the repo + grants app access, then "sync with git X" automates the rest (Decision 4.2).
 - ~~Q4: Where does this run?~~ → Answered in part: generated on demand by a /mission skill (Decision 1.9). Remaining half is Q16.
 - ~~Q16: How does /mission read Mac mini local state from a cloud/phone session?~~ → **Answered**: launchd/cron snapshot pushed to the Mission-control repo; self-timestamped; briefing degrades loudly when stale (Decision 2.5). Cadence/format are Phase 4 details.
 
@@ -15,7 +15,7 @@
 - Q8 (widened): How are "staleness", "git risk", and "planning incompleteness" (Decision 3.3) each defined and scored for tile ordering/status?
 - Q9: Mobile access needed, or Mac-only?
 - Q14 (new): Where does agent activity history come from? (Session logs, workflow journals, manual notes?) Read-only in v1 per Decision 1.4.
-- Q15 (new): How reachable is Claude chat history programmatically? Reconstruction (Decision 1.6) and chat-only projects (Q2) both depend on it. Candidate: riskiest technical assumption — test early in Phase 4.
+- ~~Q15: How reachable is Claude chat history programmatically?~~ → **Answered**: Claude Code transcripts on the Mac mini are readable (`~/.claude`); claude.ai chats have no API — unreachable except manual export. Reconstruction coverage narrowed accordingly (Decision 4.1).
 
 ## Tier 3 — Can wait until beta
 - Q10: Notifications/nudges ("Boat Hub has an unpushed branch for 3 weeks")?
