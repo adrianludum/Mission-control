@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission Control — prototype v0 (fake data)</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page:      #f9f9f7;
+    --surface:   #fcfcfb;
+    --ink:       #0b0b0b;
+    --ink-2:     #52514e;
+    --muted:     #898781;
+    --grid:      #e1e0d9;
+    --baseline:  #c3c2b7;
+    --border:    rgba(11,11,11,0.10);
+    --series-1:  #2a78d6;
+    --series-1-soft: #cde2fb;
+    --good:      #0ca30c;
+    --good-text: #006300;
+    --warning:   #fab219;
+    --serious:   #ec835a;
+    --critical:  #d03b3b;
+    --wash:      rgba(11,11,11,0.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --page:      #0d0d0d;
+      --surface:   #1a1a19;
+      --ink:       #ffffff;
+      --ink-2:     #c3c2b7;
+      --muted:     #898781;
+      --grid:      #2c2c2a;
+      --baseline:  #383835;
+      --border:    rgba(255,255,255,0.10);
+      --series-1:  #3987e5;
+      --series-1-soft: #184f95;
+      --good-text: #0ca30c;
+      --wash:      rgba(255,255,255,0.05);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 20px 16px 48px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  header h1 { font-size: 22px; letter-spacing: -0.01em; }
+  header .sub { color: var(--ink-2); font-size: 13px; margin-top: 4px; }
+  .proto-tag {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    color: var(--ink-2); border: 1px solid var(--border);
+    border-radius: 999px; padding: 2px 10px; margin-top: 8px;
+    background: var(--wash);
+  }
+
+  /* ---- stat tiles ---- */
+  .tiles {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 20px 0 24px;
+  }
+  .tile {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px 14px;
+  }
+  .tile .v { font-size: 24px; font-weight: 650; line-height: 1.1; }
+  .tile .l { font-size: 12px; color: var(--ink-2); margin-top: 3px; }
+  .tile .v small { font-size: 13px; font-weight: 500; color: var(--ink-2); }
+
+  /* ---- project cards ---- */
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px;
+  }
+  .card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .card-head h2 { font-size: 16px; }
+  .where { font-size: 11px; color: var(--muted); }
+  .lastline { font-size: 12.5px; color: var(--ink-2); }
+  .lastline b { color: var(--ink); font-weight: 600; }
+
+  .status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .status .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  .s-good  .dot { background: var(--good); }     .s-good  { color: var(--good-text); }
+  .s-warn  .dot { background: var(--warning); }  .s-warn  { color: var(--ink-2); }
+  .s-serious .dot { background: var(--serious);} .s-serious { color: var(--ink-2); }
+  .s-crit  .dot { background: var(--critical); } .s-crit  { color: var(--critical); }
+
+  /* git row */
+  .gitrow { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-size: 11.5px; padding: 3px 9px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--ink-2); background: var(--wash);
+  }
+  .chip.alert { border-color: var(--critical); color: var(--critical); font-weight: 600; }
+  .chip.warn  { border-color: var(--serious); font-weight: 600; }
+  .chip b { color: var(--ink); font-weight: 600; }
+
+  /* sparkline */
+  .spark { display: flex; align-items: flex-end; gap: 8px; }
+  .spark svg { display: block; }
+  .spark .cap { font-size: 11px; color: var(--muted); }
+
+  /* open loops */
+  .loops { border-top: 1px solid var(--grid); padding-top: 10px; }
+  .loops h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+  .loops ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+  .loops li { font-size: 12.5px; color: var(--ink-2); padding-left: 16px; position: relative; }
+  .loops li::before { content: ""; position: absolute; left: 2px; top: 6px; width: 7px; height: 7px; border-radius: 50%; }
+  .loops li.decide::before { background: var(--serious); }
+  .loops li.build::before  { background: var(--series-1); }
+
+  /* briefing */
+  details.brief { border-top: 1px solid var(--grid); padding-top: 8px; }
+  details.brief summary {
+    cursor: pointer; font-size: 13px; font-weight: 600; color: var(--series-1);
+    list-style: none; display: flex; align-items: center; gap: 6px;
+  }
+  details.brief summary::before { content: "▸"; font-size: 11px; transition: transform .15s; }
+  details.brief[open] summary::before { transform: rotate(90deg); }
+  details.brief .body {
+    margin-top: 8px; font-size: 13px; line-height: 1.55; color: var(--ink-2);
+    background: var(--wash); border-radius: 8px; padding: 12px;
+  }
+  details.brief .body b { color: var(--ink); }
+  details.brief .next {
+    margin-top: 8px; font-size: 12.5px; font-weight: 600; color: var(--ink);
+  }
+  footer { margin-top: 28px; font-size: 12px; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mission Control</h1>
+  <div class="sub">Every project, one glance — state, open loops, and where to pick up.</div>
+  <span class="proto-tag">PROTOTYPE v0 · all data is fake</span>
+</header>
+
+<section class="tiles" aria-label="Portfolio summary">
+  <div class="tile"><div class="v">7</div><div class="l">Projects tracked</div></div>
+  <div class="tile"><div class="v">2</div><div class="l">Active this week</div></div>
+  <div class="tile"><div class="v">3</div><div class="l">Stale &gt; 30 days</div></div>
+  <div class="tile"><div class="v">4 <small>repos</small></div><div class="l">With unpushed work</div></div>
+  <div class="tile"><div class="v">11</div><div class="l">Decisions waiting on you</div></div>
+</section>
+
+<main class="cards">
+
+  <!-- 1. Active project -->
+  <article class="card">
+    <div class="card-head">
+      <div><h2>Luna</h2><div class="where">Mac mini + GitHub · React Native</div></div>
+      <span class="status s-good"><span class="dot"></span>Active</span>
+    </div>
+    <div class="lastline">Last touched <b>yesterday</b> · you were building the cycle-phase overlay on the training calendar</div>
+    <div class="gitrow">
+      <span class="chip">branch <b>feat/cycle-overlay</b></span>
+      <span class="chip warn">↑ 3 unpushed</span>
+      <span class="chip">2 files uncommitted</span>
+      <span class="chip">4 branches</span>
+    </div>
+    <div class="spark">
+      <svg width="120" height="28" viewBox="0 0 120 28" role="img" aria-label="Commits per week, last 8 weeks: 2,5,0,3,6,4,8,7">
+        <title>Commits/week, last 8 weeks</title>
+        <g fill="var(--series-1)">
+          <rect x="0"  y="22" width="11" height="6"  rx="2"/><rect x="15" y="13" width="11" height="15" rx="2"/>
+          <rect x="30" y="27" width="11" height="1"/><rect x="45" y="19" width="11" height="9" rx="2"/>
+          <rect x="60" y="10" width="11" height="18" rx="2"/><rect x="75" y="16" width="11" height="12" rx="2"/>
+          <rect x="90" y="4"  width="11" height="24" rx="2"/><rect x="105" y="7" width="11" height="21" rx="2"/>
+        </g>
+      </svg>
+      <span class="cap">commits · 8 wks</span>
+    </div>
+    <div class="loops">
+      <h3>Open loops — 2 to decide · 3 to build</h3>
+      <ul>
+        <li class="decide">Decide: RED-S alert threshold — needs medical sign-off</li>
+        <li class="decide">Decide: onboarding — cycle data optional or required?</li>
+        <li class="build">Build: symptom logging screen (PRD §6.3)</li>
+      </ul>
+    </div>
+    <details class="brief">
+      <summary>Re-entry briefing</summary>
+      <div class="body">
+        You're mid-feature on <b>feat/cycle-overlay</b>: the calendar renders phases but the
+        colour tokens are hard-coded (see TODO in <b>CalendarView.tsx</b>). Last session ended
+        after a failing snapshot test. Nothing merged in 9 days.
+        <div class="next">→ Next action: fix the snapshot test, then push — 3 commits are local-only.</div>
+      </div>
+    </details>
+  </article>
+
+  <!-- 2. Drifting -->
+  <article class="card">
+    <div class="card-head">
+      <div><h2>Boat Hub</h2><div class="where">GitHub · Next.js + Supabase</div></div>
+      <span class="status s-warn"><span class="dot"></span>Drifting · 24d</span>
+    </div>
+    <div class="lastline">Last touched <b>24 days ago</b> · you stopped mid-way through the crew roster migration</div>
+    <div class="gitrow">
+      <span class="chip">branch <b>main</b></span>
+      <span class="chip alert">↑ 6 unpushed</span>
+      <span class="chip">clean tree</span>
+      <span class="chip warn">1 stale branch (41d)</span>
+    </div>
+    <div class="spark">
+      <svg width="120" height="28" viewBox="0 0 120 28" role="img" aria-label="Commits per week, last 8 weeks: 9,6,4,2,0,0,0,0">
+        <title>Commits/week, last 8 weeks</title>
+        <g fill="var(--series-1)">
+          <rect x="0" y="2" width="11" height="26" rx="2"/><rect x="15" y="10" width="11" height="18" rx="2"/>
+          <rect x="30" y="16" width="11" height="12" rx="2"/><rect x="45" y="22" width="11" height="6" rx="2"/>
+          <rect x="60" y="27" width="11" height="1"/><rect x="75" y="27" width="11" height="1"/>
+          <rect x="90" y="27" width="11" height="1"/><rect x="105" y="27" width="11" height="1"/>
+        </g>
+      </svg>
+      <span class="cap">commits · 8 wks</span>
+    </div>
+    <div class="loops">
+      <h3>Open loops — 3 to decide · 2 to build</h3>
+      <ul>
+        <li class="decide">Decide: single-club v1, or multi-club from day one?</li>
+        <li class="decide">Decide: pricing model before beta invite goes out</li>
+        <li class="build">Build: finish roster migration (schema half-applied)</li>
+      </ul>
+    </div>
+    <details class="brief">
+      <summary>Re-entry briefing</summary>
+      <div class="body">
+        Riskiest state on the board: <b>6 commits exist only on your Mac mini</b>, including the
+        half-applied roster schema migration. The stale branch <b>feat/notifications</b> predates
+        the migration and will conflict.
+        <div class="next">→ Next action: push main today, then decide the multi-club question — it blocks the schema.</div>
+      </div>
+    </details>
+  </article>
+
+  <!-- 3. Stale -->
+  <article class="card">
+    <div class="card-head">
+      <div><h2>Ludum Website</h2><div class="where">GitHub · discovery phase</div></div>
+      <span class="status s-serious"><span class="dot"></span>Stale · 47d</span>
+    </div>
+    <div class="lastline">Last touched <b>47 days ago</b> · discovery paused during Phase 2 (scope &amp; shape)</div>
+    <div class="gitrow">
+      <span class="chip">branch <b>main</b></span>
+      <span class="chip">✓ pushed</span>
+      <span class="chip">clean tree</span>
+      <span class="chip">docs only, no build yet</span>
+    </div>
+    <div class="spark">
+      <svg width="120" height="28" viewBox="0 0 120 28" role="img" aria-label="Commits per week, last 8 weeks: 0,3,1,0,0,0,0,0">
+        <title>Commits/week, last 8 weeks</title>
+        <g fill="var(--series-1)">
+          <rect x="0" y="27" width="11" height="1"/><rect x="15" y="17" width="11" height="11" rx="2"/>
+          <rect x="30" y="24" width="11" height="4" rx="2"/><rect x="45" y="27" width="11" height="1"/>
+          <rect x="60" y="27" width="11" height="1"/><rect x="75" y="27" width="11" height="1"/>
+          <rect x="90" y="27" width="11" height="1"/><rect x="105" y="27" width="11" height="1"/>
+        </g>
+      </svg>
+      <span class="cap">commits · 8 wks</span>
+    </div>
+    <div class="loops">
+      <h3>Open loops — 4 to decide · 0 to build</h3>
+      <ul>
+        <li class="decide">Decide: primary audience — buyers (coaches) or athletes?</li>
+        <li class="decide">Decide: CMS or hand-rolled content?</li>
+        <li class="decide">Decide: does app.ludum.com login live in the nav?</li>
+      </ul>
+    </div>
+    <details class="brief">
+      <summary>Re-entry briefing</summary>
+      <div class="body">
+        No code at risk — this one is <b>stalled on decisions, not implementation</b>. The PRD's
+        Phase 1 is complete; Phase 2 stopped at the audience question, and everything downstream
+        (IA, CMS, design direction) hangs off it.
+        <div class="next">→ Next action: one 20-minute discovery session on the audience question unblocks the rest.</div>
+      </div>
+    </details>
+  </article>
+
+  <!-- 4. At-risk local only -->
+  <article class="card">
+    <div class="card-head">
+      <div><h2>Telemetry Exporter</h2><div class="where">Mac mini only — no remote</div></div>
+      <span class="status s-crit"><span class="dot"></span>At risk</span>
+    </div>
+    <div class="lastline">Last touched <b>12 days ago</b> · entire repo has no GitHub remote — one disk failure from gone</div>
+    <div class="gitrow">
+      <span class="chip alert">no remote configured</span>
+      <span class="chip">branch <b>main</b></span>
+      <span class="chip">5 files uncommitted</span>
+    </div>
+    <div class="spark">
+      <svg width="120" height="28" viewBox="0 0 120 28" role="img" aria-label="Commits per week, last 8 weeks: 1,0,4,2,0,1,3,0">
+        <title>Commits/week, last 8 weeks</title>
+        <g fill="var(--series-1)">
+          <rect x="0" y="24" width="11" height="4" rx="2"/><rect x="15" y="27" width="11" height="1"/>
+          <rect x="30" y="14" width="11" height="14" rx="2"/><rect x="45" y="21" width="11" height="7" rx="2"/>
+          <rect x="60" y="27" width="11" height="1"/><rect x="75" y="24" width="11" height="4" rx="2"/>
+          <rect x="90" y="17" width="11" height="11" rx="2"/><rect x="105" y="27" width="11" height="1"/>
+        </g>
+      </svg>
+      <span class="cap">commits · 8 wks</span>
+    </div>
+    <div class="loops">
+      <h3>Open loops — 1 to decide · 1 to build</h3>
+      <ul>
+        <li class="decide">Decide: fold into Ludum Telemetry product, or keep as internal tool?</li>
+        <li class="build">Build: CSV export for physiologist workflow</li>
+      </ul>
+    </div>
+    <details class="brief">
+      <summary>Re-entry briefing</summary>
+      <div class="body">
+        Working tool, used occasionally, but it lives <b>only on the Mac mini</b> with uncommitted
+        changes on top. Before anything else this needs a remote.
+        <div class="next">→ Next action: commit, create GitHub repo, push. Ten minutes, removes the single point of failure.</div>
+      </div>
+    </details>
+  </article>
+
+  <!-- 5. Idea stage, Claude chat only -->
+  <article class="card">
+    <div class="card-head">
+      <div><h2>Pace Predictor</h2><div class="where">Claude chats only — no repo</div></div>
+      <span class="status s-warn"><span class="dot"></span>Idea stage</span>
+    </div>
+    <div class="lastline">Last discussed <b>~5 weeks ago</b> across 3 Claude conversations · no code, no repo</div>
+    <div class="gitrow">
+      <span class="chip">no repo yet</span>
+      <span class="chip">artefacts: rough spec in chat</span>
+    </div>
+    <div class="loops">
+      <h3>Open loops — 2 to decide · 1 to do</h3>
+      <ul>
+        <li class="decide">Decide: standalone tool or a Row/Paddle feature?</li>
+        <li class="decide">Decide: is this worth building at all? (kill test not run)</li>
+        <li class="build">Do: extract the spec from the chats into a repo</li>
+      </ul>
+    </div>
+    <details class="brief">
+      <summary>Re-entry briefing</summary>
+      <div class="body">
+        Exists only as conversation. The three chats contain a rough algorithm sketch and a list of
+        input data you already collect in Telemetry. <b>Nothing is versioned</b> — if the chats age
+        out of memory, the thinking is gone.
+        <div class="next">→ Next action: 15 minutes to consolidate the chats into a one-page spec in a new repo — or run the kill test and archive it deliberately.</div>
+      </div>
+    </details>
+  </article>
+
+  <!-- 6. Healthy shipped -->
+  <article class="card">
+    <div class="card-head">
+      <div><h2>Gym Hub</h2><div class="where">GitHub · deployed on Vercel</div></div>
+      <span class="status s-good"><span class="dot"></span>Shipped · quiet</span>
+    </div>
+    <div class="lastline">Last touched <b>8 days ago</b> · v0.9 live, deploy green, no urgent loops</div>
+    <div class="gitrow">
+      <span class="chip">branch <b>main</b></span>
+      <span class="chip">✓ pushed</span>
+      <span class="chip">✓ deploy green</span>
+      <span class="chip">2 branches</span>
+    </div>
+    <div class="spark">
+      <svg width="120" height="28" viewBox="0 0 120 28" role="img" aria-label="Commits per week, last 8 weeks: 6,8,5,7,3,2,1,1">
+        <title>Commits/week, last 8 weeks</title>
+        <g fill="var(--series-1)">
+          <rect x="0" y="10" width="11" height="18" rx="2"/><rect x="15" y="4" width="11" height="24" rx="2"/>
+          <rect x="30" y="13" width="11" height="15" rx="2"/><rect x="45" y="7" width="11" height="21" rx="2"/>
+          <rect x="60" y="19" width="11" height="9" rx="2"/><rect x="75" y="22" width="11" height="6" rx="2"/>
+          <rect x="90" y="24" width="11" height="4" rx="2"/><rect x="105" y="24" width="11" height="4" rx="2"/>
+        </g>
+      </svg>
+      <span class="cap">commits · 8 wks</span>
+    </div>
+    <div class="loops">
+      <h3>Open loops — 1 to decide · 2 to build</h3>
+      <ul>
+        <li class="decide">Decide: v1 launch date + which two features make the cut</li>
+        <li class="build">Build: session templates (parked, PRD §7)</li>
+      </ul>
+    </div>
+    <details class="brief">
+      <summary>Re-entry briefing</summary>
+      <div class="body">
+        In good shape — everything pushed, deploy green, activity intentionally winding down after
+        the v0.9 push. The only thing waiting is a <b>scoping decision for v1</b>.
+        <div class="next">→ Next action: nothing urgent. Schedule the v1 scope decision when you have an hour.</div>
+      </div>
+    </details>
+  </article>
+
+  <!-- 7. This project -->
+  <article class="card">
+    <div class="card-head">
+      <div><h2>Mission Control</h2><div class="where">Cowork session · discovery live</div></div>
+      <span class="status s-good"><span class="dot"></span>Active · today</span>
+    </div>
+    <div class="lastline">Last touched <b>right now</b> · discovery Phase 1 in progress, prototype v0 delivered</div>
+    <div class="gitrow">
+      <span class="chip">no repo yet</span>
+      <span class="chip">artefacts: PRD scaffold + decisions log</span>
+    </div>
+    <div class="loops">
+      <h3>Open loops — 5 to decide · 1 to build</h3>
+      <ul>
+        <li class="decide">Decide: what's the primary moment — re-entry or daily triage?</li>
+        <li class="decide">Decide: where does it run — Mac mini local, or hosted?</li>
+        <li class="decide">Decide: where do "open loops" come from?</li>
+      </ul>
+    </div>
+    <details class="brief">
+      <summary>Re-entry briefing</summary>
+      <div class="body">
+        Very meta. You're looking at it. Discovery is live in a Cowork session; the decisions log
+        has 2 entries and 11 open questions.
+        <div class="next">→ Next action: answer Black Swan's Phase 1 questions.</div>
+      </div>
+    </details>
+  </article>
+
+</main>
+
+<footer>Mission Control · prototype v0 · every number on this page is invented</footer>
+
+</body>
+</html>
