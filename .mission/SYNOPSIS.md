@@ -1,8 +1,8 @@
 # Mission Control — Synopsis
-*Written at checkpoint, 2026-08-10 evening. Overwritten at every save.*
+*Written at checkpoint, 2026-08-10 late evening. Overwritten at every save.*
 
-**Where it stands:** Discovery. Phase 1 done (the product is a re-entry briefing summoned by /mission; agent management deferred to v2). Phase 2 nearly done — 7 decisions today nailed the architecture: project = repo, curated index in this hub repo, "update log" trigger, Mac mini snapshot reporter, ten-file `.mission/` standard (dogfooded here), synopses written at source. No code yet beyond a fake-data prototype (`prototype-v0.html`).
+**Where it stands:** Discovery Phases 1–3 complete, 22 decisions logged. The product: a re-entry briefing summoned by /mission, built on files-as-truth — every project carries a ten-file `.mission/` folder, a curated index + Mac mini snapshot live in this hub repo, sessions checkpoint continuously (no save ritual), promotion is a ceremony-free "track this". Four user journeys documented in the PRD (§7). No code yet beyond the fake-data prototype.
 
-**Open:** staleness definition (Q8), agent-activity source (Q14), per-product analytics mapping (Q7) — all decidable during build. Phase 4 spikes queued: chat-history reachability (Q15), mobile repo creation (Q17).
+**Open:** Phase 4 (Technical Shape) just opened. Spikes: Q17 (can a phone session create a repo?) and Q15 (chat history reachability). Build details: reporter cadence/format, /mission skill construction, Q7/Q8/Q14 definitions.
 
-**Only Adrian can unblock:** trying repo-creation from his phone (Q17 test); picking the first existing repo to enrol.
+**Only Adrian can unblock:** run the Q17 test from his phone; pick the first existing repo to enrol by back-fill.

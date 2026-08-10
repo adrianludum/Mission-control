@@ -1,5 +1,5 @@
 # Mission Control — Product Requirements Document
-*Status: In Progress — Phases 1 & 2 complete*
+*Status: In Progress — Phases 1–3 complete*
 *Last synthesised: 2026-08-10*
 
 ## 1. Overview
@@ -46,18 +46,29 @@ Reads, in order: project index (this repo) → each project's `.mission/` folder
 README (mission overview), DECISIONS, OPEN-QUESTIONS, LEARNINGS, CHANGELOG, FEEDBACK-LOG, PRD, TASKS (blockers = entries tagged "owner: Adrian"), AGENT-LOG (append-only), SYNOPSIS (overwritten at every checkpoint) (2.6, 2.7). Existing repos are enrolled by back-fill: a Claude session reads the repo and seeds what it can.
 
 ### 6.3 Capture (how state stays true)
-1. **Auto-checkpoint** — working sessions update `.mission/` at session end, including SYNOPSIS.md (primary; 1.6).
-2. **"update log"** — universal mid-session save; the session classifies items itself; plain English adds routing hints (2.4).
-3. **Reconstruction** — when state lags reality (missed checkpoint, work outside a session), an agent rebuilds the briefing from git diffs + reachable chat history (safety net; 1.6).
+1. **Continuous checkpoint** (primary) — mission-disciplined sessions write to `.mission/` *as things happen*; a decision made mid-conversation is committed mid-conversation. "Session end" does not exist as a save moment (3.4, amending 1.6).
+2. **"update log"** — comfort word forcing a save right now; per-chat by nature; never a required ritual (2.4, 3.4).
+3. **Reconstruction** — for work done outside disciplined sessions, an agent rebuilds state from git diffs + whatever chat history is reachable (safety net; 1.6, Q15).
 
 ### 6.4 Promotion (how projects are born)
-Adrian says "track this" in any session → the session creates the GitHub repo, seeds `.mission/` from the conversation, and appends the project to the index in this repo (2.2, 2.3). Retirement: "retire X" → index edited. The index is hand-editable but no workflow requires it.
+Adrian says "track this" in any session → no ceremony: the session picks a name, creates the repo private, seeds `.mission/` from the chat so far, appends to the index, reports afterwards (2.2, 2.3, 3.6). Thin ideas promote immediately — empty-shell files are honest ("just born, planning 5%"); the incompleteness signal nags them toward meat (3.3, 3.6). The same chat keeps checkpointing into the new repo; moving to a fresh repo-connected window later costs nothing because the files are the memory. Retirement: "retire X" → index edited.
 
 ### 6.5 Mac mini state reporter
 launchd/cron job on the always-on Mac mini scans local repos, pushes a self-timestamped snapshot (uncommitted files, unpushed branches, no-remote repos) to this repo (2.5). Cadence/format: Phase 4.
 
 ## 7. User Journeys
-(Phase 3 — next.)
+
+### J1 — The morning briefing (phone, coffee)
+Adrian types `/mission`. First screen: every tracked project in two bands — *Active* (last ~14 days) ordered by risk + planning incompleteness, *Dormant* ordered by time parked, risk still visible (3.1). He taps a project → detailed briefing: where it stands, what's open, what only he can do, git detail, tasks. The briefing's last element is a launch pad: top next action + open a context-loaded work chat on that repo (3.2). He either starts working or goes back up. Ninety seconds, briefed.
+
+### J2 — The work session (capture is invisible)
+Two hours in a session on a project. Decisions, discoveries, and task movement are written to `.mission/` as they happen (3.4). He closes the laptop at 11pm without saying anything — nothing is lost, because nothing was waiting to be saved. "update log" exists for forcing a save before chaos, not as duty.
+
+### J3 — The wrong briefing (break-in repair)
+A briefing confidently describes last week. Adrian opens a chat connected to the affected project's repo and corrects the files there; system-level errors get fixed in a chat on the Mission-control repo (3.5). Every correction appends a FEEDBACK-LOG line with the cause when diagnosable. The record of misses is the tuning curriculum (1.7).
+
+### J4 — The birth (sofa, phone)
+Ten minutes into riffing on a new idea: "track this." The session creates a private repo, seeds `.mission/` from the chat, indexes it, and says so — no questions asked (3.6). The tile appears honestly thin. The riff continues, checkpointing into the new repo; when the chat gets long, a fresh Claude Code window connected to the repo picks up with clean context and full state.
 
 ## 8. Data Model (Sketch)
 - **Hub (this repo)**: project index (registry + per-project metadata: display name, host machine, analytics source, chat-heritage links) + Mac mini snapshot + this project's own `.mission/`.
