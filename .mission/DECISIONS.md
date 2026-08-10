@@ -116,3 +116,21 @@
 - **Date**: 2026-08-10
 - **Supersedes**: — (amends 2.6: standard set becomes **ten** files, adding SYNOPSIS.md)
 - **Note**: Resolves Q5. Model/cost of the assembly pass: whatever model the /mission session runs on — no separate pipeline.
+
+### Decision 3.1 — Home screen: all tracked projects, two bands; recency is position, never membership
+- **What**: The home screen always shows every tracked project. Band 1 — *Active* (touched in the last ~14 days), ordered by risk + planning incompleteness. Band 2 — *Dormant*, ordered by how long parked, risk still visible on every tile. Nothing tracked is ever hidden.
+- **Why**: Adrian's first instinct ("projects worked on in the last 7/14 days") would hide exactly the projects re-entry is for (Decision 1.1) — the dormant one with the three-week-old unpushed branch. Corrected on challenge: "Recent first, nothing gets buried."
+- **Date**: 2026-08-10
+- **Supersedes**: —
+
+### Decision 3.2 — The project view ends in a launch pad
+- **What**: A project briefing's last element is not a summary but an exit ramp: the top next action, plus a ready way to open a work chat on that project with its context (`.mission/` state) already loaded. Reading ends in working.
+- **Why**: From Adrian's own walkthrough — after reading a project's detail he either goes back home or "opens a code chat linked to this project to start work." v1-safe: it's a link with context, not agent management (Decision 1.4 boundary intact).
+- **Date**: 2026-08-10
+- **Supersedes**: —
+
+### Decision 3.3 — "Planning incompleteness" is a first-class tile signal
+- **What**: Tile ordering/status includes planning incompleteness — unanswered Tier-1 questions, PRD holes, undecided decisions — alongside git risk and staleness. A tile can scream with perfectly clean git.
+- **Why**: Adrian's sort key was "risk and incompleteness of planning"; intent gaps are open loops just as much as unpushed branches. Exact scoring folds into the staleness/risk definition (Q8).
+- **Date**: 2026-08-10
+- **Supersedes**: —

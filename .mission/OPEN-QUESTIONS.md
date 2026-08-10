@@ -12,7 +12,7 @@
 ## Tier 2 — Can decide during build
 - ~~Q6: How are projects registered?~~ → **Answered**: repo creation registers the project in a curated index in the Mission-control repo, maintained by Claude at promotion/retirement (Decisions 2.1–2.3).
 - Q7: User-count sources: Vercel analytics? Supabase? App telemetry? Per-product mapping needed. (Panel confirmed in v1, project view only.)
-- Q8: How is "staleness" defined and displayed?
+- Q8 (widened): How are "staleness", "git risk", and "planning incompleteness" (Decision 3.3) each defined and scored for tile ordering/status?
 - Q9: Mobile access needed, or Mac-only?
 - Q14 (new): Where does agent activity history come from? (Session logs, workflow journals, manual notes?) Read-only in v1 per Decision 1.4.
 - Q15 (new): How reachable is Claude chat history programmatically? Reconstruction (Decision 1.6) and chat-only projects (Q2) both depend on it. Candidate: riskiest technical assumption — test early in Phase 4.
