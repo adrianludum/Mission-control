@@ -1,8 +1,8 @@
 # Mission Control — Synopsis
 *Overwritten at every checkpoint. Written 2026-08-11 by the operate-phase session.*
 
-**Where it stands:** v0.1 build merged; board live at the standing URL; **hourly refresh Routine enabled** (:17 UTC, first fire 02:17). **All Tier-2 questions now closed and built** (Decisions 8.1–8.3): real scoring rubric in /mission, analytics mapping + cache design, agent-log sourcing with unlogged-commit detection. Q9 closed too — only Tier-3 (beta) questions remain.
+**Where it stands:** v0.1 + Tier-2 (Decisions 8.1–8.3) merged and live. **Hourly board refresh verified working**: first firing republished the standing URL at 02:19 UTC, scored per 8.1, connector-less as designed. An accidental duplicate Routine (parallel-session race — see FEEDBACK-LOG) was found and deleted; one Routine remains (:17 UTC, trig_014ZFiJn3X4EFTVFY5MvNpnf).
 
-**Open:** verify the Routine's first firing (board timestamp after 02:17 UTC); Tier-3 at beta — notifications, sharing, trust acceptance test.
+**Open:** Tier-3 at beta only — notifications, sharing, trust acceptance test.
 
-**Only Adrian can unblock (both need the Mac mini):** install the reporter (`reporter/INSTALL.md`, ~2 min); run `/enrol` for wave one — which now also assigns each repo's analytics source (8.2). Break-in period (1.7) starts with real use.
+**Only Adrian can unblock (both need the Mac mini):** install the reporter (`reporter/INSTALL.md`, ~2 min); run `/enrol` for wave one (3–5 repos, approve pairing table + analytics sources). Break-in period (1.7) starts with real use.

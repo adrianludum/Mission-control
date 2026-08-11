@@ -2,12 +2,12 @@
 *Blockers are entries marked **owner: Adrian** — jobs only he can do.*
 
 ## To do
-- [ ] Verify the board-refresh Routine's first firing — after 02:17 UTC 2026-08-11, glance at the board (URL in BOARD.md): the timestamp under the wordmark should be within the last hour. Watch item: fired sessions carry no MCP connectors — /mission only needs repo files + the Artifact tool, so this should be fine, but the first firing proves it.
 - [ ] Install the reporter at the Mac mini — follow `reporter/INSTALL.md` (~2 min: adjust paths, chmod, launchctl bootstrap) — **owner: Adrian** (must be at the machine)
 - [ ] Run enrolment wave one — `/enrol` in a Claude Code session at the Mac mini, 3–5 real repos — **owner: Adrian** (picks the repos, approves pairing table)
 - [ ] At beta (Tier 3): notifications, sharing, trust acceptance test
 
 ## Done
+- [x] 2026-08-11 — Board-refresh Routine's first firing **verified**: board republished at 02:19 UTC to the standing URL, scored per 8.1, connector-less as designed. Found and deleted an accidental duplicate Routine (:13 UTC, created by a parallel session whose checkpoint sat on an unmerged branch — see FEEDBACK-LOG); the :17 UTC Routine (trig_014ZFiJn3X4EFTVFY5MvNpnf) is the single survivor
 - [x] 2026-08-11 — Tier-2 work merged to the default branch (fast-forward, on Adrian's word) — Decisions 8.1–8.3 now live for every /mission render, including the hourly Routine
 - [x] 2026-08-11 — Tier-2 questions closed and built (Decisions 8.1–8.3): Q8 scoring rubric replaces the interim heuristic in /mission; Q7 analytics vocabulary + snapshot/analytics.md cache wired into /mission, INDEX.md and /enrol; Q14 agent-log sourcing + unlogged-commits cross-check; Q9 closed by shipped reality (mobile in)
 - [x] 2026-08-11 — Hourly board-refresh Routine created (Decision 7.1): trigger `trig_014ZFiJn3X4EFTVFY5MvNpnf`, "Mission Control board refresh", hourly at :17 UTC, fresh session per fire, notifications off; creation succeeded from a fresh remote session with no approval gate
