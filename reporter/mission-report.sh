@@ -162,10 +162,18 @@ fi
 
 cd "$HUB_REPO" || exit 1
 
+# Push to whatever branch the hub clone has checked out — the repo's default
+# branch is not necessarily "main".
+HUB_BRANCH="$(git symbolic-ref --short -q HEAD)"
+if [ -z "$HUB_BRANCH" ]; then
+  log "ERROR: HUB_REPO is in detached HEAD; snapshot written but not pushed"
+  exit 1
+fi
+
 # --autostash: the freshly written snapshot makes the tree dirty, and a plain
 # pull --rebase refuses to run with unstaged changes. On failure, abort any
 # half-done rebase so the repo can never stay wedged for future runs.
-if ! git pull --rebase --autostash origin main; then
+if ! git pull --rebase --autostash origin "$HUB_BRANCH"; then
   git rebase --abort >/dev/null 2>&1
   log "WARNING: git pull --rebase failed; continuing with local state"
 fi
@@ -183,14 +191,14 @@ if ! git commit -m "reporter: snapshot $NOW_UTC"; then
 fi
 
 # Push with up to 4 retries, exponential backoff: 2s 4s 8s 16s.
-if git push origin main; then
+if git push origin "$HUB_BRANCH"; then
   log "pushed"
   exit 0
 fi
 for delay in 2 4 8 16; do
   log "push failed; retrying in ${delay}s"
   sleep "$delay"
-  if git push origin main; then
+  if git push origin "$HUB_BRANCH"; then
     log "pushed"
     exit 0
   fi
