@@ -2,6 +2,7 @@
 *Blockers are entries marked **owner: Adrian** — jobs only he can do.*
 
 ## To do
+- [ ] Create the hourly board-refresh Routine (Decision 7.1) — the create-trigger call needs in-session approval — **owner: Adrian** (say "create the board refresh routine" in any session and approve the tool call)
 - [ ] Install the reporter at the Mac mini — follow `reporter/INSTALL.md` (~2 min: adjust paths, chmod, launchctl bootstrap) — **owner: Adrian** (must be at the machine)
 - [ ] Run enrolment wave one — `/enrol` in a Claude Code session at the Mac mini, 3–5 real repos — **owner: Adrian** (picks the repos, approves pairing table)
 - [ ] During build (Tier 2): Q7 analytics mapping, Q8 risk scoring (interim heuristic in /mission SKILL.md), Q14 agent-log sourcing

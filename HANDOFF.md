@@ -1,21 +1,25 @@
 # Handoff — continuing this project in any Claude session
 
-## State as of 2026-08-10 (end of day)
-**Discovery is complete.** Six phases, 29 decisions, PRD stamped ready-to-build — all in one day. Read `.mission/PRD.md` top to bottom; `.mission/DECISIONS.md` is the full reasoning trail. `PLAYBOOK.md` (repo root) has every paste-ready command and flow.
+## State as of 2026-08-11
+**Build steps 1–4 are complete and merged to the default branch.** Discovery (29 decisions) closed 2026-08-10; the build shipped the next day: /mission skill + worm dashboard template, reporter code (script + plist + INSTALL.md), enrolment tooling (mission-seed templates + /enrol skill), mission-discipline skill + CLAUDE.md. First live /mission render proven end-to-end. The board has a standing URL — see `BOARD.md` (Decision 7.1); every /mission run republishes it.
 
-## What happens next (build order — Decision 6.1)
-1. **/mission skill v0** — reads only this repo; board tracks Mission Control itself. Can start in any session.
-2. **Reporter** — needs a Claude Code session at the Mac mini (scan script + launchd plist).
-3. **Enrolment wave one** — PLAYBOOK bulk prompt, 3–5 real repos.
-4. **Discipline skill** — continuous checkpointing for working sessions; break-in begins.
+Read `.mission/SYNOPSIS.md` first, then `TASKS.md`. Full reasoning trail: `.mission/DECISIONS.md` (now 30 decisions). Ops cheat sheet: `PLAYBOOK.md`.
 
-## To resume in a build session
+## What's next (in order)
+1. **Create the hourly board-refresh Routine** — designed in Decision 7.1, blocked only on Adrian approving the trigger-creation tool call in a session. Ask any session to "create the board refresh routine".
+2. **Install the reporter at the Mac mini** — `reporter/INSTALL.md`, ~2 min at the machine. Until then every board honestly shows "Mac mini has not reported".
+3. **Enrolment wave one** — `/enrol` in a Claude Code session at the Mac mini; Adrian picks 3–5 repos and approves the pairing table.
+4. Then: break-in period (Decision 1.7) — use /mission daily, correct via repo chats, FEEDBACK-LOG is the tuning record. Tier-2 questions (Q7 analytics, Q8 scoring, Q14 agent-log source) decided along the way.
+
+## To resume in a new session
 Paste:
 
-> Read .mission/PRD.md, .mission/DECISIONS.md and .mission/TASKS.md in this repo.
-> We are building, not discovering. Take the next unchecked task in TASKS.md and build it.
-> Honour the emotional contract (5.2), the worm-era visual direction (5.1), and continuous
-> checkpointing (3.4): update .mission/ state files and push as you work.
+> Read .mission/SYNOPSIS.md, .mission/TASKS.md and HANDOFF.md in this repo.
+> We are building/operating, not discovering. Take the next unchecked task in TASKS.md.
+> Follow the mission discipline (CLAUDE.md): checkpoint .mission/ and push as things happen.
+
+At the Mac mini specifically: follow `reporter/INSTALL.md`, then run `/enrol`.
+To see the board from anywhere: type `/mission` (republishes the standing URL in BOARD.md).
 
 ## To resume discovery (if something reopens)
 > Read the files in .mission/. You are "Black Swan", a rigorous discovery interrogator.
