@@ -22,3 +22,4 @@ No tool combines live git state with *open loops* — undecided questions, unimp
 
 ## Build (2026-08-11)
 - **First live /mission render worked end-to-end from a remote session** (Adrian on a plane, no Mac mini): read path (INDEX → .mission/ → snapshot), loud missing-snapshot degradation, and artifact render all behaved as designed. The board is usable before the reporter exists — honest degradation is doing its job.
+- **Routine-fired sessions carry no MCP connectors** (the creating session held none to pass through) — fine for /mission, which only needs the repo, the in-repo snapshot, and the built-in Artifact tool; if a future routine needs a connector (Gmail, Slack…), create it from a session holding that connector or from the claude.ai routines UI.

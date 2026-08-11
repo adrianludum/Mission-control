@@ -2,13 +2,13 @@
 *Blockers are entries marked **owner: Adrian** — jobs only he can do.*
 
 ## To do
-- [ ] Create the hourly board-refresh Routine (Decision 7.1) — **owner: Adrian** — must be done from an *interactive* session (the build session's approval dialogs never rendered; typed "Approve" couldn't clear the gate). In a fresh chat on this repo say: "Create the board refresh routine per Decision 7.1: hourly, fresh session, run /mission and republish to the URL in BOARD.md" — then approve the permission dialog when it appears.
 - [ ] Install the reporter at the Mac mini — follow `reporter/INSTALL.md` (~2 min: adjust paths, chmod, launchctl bootstrap) — **owner: Adrian** (must be at the machine)
 - [ ] Run enrolment wave one — `/enrol` in a Claude Code session at the Mac mini, 3–5 real repos — **owner: Adrian** (picks the repos, approves pairing table)
 - [ ] During build (Tier 2): Q7 analytics mapping, Q8 risk scoring (interim heuristic in /mission SKILL.md), Q14 agent-log sourcing
 - [ ] At beta (Tier 3): notifications, sharing, trust acceptance test
 
 ## Done
+- [x] 2026-08-11 — Hourly board-refresh Routine created (Decision 7.1): "Mission Control board refresh", trig_01XiNPEv24C5C96hCXVoErNN, fires at :13 each hour, fresh session per fire, runs /mission and republishes to the BOARD.md URL; notifications off
 - [x] 2026-08-11 — Build branch merged into the default branch (fast-forward, on Adrian's word from the plane); /mission + all skills now live on the default branch
 - [x] 2026-08-11 — First live /mission render published as an artifact — read path + loud degradation proven end-to-end
 - [x] 2026-08-11 — Build step 1: /mission skill v0 — INDEX.md registry, SKILL.md read path + rules, self-contained dashboard template (worm SVG wordmark, two bands, drill-down, launch pad; render-verified light/dark/mobile)
