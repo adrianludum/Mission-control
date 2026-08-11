@@ -35,6 +35,11 @@ Mostly **assemble** the stored `SYNOPSIS.md` texts — do not re-derive what a c
 One **self-contained HTML artifact**, rendered from the template at `.claude/skills/mission/template.html`:
 read the template, replace the sample data at the `<!-- DATA:... -->` injection points with real data, publish/present it. No external requests; everything ships in the one render.
 
+**Standing URL (Decision 7.1):** read `BOARD.md` at the repo root and pass its artifact URL as the
+Artifact tool's `url` parameter, so every render — from any chat or the hourly refresh Routine —
+updates the same pinned link. If `BOARD.md` is missing or the URL is gone, publish fresh and
+rewrite `BOARD.md` with the new URL (the one exception to "you never write here").
+
 Structure (Decision 3.1 — nothing tracked is ever hidden):
 - **ACTIVE band** — projects touched ≤14 days, ordered by risk + planning incompleteness (worst first).
 - **DORMANT band** — everything else, ordered by time parked (longest first), risk still visible on every tile.

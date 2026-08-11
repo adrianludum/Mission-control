@@ -196,3 +196,9 @@
 - **Why**: Each step ships something usable and de-risks the next; self-tracking first means the tool dogfoods from hour one.
 - **Date**: 2026-08-10
 - **Supersedes**: —
+
+### Decision 7.1 — The board gets a standing URL, hourly re-render, on-demand refresh
+- **What**: The board lives at one canonical artifact URL, recorded in `BOARD.md` at the hub root. Every /mission render — from any chat, any device — republishes to that URL instead of minting a new artifact. An hourly Routine re-renders it on the reporter's cadence; on-demand refresh is typing /mission anywhere. The page itself stays a point-in-time render (no in-page live data — the artifact runtime here cannot safely re-read the repo).
+- **Why**: First live use (Adrian, on a plane) surfaced the expectation immediately: after merging he expected the board to update, then confirmed he wants auto-refresh — "even if I could just trigger it myself." A pinned-but-stale link is the trust-decay failure mode (1.7) in miniature; a standing URL that every door refreshes is the smallest fix. The /mission skill remains the sole engine — this adds a door, no rework, exactly as 1.9 anticipated.
+- **Date**: 2026-08-11
+- **Supersedes**: Amends PRD §5's v1 exclusions ("scheduled delivery, pinned artifacts" were other-door examples) — narrowly, for the board artifact only. Decision 1.9's skill-as-engine stands.
