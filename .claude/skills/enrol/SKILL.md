@@ -45,7 +45,7 @@ Append one row per enrolled repo to Mission-control's `INDEX.md` (create it with
 | Project | Repo | Host machine | Local path | Analytics source | Status | Born | Notes |
 |---|---|---|---|---|---|---|---|
 
-Status e.g. "active"/"dormant" from last-commit recency; Analytics source "—" unless known; Born = enrolment date with "(enrolled)". Commit and push the hub.
+Status e.g. "active"/"dormant" from last-commit recency; Born = enrolment date with "(enrolled)". For **Analytics source**, use the Decision 8.2 vocabulary (`vercel:<project-name>`, `supabase:<project-ref>`, `manual:<where>`, `—`): where the repo makes the source obvious (a `vercel.json`, a Supabase config) propose it; otherwise ask Adrian alongside the pairing table — one question for the wave, not one per repo. "—" is the honest default for anything without live users. Commit and push the hub.
 
 ### 6. Report
 End with: a table of what was enrolled (repo, action taken, seed thinness note); anything skipped and why; repos marked "needs app access"; repos halted mid-reconcile and what Adrian must decide. Also append one line to the hub's `.mission/AGENT-LOG.md` for this run.

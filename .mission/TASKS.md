@@ -5,10 +5,10 @@
 - [ ] Verify the board-refresh Routine's first firing — after 02:17 UTC 2026-08-11, glance at the board (URL in BOARD.md): the timestamp under the wordmark should be within the last hour. Watch item: fired sessions carry no MCP connectors — /mission only needs repo files + the Artifact tool, so this should be fine, but the first firing proves it.
 - [ ] Install the reporter at the Mac mini — follow `reporter/INSTALL.md` (~2 min: adjust paths, chmod, launchctl bootstrap) — **owner: Adrian** (must be at the machine)
 - [ ] Run enrolment wave one — `/enrol` in a Claude Code session at the Mac mini, 3–5 real repos — **owner: Adrian** (picks the repos, approves pairing table)
-- [ ] During build (Tier 2): Q7 analytics mapping, Q8 risk scoring (interim heuristic in /mission SKILL.md), Q14 agent-log sourcing
 - [ ] At beta (Tier 3): notifications, sharing, trust acceptance test
 
 ## Done
+- [x] 2026-08-11 — Tier-2 questions closed and built (Decisions 8.1–8.3): Q8 scoring rubric replaces the interim heuristic in /mission; Q7 analytics vocabulary + snapshot/analytics.md cache wired into /mission, INDEX.md and /enrol; Q14 agent-log sourcing + unlogged-commits cross-check; Q9 closed by shipped reality (mobile in)
 - [x] 2026-08-11 — Hourly board-refresh Routine created (Decision 7.1): trigger `trig_014ZFiJn3X4EFTVFY5MvNpnf`, "Mission Control board refresh", hourly at :17 UTC, fresh session per fire, notifications off; creation succeeded from a fresh remote session with no approval gate
 - [x] 2026-08-11 — Build branch merged into the default branch (fast-forward, on Adrian's word from the plane); /mission + all skills now live on the default branch
 - [x] 2026-08-11 — First live /mission render published as an artifact — read path + loud degradation proven end-to-end

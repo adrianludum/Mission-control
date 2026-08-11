@@ -11,10 +11,10 @@
 
 ## Tier 2 — Can decide during build
 - ~~Q6: How are projects registered?~~ → **Answered**: repo creation registers the project in a curated index in the Mission-control repo, maintained by Claude at promotion/retirement (Decisions 2.1–2.3).
-- Q7: User-count sources: Vercel analytics? Supabase? App telemetry? Per-product mapping needed. (Panel confirmed in v1, project view only.)
-- Q8 (widened): How are "staleness", "git risk", and "planning incompleteness" (Decision 3.3) each defined and scored for tile ordering/status?
-- Q9: Mobile access needed, or Mac-only?
-- Q14 (new): Where does agent activity history come from? (Session logs, workflow journals, manual notes?) Read-only in v1 per Decision 1.4.
+- ~~Q7: User-count sources?~~ → **Answered**: typed "Analytics source" column (`vercel:` / `supabase:` / `manual:` / `—`), resolved live when connectors are in reach, cached self-timestamped in `snapshot/analytics.md` for connector-less renders; mapped per product at enrolment (Decision 8.2).
+- ~~Q8 (widened): How are staleness / git risk / planning incompleteness scored?~~ → **Answered**: rubric in /mission SKILL.md §6 — staleness bands from last-touch, git risk levels with unknown-sorts-as-serious, blocker-pressure ages, completeness checklist out of 100 (Decision 8.1).
+- ~~Q9: Mobile access needed, or Mac-only?~~ → **Answered by shipped reality**: /mission is a skill on every surface (1.9, 4.4) and the first live render was from a phone on a plane. Mobile is in, no new decision needed.
+- ~~Q14 (new): Where does agent activity history come from?~~ → **Answered**: solely each repo's AGENT-LOG.md, cross-checked against commits ("unlogged activity" gap lines); transcripts stay reconstruction-only (Decision 8.3).
 - ~~Q15: How reachable is Claude chat history programmatically?~~ → **Answered**: Claude Code transcripts on the Mac mini are readable (`~/.claude`); claude.ai chats have no API — unreachable except manual export. Reconstruction coverage narrowed accordingly (Decision 4.1).
 
 ## Tier 3 — Can wait until beta

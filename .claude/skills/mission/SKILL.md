@@ -12,7 +12,9 @@ You are the reading room. You never write project state here; you read, assemble
 1. `INDEX.md` at the repo root — the registry. Only rows listed there are tracked. Note per-row metadata: display name, repo, host machine, local path, analytics source, status, born date.
 2. For **each** tracked project, its repo's `.mission/` folder — all ten files, `SYNOPSIS.md` first, then: README, DECISIONS, OPEN-QUESTIONS, LEARNINGS, CHANGELOG, FEEDBACK-LOG, PRD, TASKS (blockers = entries tagged `owner: Adrian`), AGENT-LOG.
 3. `snapshot/mac-mini.md` in this repo — the Mac mini reporter's self-timestamped snapshot (local git truth: uncommitted/untracked files, unpushed branches, missing remotes, last-commit times).
-4. Analytics sources per the index's "Analytics source" column. **v0: none mapped** — render user counts as "—".
+4. Analytics per the index's "Analytics source" column (Decision 8.2). Column vocabulary: `vercel:<project-name>`, `supabase:<project-ref>` (count from `auth.users` unless the Notes column names another query), `manual:<where the number lives>`, or `—` (no live users to count).
+   - **With connector access** (interactive sessions): resolve each source live — Vercel via its analytics tool, Supabase via a count query — then overwrite `snapshot/analytics.md` with the fetched numbers and a `*Generated: <UTC ISO>*` timestamp (machine-maintained cache; the second permitted write, alongside BOARD.md recovery).
+   - **Without connector access** (the hourly Routine fires connector-less): read `snapshot/analytics.md` and label the age — "412 users · as of 9h ago". Cache older than 7 days or missing → render "—" with "analytics unreported", per the loud-degradation register (2.5). Never present a cached count as current.
 
 **v0 scope note:** today the index holds only Mission-control itself (n=1). This read path is written generally — never assume n=1; loop over whatever the index contains.
 
@@ -53,7 +55,7 @@ Each project detail view must answer Decision 1.2's seven items:
 4. Git detail — branch, machine, unpushed, uncommitted (from the snapshot; honour §2)
 5. User counts for live products (v0: "—")
 6. Tasks completed vs remaining
-7. Read-only agent activity log
+7. Read-only agent activity log — sourced **solely from that repo's `.mission/AGENT-LOG.md`** (Decision 8.3). Cross-check it against recent commits: commits since the newest log entry are rendered as one honest gap line — "unlogged activity: N commits since last log entry" — which also trips the contradiction rule (§3). Never scrape transcripts at render time; Mac mini `~/.claude` transcripts are reconstruction-only inputs (4.1).
 
 The detail view **ends in a launch pad** (Decision 3.2): the top next action, plus the exact prompt to paste to open a context-loaded work chat on that repo (e.g. "Open a chat connected to <repo>. Read .mission/ — SYNOPSIS first — then: <top next action>.").
 
@@ -61,14 +63,40 @@ The detail view **ends in a launch pad** (Decision 3.2): the top next action, pl
 
 When nothing needs Adrian, the board's headline says so plainly — the "Systems nominal — go enjoy your coffee" register. Calm dismissal is the default; loudness is earned only by genuine need (a genuinely screaming tile, a stale snapshot). Never render a guilt machine: a green board is permission to leave.
 
-## 6. Interim risk scoring (Q8 open — this heuristic is interim, say so in output)
+## 6. Scoring (Decision 8.1 — closes Q8)
 
-- **critical** — unpushed/uncommitted work older than 7 days, OR a blocker tagged `owner: Adrian` older than 14 days
-- **serious** — unpushed/uncommitted work 2–7 days old, or a stale/missing snapshot
-- **warning** — open Tier-1 questions / planning incompleteness (thin PRD, undecided decisions)
-- **good** — none of the above
+Three measures per project, each computed from files. Where a step needs judgement it is named as judgement — but the checklist below is the rubric, applied the same way every render.
 
-Planning incompleteness is shown as a % on the tile — a rough judgement from PRD/OPEN-QUESTIONS fullness (thin PRD + many open Tier-1s = low completeness). Mark it as judgement, not measurement.
+### 6.1 Staleness (drives band placement)
+**Last touched** = the most recent of: last commit on any branch (snapshot or GitHub), newest dated `AGENT-LOG.md` entry, `SYNOPSIS.md` date.
+- ≤ 14 days → **ACTIVE** band; otherwise **DORMANT** (Decision 3.1's cutoff).
+- Tiles show "last touched N d ago". Dormancy is not itself risk — parked-cleanly is a fine state.
+
+### 6.2 Git risk (chips; from the snapshot and GitHub)
+Computed **only from a fresh snapshot** (§2). Levels, worst first:
+- **critical** — uncommitted or unpushed work older than 7 days, or a local repo with no remote
+- **serious** — uncommitted/unpushed work 2–7 days old
+- **notice** — uncommitted/unpushed work under 2 days (normal work-in-flight, not alarming)
+- **clean** — none of the above
+- **unknown** — snapshot stale or missing, or repo not in it. Displayed as "unknown", **sorts as serious** (honest uncertainty ranks high), never asserted as a fact.
+
+### 6.3 Blocker pressure (from TASKS entries tagged `owner: Adrian`)
+Age from the entry's date (or first appearance in git history if undated):
+- **critical** — an open Adrian-blocker older than 14 days
+- **serious** — 7–14 days · **notice** — younger than 7 days · **clean** — none open
+
+### 6.4 Planning completeness % (Decision 3.3's incompleteness signal)
+Score out of 100, shown on the tile; the checklist is the rubric:
+- **PRD (0–40)**: 40 = marked complete/ready-to-build · 20 = substantive but partial · 0 = missing or a stub of placeholders
+- **Tier-1 questions (0–30)**: 30 if no open Tier-1 questions; −10 per open Tier-1 (floor 0)
+- **Decisions (0–15)**: 15 if ≥3 substantive decisions logged, else 0
+- **Tasks (0–15)**: 15 if TASKS.md has a concrete To-do list beyond seed placeholders, else 0
+"Substantive"/"partial" are judgement calls — make them consistently and don't relitigate between renders.
+
+### 6.5 Tile status and ordering
+- **Status dot** = worst of (git risk, blocker pressure); unknown counts as serious.
+- **ACTIVE ordering**: severity desc (critical > serious/unknown > notice > clean), then lower completeness first, then most-recently-touched first.
+- **DORMANT ordering**: time parked desc (longest first), risk chips still visible (3.1).
 
 ## 7. Fallback
 

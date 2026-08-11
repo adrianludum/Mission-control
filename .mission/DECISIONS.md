@@ -202,3 +202,21 @@
 - **Why**: First live use (Adrian, on a plane) surfaced the expectation immediately: after merging he expected the board to update, then confirmed he wants auto-refresh — "even if I could just trigger it myself." A pinned-but-stale link is the trust-decay failure mode (1.7) in miniature; a standing URL that every door refreshes is the smallest fix. The /mission skill remains the sole engine — this adds a door, no rework, exactly as 1.9 anticipated.
 - **Date**: 2026-08-11
 - **Supersedes**: Amends PRD §5's v1 exclusions ("scheduled delivery, pinned artifacts" were other-door examples) — narrowly, for the board artifact only. Decision 1.9's skill-as-engine stands.
+
+### Decision 8.1 — Scoring defined: staleness, git risk, blocker pressure, planning completeness (closes Q8)
+- **What**: The interim heuristic in /mission SKILL.md §6 is replaced by a rubric. **Staleness**: last-touched = most recent of last commit / newest AGENT-LOG entry / SYNOPSIS date; ≤14 days → ACTIVE band. **Git risk** (fresh snapshot only): critical = uncommitted/unpushed >7d or no remote; serious = 2–7d; notice = <2d (work-in-flight); clean; **unknown** when the snapshot is stale/missing — displayed as unknown, sorts as serious. **Blocker pressure**: open owner:Adrian tasks — >14d critical, 7–14d serious, else notice. **Planning completeness** (0–100, tile %): PRD 0/20/40 + no-open-Tier-1s 30 (−10 each) + ≥3 decisions 15 + concrete tasks 15. Status dot = worst of (git risk, blocker pressure). ACTIVE ordering: severity desc, then lower completeness, then recency. DORMANT: time parked desc.
+- **Why**: Trust (1.7) needs scores Adrian can audit — a checklist applied identically every render, not per-render vibes. Unknown-sorts-as-serious keeps degradation loud (2.5) without asserting facts; notice-level for fresh work-in-flight keeps the board off the guilt-machine path (5.2).
+- **Date**: 2026-08-11
+- **Supersedes**: The interim heuristic (SKILL.md §6, shipped with build step 1).
+
+### Decision 8.2 — Analytics: typed index column, live fetch when connected, self-timestamped cache (closes Q7)
+- **What**: The index's "Analytics source" column takes a typed value: `vercel:<project-name>` · `supabase:<project-ref>` (counts `auth.users` unless Notes names another query) · `manual:<where the number lives>` · `—` (no live users). /mission with connector access resolves sources live (Vercel analytics tool, Supabase count query) and overwrites `snapshot/analytics.md` — a machine-maintained, self-timestamped cache on the Mac-mini-snapshot pattern. Connector-less renders (the hourly Routine fires without MCP connectors — learned 2026-08-11) read the cache and label its age; >7 days or missing → "analytics unreported". Per-product mapping is assigned at enrolment (/enrol proposes from repo evidence, asks Adrian once per wave).
+- **Why**: The Routine's connector-less reality forced the design: without a cache, the hourly board would always show "—" even for mapped products. The snapshot pattern (2.5) already solved exactly this — self-timestamped facts, loud staleness — so analytics reuses it rather than inventing a second freshness mechanism.
+- **Date**: 2026-08-11
+- **Supersedes**: —
+
+### Decision 8.3 — Agent activity comes solely from AGENT-LOG.md, cross-checked against commits (closes Q14)
+- **What**: The board's per-project agent activity view reads only that repo's `.mission/AGENT-LOG.md` (append-only, written by disciplined sessions). At render, /mission cross-checks it against recent commits: commits newer than the last log entry render as one line — "unlogged activity: N commits since last log entry" — and trip the contradiction rule (2.7). No transcript scraping at render time; Mac mini `~/.claude` transcripts stay reconstruction-only inputs (4.1).
+- **Why**: The log file is the only source every surface can read (phone sessions can't reach `~/.claude`), and discipline (3.4) already guarantees its freshness for tracked work. The commit cross-check catches undisciplined sessions honestly — a visible gap, not a fabricated history.
+- **Date**: 2026-08-11
+- **Supersedes**: —
