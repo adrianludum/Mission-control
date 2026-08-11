@@ -2,11 +2,12 @@
 *Blockers are entries marked **owner: Adrian** — jobs only he can do.*
 
 ## To do
-- [ ] Install the reporter at the Mac mini — follow `reporter/INSTALL.md` (~2 min: adjust paths, chmod, launchctl bootstrap) — **owner: Adrian** (must be at the machine)
+- [ ] **Log in at the Mac mini's desktop (or enable auto-login)** so a GUI/Aqua session exists — without one, launchd refuses to load *any* LaunchAgent, so the reporter's hourly schedule cannot start. Then: `launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.adrianludum.mission-reporter.plist` — **owner: Adrian** (needs console/Screen Sharing access, not SSH)
 - [ ] Run enrolment wave one — `/enrol` in a Claude Code session at the Mac mini, 3–5 real repos — **owner: Adrian** (picks the repos, approves pairing table)
 - [ ] At beta (Tier 3): notifications, sharing, trust acceptance test
 
 ## Done
+- [x] 2026-08-11 — Reporter **installed and proven at the Mac mini** (partial — schedule not yet live): repo cloned to `~/Projects/mission-control` (note: lowercase, and the hub is *not* named `Mission-control` locally), script chmod'd, DRY_RUN pass then a real run scanning 20 git repos of 35 folders, snapshot committed and pushed as `reporter: snapshot 2026-08-11T11:13:06Z`. Non-interactive push confirmed working via osxkeychain. Plist installed to `~/Library/LaunchAgents/` with this machine's paths (`adriancassidyhome`, lowercase clone dir) plus explicit `SCAN_ROOT`/`HUB_REPO`. **Not loaded** — no GUI session on the mini; see the new To-do blocker
 - [x] 2026-08-11 — Board-refresh Routine's first firing **verified**: board republished at 02:19 UTC to the standing URL, scored per 8.1, connector-less as designed. Found and deleted an accidental duplicate Routine (:13 UTC, created by a parallel session whose checkpoint sat on an unmerged branch — see FEEDBACK-LOG); the :17 UTC Routine (trig_014ZFiJn3X4EFTVFY5MvNpnf) is the single survivor
 - [x] 2026-08-11 — Tier-2 work merged to the default branch (fast-forward, on Adrian's word) — Decisions 8.1–8.3 now live for every /mission render, including the hourly Routine
 - [x] 2026-08-11 — Tier-2 questions closed and built (Decisions 8.1–8.3): Q8 scoring rubric replaces the interim heuristic in /mission; Q7 analytics vocabulary + snapshot/analytics.md cache wired into /mission, INDEX.md and /enrol; Q14 agent-log sourcing + unlogged-commits cross-check; Q9 closed by shipped reality (mobile in)
