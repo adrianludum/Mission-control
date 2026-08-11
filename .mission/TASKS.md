@@ -3,6 +3,7 @@
 
 ## To do
 - [ ] **Log in at the Mac mini's desktop (or enable auto-login)** so a GUI/Aqua session exists — without one, launchd refuses to load *any* LaunchAgent, so the reporter's hourly schedule cannot start. Then: `launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.adrianludum.mission-reporter.plist` — **owner: Adrian** (needs console/Screen Sharing access, not SSH)
+  - *2026-08-11 13:35 UTC:* this **appears cleared** — snapshots pushed from the mini at 12:31 and 13:31 UTC, exactly hourly at :31, which manual runs wouldn't do. Awaiting Adrian's confirmation of how (desktop login vs auto-login) and that it survives a reboot before closing.
 - [ ] Decide what happens to the loose work enrolment deliberately did not touch: `HRR-Commentator-2026` (2 modified + `_previews/` + two proposal .docx) and `language` (3 modified + untracked `app/`, `server/`, `docs/plan/` — a Flutter client and LiveKit server that exist only on this machine) — **owner: Adrian**
 - [ ] Decide the fate of `drone-rowing-analysis` — `git init` with **no commits and no remote**, 13 uncommitted files. Not enrollable as-is; no history to recover if the folder is lost — **owner: Adrian**
 - [ ] At beta (Tier 3): notifications, sharing, trust acceptance test
