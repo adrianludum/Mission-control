@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission Control</title>
+<style>
+  /* == Palette: carried over from prototype-v0 (Decision 5.1) + worm-red brand accent == */
+  :root {
+    color-scheme: light;
+    --page:      #f9f9f7;
+    --surface:   #fcfcfb;
+    --ink:       #0b0b0b;
+    --ink-2:     #52514e;
+    --muted:     #898781;
+    --grid:      #e1e0d9;
+    --baseline:  #c3c2b7;
+    --border:    rgba(11,11,11,0.10);
+    --good:      #0ca30c;
+    --good-text: #006300;
+    --warning:   #fab219;
+    --serious:   #ec835a;
+    --critical:  #d03b3b;
+    --wash:      rgba(11,11,11,0.04);
+    --worm:      #E03C31; /* sole brand accent — approx PMS 179 */
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --page:      #0d0d0d;
+      --surface:   #1a1a19;
+      --ink:       #ffffff;
+      --ink-2:     #c3c2b7;
+      --muted:     #898781;
+      --grid:      #2c2c2a;
+      --baseline:  #383835;
+      --border:    rgba(255,255,255,0.10);
+      --good-text: #0ca30c;
+      --wash:      rgba(255,255,255,0.05);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:      #0d0d0d;
+    --surface:   #1a1a19;
+    --ink:       #ffffff;
+    --ink-2:     #c3c2b7;
+    --muted:     #898781;
+    --grid:      #2c2c2a;
+    --baseline:  #383835;
+    --border:    rgba(255,255,255,0.10);
+    --good-text: #0ca30c;
+    --wash:      rgba(255,255,255,0.05);
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    padding: 28px 16px 56px;
+    max-width: 880px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* ---- wordmark header ---- */
+  .wordmark { display: block; width: 100%; max-width: 560px; height: auto; color: var(--worm); }
+  .masthead { border-bottom: 3px solid var(--worm); padding-bottom: 18px; }
+  .stampline {
+    display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: space-between;
+    margin-top: 12px; font-size: 12px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  /* ---- headline status ---- */
+  .headline { margin: 26px 0 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; }
+  .headline small { display: block; font-size: 13.5px; font-weight: 400; color: var(--ink-2); margin-top: 4px; }
+
+  /* ---- loud staleness banner (Decision 2.5) ---- */
+  .stale-banner {
+    margin-top: 18px; border: 3px solid var(--worm); border-radius: 10px;
+    padding: 14px 16px; background: var(--wash);
+  }
+  .stale-banner .k {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--worm);
+  }
+  .stale-banner .t { font-size: 14px; color: var(--ink-2); margin-top: 4px; }
+
+  /* ---- bands ---- */
+  .band { margin-top: 34px; }
+  .band > h2 {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); display: flex; align-items: center; gap: 12px;
+  }
+  .band > h2::after { content: ""; flex: 1; height: 1px; background: var(--grid); }
+  .band .sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 14px; }
+  .empty { font-size: 13px; color: var(--muted); margin-top: 14px; }
+
+  /* ---- project tiles (card idiom from prototype-v0) ---- */
+  button.tile {
+    font: inherit; color: inherit; text-align: left; width: 100%; cursor: pointer;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 16px; min-height: 44px; display: flex; flex-direction: column; gap: 10px;
+  }
+  button.tile:hover, button.tile:focus-visible { border-color: var(--baseline); }
+  .tile-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .tile-head h3 { font-size: 16px; letter-spacing: -0.01em; }
+  .status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .status .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .s-good    .dot { background: var(--good); }     .s-good    { color: var(--good-text); }
+  .s-warn    .dot { background: var(--warning); }  .s-warn    { color: var(--ink-2); }
+  .s-serious .dot { background: var(--serious); }  .s-serious { color: var(--ink-2); }
+  .s-crit    .dot { background: var(--critical); } .s-crit    { color: var(--critical); }
+  .tile .lastline { font-size: 12.5px; color: var(--ink-2); }
+  .tile .lastline b { color: var(--ink); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-size: 11.5px; padding: 3px 9px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--ink-2); background: var(--wash);
+  }
+  .chip.alert { border-color: var(--critical); color: var(--critical); font-weight: 600; }
+  .chip.warn  { border-color: var(--serious); font-weight: 600; }
+  .chip b { color: var(--ink); font-weight: 600; }
+  .tile-foot {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+    border-top: 1px solid var(--grid); padding-top: 9px; font-size: 12px; color: var(--ink-2);
+  }
+  .plan { font-variant-numeric: tabular-nums; color: var(--muted); }
+  .go { color: var(--worm); font-weight: 700; }
+
+  /* ---- detail views ---- */
+  .detail[hidden], #board[hidden] { display: none; }
+  .backbar { display: flex; align-items: center; gap: 12px; margin-top: 22px; }
+  button.back {
+    font: inherit; cursor: pointer; min-height: 44px; min-width: 44px; padding: 8px 18px;
+    background: var(--surface); color: var(--ink); border: 1px solid var(--border);
+    border-radius: 999px; font-size: 14px; font-weight: 600;
+  }
+  button.back:hover, button.back:focus-visible { border-color: var(--worm); color: var(--worm); }
+  .detail h2.pname { font-size: 24px; letter-spacing: -0.01em; margin-top: 18px; }
+  .detail .pmeta { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .sec { margin-top: 22px; border-top: 1px solid var(--grid); padding-top: 14px; }
+  .sec > h4 {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  }
+  .sec > h4 .n { color: var(--worm); margin-right: 8px; }
+  .sec ul { list-style: none; padding: 0; margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+  .sec li { font-size: 13.5px; color: var(--ink-2); padding-left: 16px; position: relative; }
+  .sec li::before { content: ""; position: absolute; left: 2px; top: 7px; width: 7px; height: 7px; border-radius: 50%; background: var(--baseline); }
+  .sec li.open::before { background: var(--warning); }
+  .sec li.done::before { background: var(--good); }
+  .sec li.block::before { background: var(--critical); }
+  .sec li b, .sec p b { color: var(--ink); }
+  .sec p { font-size: 13.5px; color: var(--ink-2); margin-top: 8px; }
+  .unknown { color: var(--muted); font-style: italic; }
+
+  /* ---- launch pad (Decision 3.2) ---- */
+  .launch { margin-top: 26px; border: 2px solid var(--worm); border-radius: 12px; padding: 16px; }
+  .launch h4 {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--worm);
+  }
+  .launch .next { font-size: 15px; font-weight: 600; margin-top: 8px; }
+  .launch .how { font-size: 12.5px; color: var(--muted); margin-top: 12px; }
+  .launch pre {
+    margin-top: 6px; padding: 12px; background: var(--wash); border: 1px solid var(--border);
+    border-radius: 8px; font-size: 12.5px; line-height: 1.5; color: var(--ink-2);
+    white-space: pre-wrap; word-break: break-word; overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  footer { margin-top: 44px; font-size: 11.5px; color: var(--muted); text-align: center; }
+
+  @media (min-width: 640px) { body { padding: 40px 28px 64px; } }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <!-- "MISSION CONTROL" wordmark — custom single-stroke rounded lettering in the style of the
+       NASA worm (crossbar-less A not needed here; no A in the name). Letterforms defined once,
+       placed with <use>. Uniform 8-unit stroke, round caps/joins, worm-red. -->
+  <svg class="wordmark" viewBox="-1 -1 514 42" role="img" aria-label="MISSION CONTROL">
+    <defs>
+      <g id="wm-M"><path d="M4 36 V13 Q4 4 13 4 Q22 4 22 13 V36 M22 36 V13 Q22 4 31 4 Q40 4 40 13 V36"/></g>
+      <g id="wm-I"><path d="M4 4 V36"/></g>
+      <g id="wm-S"><path d="M23 10 C23 4 19 4 14 4 C7.5 4 4.5 7 4.5 11.5 C4.5 16.5 9 18.6 14 20 C19 21.4 23.5 23.5 23.5 28.5 C23.5 33 20.5 36 14 36 C9 36 5 36 5 30"/></g>
+      <g id="wm-O"><path d="M14 4 C21.5 4 24 11 24 20 C24 29 21.5 36 14 36 C6.5 36 4 29 4 20 C4 11 6.5 4 14 4 Z"/></g>
+      <g id="wm-N"><path d="M4 36 V13 Q4 4 14 4 Q24 4 24 13 V36"/></g>
+      <g id="wm-C"><path d="M23 9.5 C21 5.5 18.5 4 14 4 C6.5 4 4 11 4 20 C4 29 6.5 36 14 36 C18.5 36 21 34.5 23 30.5"/></g>
+      <g id="wm-T"><path d="M4 4 H24 M14 4 V36"/></g>
+      <g id="wm-R"><path d="M4 36 V4 H14.5 C21.5 4 24 7.5 24 12 C24 16.5 21.5 20 14.5 20 H4 M15.5 20 L24 36"/></g>
+      <g id="wm-L"><path d="M4 4 V36 H22"/></g>
+    </defs>
+    <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- MISSION -->
+      <use href="#wm-M" x="0"/>
+      <use href="#wm-I" x="54"/>
+      <use href="#wm-S" x="72"/>
+      <use href="#wm-S" x="110"/>
+      <use href="#wm-I" x="148"/>
+      <use href="#wm-O" x="166"/>
+      <use href="#wm-N" x="204"/>
+      <!-- CONTROL -->
+      <use href="#wm-C" x="258"/>
+      <use href="#wm-O" x="296"/>
+      <use href="#wm-N" x="334"/>
+      <use href="#wm-T" x="372"/>
+      <use href="#wm-R" x="410"/>
+      <use href="#wm-O" x="448"/>
+      <use href="#wm-L" x="486"/>
+    </g>
+  </svg>
+  <div class="stampline">
+    <!-- DATA:TIMESTAMP -->
+    <span>Rendered 2026-08-11 · 1 project tracked</span>
+    <span>Risk scoring: interim heuristic (Q8 open)</span>
+    <!-- /DATA:TIMESTAMP -->
+  </div>
+</header>
+
+<div id="board">
+
+  <p class="headline">
+    <!-- DATA:HEADLINE — when nothing needs Adrian, this line reads in the
+         "Systems nominal — go enjoy your coffee" register (Decision 5.2). -->
+    Build under way — local state unreported.
+    <small>2 blockers are yours (reporter build, enrolment picks). Everything else is on course.</small>
+    <!-- /DATA:HEADLINE -->
+  </p>
+
+  <!-- DATA:STALENESS-BANNER — omit this block entirely when the snapshot is fresh (≤3h). -->
+  <div class="stale-banner" role="alert">
+    <div class="k">Mac mini has not reported — local state unknown</div>
+    <div class="t">No snapshot found at <b>snapshot/mac-mini.md</b>. The reporter is not running yet
+      (build step 2). Uncommitted and unpushed work on the Mac mini is invisible to this board.</div>
+  </div>
+  <!-- /DATA:STALENESS-BANNER -->
+
+  <section class="band" aria-label="Active projects">
+    <h2>Active</h2>
+    <div class="sub">Touched in the last 14 days · ordered by risk + planning incompleteness</div>
+    <div class="tiles">
+      <!-- DATA:TILES-ACTIVE -->
+      <button class="tile" data-project="mission-control" aria-label="Mission Control — open detail">
+        <div class="tile-head">
+          <h3>Mission Control</h3>
+          <span class="status s-serious"><span class="dot"></span>Serious</span>
+        </div>
+        <div class="lastline">Touched <b>today</b> · discovery complete, build step 1 in progress</div>
+        <div class="chips">
+          <span class="chip">branch <b>main</b></span>
+          <span class="chip warn">snapshot missing</span>
+          <span class="chip">↑ pushed · 2026-08-10</span>
+        </div>
+        <div class="tile-foot">
+          <span>3 open questions · 2 blockers</span>
+          <span class="plan">planning 90%</span>
+          <span class="go" aria-hidden="true">→</span>
+        </div>
+      </button>
+      <!-- /DATA:TILES-ACTIVE -->
+    </div>
+  </section>
+
+  <section class="band" aria-label="Dormant projects">
+    <h2>Dormant</h2>
+    <div class="sub">Ordered by time parked · risk stays visible — nothing tracked is ever hidden</div>
+    <!-- DATA:TILES-DORMANT -->
+    <p class="empty">No dormant projects.</p>
+    <!-- /DATA:TILES-DORMANT -->
+  </section>
+
+</div><!-- /board -->
+
+<!-- ============ per-project detail views (all shipped in this one render) ============ -->
+<!-- DATA:DETAILS -->
+<section class="detail" id="detail-mission-control" hidden aria-label="Mission Control — detail">
+  <div class="backbar"><button class="back" type="button">← Board</button></div>
+  <h2 class="pname">Mission Control</h2>
+  <div class="pmeta">adrianludum/Mission-control · mac-mini · ~/Projects/Mission-control · born 2026-08-10 · tracks itself</div>
+
+  <div class="sec">
+    <h4><span class="n">01</span>Questions — open &amp; answered</h4>
+    <ul>
+      <li class="open"><b>Q7</b> — analytics mapping per product (Tier 2, decide during build)</li>
+      <li class="open"><b>Q8</b> — scoring for staleness / git risk / planning incompleteness (Tier 2 — interim heuristic in use)</li>
+      <li class="open"><b>Q14</b> — where agent activity history comes from (Tier 2)</li>
+      <li class="open"><b>Q10 · Q11</b> — notifications, sharing (Tier 3, beta)</li>
+      <li class="done">Answered: Q1–Q6, Q9, Q13, Q15–Q17 — all Tier-1 questions closed; nothing blocks code</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h4><span class="n">02</span>Blockers — only Adrian can do these</h4>
+    <ul>
+      <li class="block">Build step 2 — be at the Mac mini to build the reporter (scan script + launchd plist)</li>
+      <li class="block">Build step 3 — pick the 3–5 repos for enrolment wave one and approve the pairing table</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h4><span class="n">03</span>Designed &amp; decided</h4>
+    <p><b>29 decisions</b> logged through six discovery phases. Recent: <b>4.4</b> single-artifact
+      dashboard with in-page drill-down · <b>5.1</b> worm-era NASA modernism, worm-red sole accent ·
+      <b>5.2</b> "systems nominal" emotional contract · <b>6.1</b> build order (skill → reporter →
+      enrolment → discipline). Full record in <b>.mission/DECISIONS.md</b>.</p>
+  </div>
+
+  <div class="sec">
+    <h4><span class="n">04</span>Git detail</h4>
+    <ul>
+      <li>Remote: <b>main</b> pushed to GitHub, last commit 2026-08-10</li>
+      <li class="open">Local (mac-mini): <span class="unknown">unknown — no reporter snapshot yet; uncommitted / unpushed state cannot be asserted</span></li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h4><span class="n">05</span>User counts</h4>
+    <p>— (no analytics source mapped; not a live product)</p>
+  </div>
+
+  <div class="sec">
+    <h4><span class="n">06</span>Tasks — done vs remaining</h4>
+    <p><b>4 done / 6 remaining.</b></p>
+    <ul>
+      <li class="done">Discovery Phases 1–6 · repo pushed · .mission/ migration · spikes Q15/Q17 closed</li>
+      <li class="open">Step 1 — /mission skill v0 (in progress, this render is it)</li>
+      <li class="block">Step 2 — reporter at the Mac mini (owner: Adrian)</li>
+      <li class="block">Step 3 — enrolment wave one (owner: Adrian)</li>
+      <li class="open">Step 4 — discipline skill · Tier-2 decisions during build (Q7/Q8/Q14)</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h4><span class="n">07</span>Agent activity — read-only</h4>
+    <ul>
+      <li>2026-08-10 — Black Swan (discovery) — initial bundle; Decisions 2.1–2.6; Q2/Q3/Q6/Q13/Q16 closed; .mission/ migration</li>
+      <li>2026-08-10 — Black Swan (same session) — Phases 2–4 closed: Decisions 2.7–4.4; PRD journeys + architecture; PLAYBOOK.md</li>
+    </ul>
+  </div>
+
+  <div class="launch">
+    <h4>Launch pad</h4>
+    <div class="next">→ Finish build step 1: /mission skill v0 — then get to the Mac mini for the reporter.</div>
+    <div class="how">Paste this to open a context-loaded work chat:</div>
+    <pre>Open a chat connected to adrianludum/Mission-control. Read .mission/ — SYNOPSIS.md first, then TASKS.md and DECISIONS.md. Continue build step 1 (Decision 6.1): the /mission skill v0 — verify the skill + template render the board end-to-end, then checkpoint .mission/ per Decision 3.4.</pre>
+  </div>
+</section>
+<!-- /DATA:DETAILS -->
+
+<footer>Mission Control · generated by /mission · state read from INDEX.md, .mission/ folders and the Mac mini snapshot · risk heuristic is interim (Q8)</footer>
+
+<script>
+  // In-page drill-down (Decision 4.4): tap a tile -> show its detail, hide the board. No libraries.
+  (function () {
+    var board = document.getElementById('board');
+    function show(id) {
+      var d = document.getElementById('detail-' + id);
+      if (!d) return;
+      board.hidden = true;
+      d.hidden = false;
+      window.scrollTo(0, 0);
+    }
+    function back() {
+      document.querySelectorAll('.detail').forEach(function (d) { d.hidden = true; });
+      board.hidden = false;
+      window.scrollTo(0, 0);
+    }
+    document.querySelectorAll('.tile[data-project]').forEach(function (t) {
+      t.addEventListener('click', function () { show(t.dataset.project); });
+    });
+    document.querySelectorAll('button.back').forEach(function (b) {
+      b.addEventListener('click', back);
+    });
+  })();
+</script>
+
+</body>
+</html>
