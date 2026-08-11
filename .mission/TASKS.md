@@ -8,6 +8,7 @@
 - [ ] At beta (Tier 3): notifications, sharing, trust acceptance test
 
 ## Done
+- [x] 2026-08-11 — Tier-2 work merged to the default branch (fast-forward, on Adrian's word) — Decisions 8.1–8.3 now live for every /mission render, including the hourly Routine
 - [x] 2026-08-11 — Tier-2 questions closed and built (Decisions 8.1–8.3): Q8 scoring rubric replaces the interim heuristic in /mission; Q7 analytics vocabulary + snapshot/analytics.md cache wired into /mission, INDEX.md and /enrol; Q14 agent-log sourcing + unlogged-commits cross-check; Q9 closed by shipped reality (mobile in)
 - [x] 2026-08-11 — Hourly board-refresh Routine created (Decision 7.1): trigger `trig_014ZFiJn3X4EFTVFY5MvNpnf`, "Mission Control board refresh", hourly at :17 UTC, fresh session per fire, notifications off; creation succeeded from a fresh remote session with no approval gate
 - [x] 2026-08-11 — Build branch merged into the default branch (fast-forward, on Adrian's word from the plane); /mission + all skills now live on the default branch
