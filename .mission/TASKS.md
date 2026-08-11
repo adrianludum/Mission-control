@@ -1,15 +1,18 @@
 # Mission Control — Tasks
 *Blockers are entries marked **owner: Adrian** — jobs only he can do.*
 
-## To do (build order, Decision 6.1)
-- [ ] 1. Build /mission skill v0 — reads only this repo, worm wordmark, one tile, drill-down
-- [ ] 2. Build reporter at the Mac mini — Claude Code session: scan script + launchd plist + first snapshot — **owner: Adrian** (must be at the machine to kick it off)
-- [ ] 3. Enrolment wave one — run PLAYBOOK bulk prompt, 3–5 real repos — **owner: Adrian** (picks the repos, approves pairing table)
-- [ ] 4. Discipline skill — continuous-checkpoint instruction set for working sessions; break-in period starts
-- [ ] During build (Tier 2): Q7 analytics mapping, Q8 risk scoring, Q14 agent-log sourcing
+## To do
+- [ ] Install the reporter at the Mac mini — follow `reporter/INSTALL.md` (~2 min: adjust paths, chmod, launchctl bootstrap) — **owner: Adrian** (must be at the machine)
+- [ ] Run enrolment wave one — `/enrol` in a Claude Code session at the Mac mini, 3–5 real repos — **owner: Adrian** (picks the repos, approves pairing table)
+- [ ] Merge build branch `claude/automated-build-steps-fiyq14` into main — **owner: Adrian**
+- [ ] During build (Tier 2): Q7 analytics mapping, Q8 risk scoring (interim heuristic in /mission SKILL.md), Q14 agent-log sourcing
 - [ ] At beta (Tier 3): notifications, sharing, trust acceptance test
 
 ## Done
+- [x] 2026-08-11 — Build step 1: /mission skill v0 — INDEX.md registry, SKILL.md read path + rules, self-contained dashboard template (worm SVG wordmark, two bands, drill-down, launch pad; render-verified light/dark/mobile)
+- [x] 2026-08-11 — Build step 2 (code): reporter script + launchd plist + INSTALL.md, tested end-to-end against fake repos incl. failure paths; only installation remains (see To do)
+- [x] 2026-08-11 — Build step 3 (tooling): ten-file mission-seed templates + /enrol skill (pairing-table approval gate); only the wave run remains (see To do)
+- [x] 2026-08-11 — Build step 4: mission-discipline skill + CLAUDE.md snippet for enrolled repos + this repo's own CLAUDE.md; break-in period (1.7) can begin
 - [x] 2026-08-10 — Repo pushed to GitHub; files-as-truth architecture live
 - [x] 2026-08-10 — Discovery Phases 1–6 complete: 29 decisions, PRD stamped ready-to-build
 - [x] 2026-08-10 — Dogfood migration to `.mission/` standard; PLAYBOOK.md ops cheat sheet
