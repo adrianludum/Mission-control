@@ -20,7 +20,15 @@ git push -u origin main
 
 If both sides have content (local files AND commits on GitHub), don't reconcile by hand — use the enrolment prompt below.
 
-## Enrol existing projects (bulk) — paste into Claude Code on the Mac mini
+## Enrol existing projects (bulk)
+
+**Primary path** — in a Claude Code session at the Mac mini (with this repo available), type:
+```
+/enrol
+```
+The `enrol` skill (`.claude/skills/enrol/`) runs the whole wave: surveys `~/Projects`, shows a pairing table for approval before acting, wires remotes, reconciles histories (never force-pushes), seeds `.mission/` from `templates/mission-seed/` back-filled from each repo, indexes each project in INDEX.md, and reports — repos missing the Claude GitHub App grant are listed as "needs app access", not failed.
+
+**Fallback** — session without the skill: paste this into Claude Code on the Mac mini:
 > Survey the subfolders of my Projects folder, match each to my GitHub repos by name, and for each match: wire the remote, reconcile any history differences, and push. Show me the pairing table before you act. Then seed a `.mission/` folder (the ten-file standard from adrianludum/Mission-control) into each repo, back-filled from what you can read in it.
 
 ## Promote a chat idea to a tracked project ("track this" flow, per Decision 4.2)
