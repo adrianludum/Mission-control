@@ -1,19 +1,8 @@
 # Mac mini snapshot
-*Generated: 2026-08-11T11:27:34Z*
+*Generated: 2026-08-11T12:31:10Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 20*
-
-## app.ludum
-
-| Fact | Value |
-| --- | --- |
-| Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
-| Unpushed | none |
-| Remote | origin (https://github.com/adrianludum/appludumv4.git) |
-| Last commit | 2026-08-11T12:21:42+01:00 — mission-control: enrol — seed .mission/ |
 
 ## Chief of Staff
 
@@ -25,6 +14,50 @@
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/the-chief.git) |
 | Last commit | 2026-06-12T11:29:16+01:00 — Sync: commit local changes |
+
+## HRR-Commentator-2026
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 2 |
+| Untracked | 3 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/hrr.git) |
+| Last commit | 2026-08-11T12:21:51+01:00 — mission-control: enrol — seed .mission/ |
+
+## ULBC-salesforce
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/ULBC-Salesforce.git) |
+| Last commit | 2026-07-09T10:07:07+01:00 — Phase 7: Gift Aid claims, declaration hardening, Stripe-as-rail pivot (Decisions 7.1–7.9) |
+
+## World Rowing Results
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | claude/fervent-yalow-bca81d: no upstream; claude/strange-khorana-138bb8: no upstream; design-rebuild: 4 ahead |
+| Remote | origin (https://github.com/adrianludum/WorldRowingResults.git) |
+| Last commit | 2026-08-11T12:21:47+01:00 — mission-control: enrol — seed .mission/ |
+
+## app.ludum
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/appludumv4.git) |
+| Last commit | 2026-08-11T12:21:42+01:00 — mission-control: enrol — seed .mission/ |
 
 ## drone-rowing-analysis
 
@@ -47,17 +80,6 @@
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/familysite.git) |
 | Last commit | 2026-08-11T12:21:43+01:00 — mission-control: enrol — seed .mission/ |
-
-## HRR-Commentator-2026
-
-| Fact | Value |
-| --- | --- |
-| Branch | main |
-| Uncommitted | 2 |
-| Untracked | 3 |
-| Unpushed | none |
-| Remote | origin (https://github.com/adrianludum/hrr.git) |
-| Last commit | 2026-08-11T12:21:51+01:00 — mission-control: enrol — seed .mission/ |
 
 ## imagesAi
 
@@ -145,7 +167,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-11T12:22:56+01:00 — checkpoint: wave one closed in TASKS/SYNOPSIS; new Adrian-owned decisions logged |
+| Last commit | 2026-08-11T12:32:33+01:00 — checkpoint: analytics cache seeded (Trip HQ live, HRR unreported); board republished with all 8 projects |
 
 ## new-ludum-website 2
 
@@ -201,25 +223,3 @@
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-08-11T12:21:50+01:00 — mission-control: enrol — seed .mission/ |
-
-## ULBC-salesforce
-
-| Fact | Value |
-| --- | --- |
-| Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
-| Unpushed | none |
-| Remote | origin (https://github.com/adrianludum/ULBC-Salesforce.git) |
-| Last commit | 2026-07-09T10:07:07+01:00 — Phase 7: Gift Aid claims, declaration hardening, Stripe-as-rail pivot (Decisions 7.1–7.9) |
-
-## World Rowing Results
-
-| Fact | Value |
-| --- | --- |
-| Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
-| Unpushed | claude/fervent-yalow-bca81d: no upstream; claude/strange-khorana-138bb8: no upstream; design-rebuild: 4 ahead |
-| Remote | origin (https://github.com/adrianludum/WorldRowingResults.git) |
-| Last commit | 2026-08-11T12:21:47+01:00 — mission-control: enrol — seed .mission/ |
