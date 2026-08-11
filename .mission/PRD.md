@@ -1,5 +1,5 @@
 # Mission Control — Product Requirements Document
-*Status: In Progress — Phases 1–4 complete*
+*Status: In Progress — Phases 1–5 complete*
 *Last synthesised: 2026-08-10*
 
 ## 1. Overview
@@ -87,7 +87,9 @@ Serverless in the literal sense: no hosted app. **GitHub is the database, Claude
 - **Ops reference**: PLAYBOOK.md at repo root — paste-ready commands, enrolment prompt, promotion flow, phrase glossary.
 
 ## 10. Visual Direction & Tone
-(Phase 5. Prototype v0 is a placeholder, not a direction decision.)
+**Worm-era NASA modernism** (5.1): "MISSION CONTROL" wordmark in worm-style lettering (custom, in-the-style-of — not the NASA logo), worm-red as sole brand accent, Helvetica-family grotesk, modernist grid, generous space. Base ground and status colours (green/amber/orange/red) carry over from prototype-v0 (paper-light + dark variant). Reference: 1975 NASA Graphics Standards Manual. All type/assets embedded in the artifact — no external loading (4.4).
+
+**Emotional contract** (5.2): *"Systems nominal — go enjoy your coffee."* Calm dismissal by default; loudness earned only by genuine need; never a guilt machine. Green board = permission to leave.
 
 ## 11. Risks & Dependencies
 - **Trust-decay** (named killer): briefings that stay ~90% right after the tuning window kill the product (1.7). Mitigations: capture at source, loud degradation, reconstruction backstop.

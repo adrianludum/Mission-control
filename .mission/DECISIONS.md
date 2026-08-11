@@ -178,3 +178,15 @@
 - **Date**: 2026-08-10
 - **Supersedes**: —
 - **Note**: Font must be embedded/self-contained in the artifact (no external font loading); pick a NASA-worm-alike with a clean licence in Phase 5.
+
+### Decision 5.1 — Visual direction: NASA worm-era modernism (1975 Graphics Standards Manual)
+- **What**: The dashboard's design language is worm-era NASA (Adrian: "1972–1995"): "MISSION CONTROL" wordmark in worm-style lettering (single-stroke rounded letterforms, crossbar-less A — custom lettering *in the style of* the worm, not the NASA logo itself), worm-red as the sole brand accent, Helvetica-family grotesk, modernist grid, generous calm space. The prototype-v0 palette survives as the base ground (paper-light + dark variant) with its restrained status colours (green/amber/orange/red) doing the operational talking.
+- **Why**: The worm era is institutional confidence, not CRT nostalgia — it ages like a standards manual, not a costume. Merges Adrian's NASA instinct (4.4) with the prototype's daily-readable restraint.
+- **Date**: 2026-08-10
+- **Supersedes**: —
+
+### Decision 5.2 — Emotional contract: "Systems nominal — go enjoy your coffee"
+- **What**: The board's default register is calm dismissal: when nothing needs Adrian, it says so plainly and sends him away. Loudness is earned only by genuine need (a screaming tile per 3.1/3.3). The dashboard must never become a guilt machine — a wall of open loops experienced as accusation. Green board = permission to leave.
+- **Why**: Adrian's enthusiastic adoption of the phrase. A daily-read briefing that punishes every glance trains avoidance; trust (1.7) requires the tool to be pleasant to consult when things are fine.
+- **Date**: 2026-08-10
+- **Supersedes**: —
