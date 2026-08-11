@@ -8,8 +8,9 @@ Paste-ready steps for a Claude Code session running **at the Mac mini**. Two min
   this path and the log path, because **launchd does not expand `$HOME`** in `ProgramArguments`
   or `StandardOutPath`. If the username or clone location differs, edit the two `/Users/adrian/...`
   paths in `com.adrianludum.mission-reporter.plist` before installing.
-- The mini can push to this repo **non-interactively** — i.e. `git -C ~/Projects/Mission-control push origin main`
-  works without prompting (SSH key loaded, or credential helper / `gh auth` configured).
+- The mini can push to this repo **non-interactively** — i.e. `git -C ~/Projects/Mission-control push`
+  (the checked-out branch; this repo has no `main`) works without prompting (SSH key loaded, or
+  credential helper / `gh auth` configured).
   If it prompts, fix auth first; launchd runs have no terminal to answer prompts.
 
 ## Install
