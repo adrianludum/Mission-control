@@ -19,3 +19,6 @@ No tool combines live git state with *open loops* — undecided questions, unimp
 ## Context facts
 - Projects live on: a Mac mini (local repos), GitHub, and some only inside old Claude chats (no repo yet).
 - Connected services available in Cowork: GitHub-adjacent tooling via shell, Vercel, Supabase.
+
+## Build (2026-08-11)
+- **First live /mission render worked end-to-end from a remote session** (Adrian on a plane, no Mac mini): read path (INDEX → .mission/ → snapshot), loud missing-snapshot degradation, and artifact render all behaved as designed. The board is usable before the reporter exists — honest degradation is doing its job.
