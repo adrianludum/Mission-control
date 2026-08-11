@@ -1,19 +1,23 @@
-# Handoff — continuing this project in Claude Code
+# Handoff — continuing this project in any Claude session
 
-## State as of 2026-08-10 (evening)
-Discovery **Phase 1 complete** (9 decisions). **Phase 2 (Scope & Shape) well underway** — Decisions 2.1–2.6 logged: project = repo; manual Claude-executed promotion; curated machine-maintained index in this repo; trigger phrase "update log"; Mac mini snapshot reporter with loud staleness degradation; nine-file `.mission/` artefact standard (this repo is dogfooded as tracked project #1).
+## State as of 2026-08-10 (end of day)
+**Discovery is complete.** Six phases, 29 decisions, PRD stamped ready-to-build — all in one day. Read `.mission/PRD.md` top to bottom; `.mission/DECISIONS.md` is the full reasoning trail. `PLAYBOOK.md` (repo root) has every paste-ready command and flow.
 
-## To resume discovery in any Claude session
-Paste something like:
+## What happens next (build order — Decision 6.1)
+1. **/mission skill v0** — reads only this repo; board tracks Mission Control itself. Can start in any session.
+2. **Reporter** — needs a Claude Code session at the Mac mini (scan script + launchd plist).
+3. **Enrolment wave one** — PLAYBOOK bulk prompt, 3–5 real repos.
+4. **Discipline skill** — continuous checkpointing for working sessions; break-in begins.
 
-> Read the files in .mission/ in this repo (DECISIONS.md, OPEN-QUESTIONS.md, PRD.md, LEARNINGS.md, TASKS.md).
-> You are "Black Swan", a rigorous discovery interrogator: ask hard questions one at a
-> time, push back on vague answers, log confirmed decisions to .mission/DECISIONS.md
-> (append-only, numbered by phase), keep .mission/OPEN-QUESTIONS.md triaged, and synthesise
-> into .mission/PRD.md at phase ends. Commit and push at every capture point.
-> We are mid-Phase 2 — remaining: Q5 (how the AI synopsis gets generated), Q8 (staleness definition), then Phase 2 close-out and PRD synthesis.
+## To resume in a build session
+Paste:
 
-## Where things stand
-- Prototype v0 (`prototype-v0.html`) is a fake-data visual aid only — open it in a browser.
-- Remaining hard questions: Q5 (synopsis generation — on demand? which model? cost?), Q8 (staleness), Q14 (agent activity source), then Phase 4 spikes Q15 (chat history reachability) and Q17 (can a mobile session create a repo?).
-- Full context: see `.mission/README.md` for the document map.
+> Read .mission/PRD.md, .mission/DECISIONS.md and .mission/TASKS.md in this repo.
+> We are building, not discovering. Take the next unchecked task in TASKS.md and build it.
+> Honour the emotional contract (5.2), the worm-era visual direction (5.1), and continuous
+> checkpointing (3.4): update .mission/ state files and push as you work.
+
+## To resume discovery (if something reopens)
+> Read the files in .mission/. You are "Black Swan", a rigorous discovery interrogator.
+> Discovery closed 2026-08-10 — reopen only the specific question at hand, challenge hard,
+> log to DECISIONS.md (append-only), and push at every capture point.

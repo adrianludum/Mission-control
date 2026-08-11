@@ -190,3 +190,9 @@
 - **Why**: Adrian's enthusiastic adoption of the phrase. A daily-read briefing that punishes every glance trains avoidance; trust (1.7) requires the tool to be pleasant to consult when things are fine.
 - **Date**: 2026-08-10
 - **Supersedes**: —
+
+### Decision 6.1 — Build order (v0.1, two-week line after step 3)
+- **What**: 1) The /mission skill reading only this repo — Mission Control tracking itself; proves the full read path, board usable day one with n=1. 2) The reporter — built at the Mac mini via Claude Code (script + launchd plist + first snapshot). 3) Enrolment wave one — PLAYBOOK bulk prompt, 3–5 real repos wired/seeded/indexed. 4) The discipline skill — the instruction set making working sessions continuously checkpoint (3.4 made real); week three, and the break-in period (1.7) starts when it lands.
+- **Why**: Each step ships something usable and de-risks the next; self-tracking first means the tool dogfoods from hour one.
+- **Date**: 2026-08-10
+- **Supersedes**: —

@@ -1,6 +1,8 @@
 # Mission Control — Product Requirements Document
-*Status: In Progress — Phases 1–5 complete*
+*Status: Complete — discovery Phases 1–6 done; ready to build*
 *Last synthesised: 2026-08-10*
+
+**In one breath:** Mission Control is a personal briefing room summoned by typing /mission in any Claude chat: a NASA-worm-styled board of every project — where each one stands, what's still open, and what only Adrian can unblock — kept true not by his memory but by the sessions he works in, which write state to each project's repo as decisions happen.
 
 ## 1. Overview
 Mission Control is a personal dashboard that lets Adrian re-enter any of his projects after days away and be fully briefed in minutes. Summoned by typing `/mission` in any Claude chat on any device, it reads project state — git status, decisions, open questions, tasks, agent activity — and presents a briefing per project: where things stand, what's still open, and what only Adrian can unblock.
@@ -99,4 +101,10 @@ Serverless in the literal sense: no hosted app. **GitHub is the database, Claude
 - **Unpromoted ideas die invisible** — accepted cost of manual curation (2.2).
 
 ## 12. Open Questions
-See OPEN-QUESTIONS.md. Remaining: Q7 (analytics mapping), Q8 (staleness definition), Q14 (agent-log sourcing) — Tier 2; Q10/Q11 — Tier 3; spikes Q15/Q17.
+See OPEN-QUESTIONS.md. Remaining: Q7 (analytics mapping), Q8 (risk/staleness/incompleteness scoring), Q14 (agent-log sourcing) — Tier 2, decide during build; Q10/Q11 + trust acceptance test — Tier 3, beta. Nothing blocks code.
+
+## 13. Build Plan (Decision 6.1)
+1. **/mission skill v0** — reads only this repo; Mission Control tracks itself. Worm wordmark, one tile, drill-down, synopsis assembly. Full read path proven.
+2. **Reporter** — built at the Mac mini in a Claude Code session: scan script + launchd plist, hourly snapshot into this repo.
+3. **Enrolment wave one** — PLAYBOOK bulk prompt; 3–5 real repos wired, seeded, indexed. *Two-week ship line here.*
+4. **Discipline skill** — working sessions gain the continuous-checkpoint instruction set. Break-in period (1.7) begins.

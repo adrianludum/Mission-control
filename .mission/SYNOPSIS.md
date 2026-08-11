@@ -1,8 +1,8 @@
 # Mission Control — Synopsis
 *Written at checkpoint, 2026-08-10 night. Overwritten at every save.*
 
-**Where it stands:** Discovery Phases 1–4 complete, 26 decisions. Both riskiest assumptions closed same-day: sessions can't create repos (manual birth + "sync with git X", 4.2); claude.ai chat history is unreachable (reconstruction = git + Claude Code transcripts, 4.1). Stack fixed: GitHub is the database, Claude sessions the compute, the /mission skill the UI (single-artifact visual dashboard, NASA wordmark, tap-to-drill, 4.4), one dumb hourly launchd reporter the only daemon (4.3). PLAYBOOK.md holds paste-ready ops. Nothing left blocks code.
+**Where it stands:** **Discovery complete.** Six phases, 29 decisions, PRD stamped ready-to-build in one day. The product: /mission summons a worm-era-NASA visual board of every project — two bands, risk-ordered tiles, tap-to-drill — kept true by sessions that write `.mission/` state as decisions happen, an hourly Mac mini reporter, and honest loud degradation when anything is stale. Emotional contract: "Systems nominal — go enjoy your coffee."
 
-**Open:** Phase 5 (Visual & Tone) — half-seeded by 4.4. Tier-2 build-time: Q7 (analytics mapping), Q8 (risk scoring), Q14 (agent-log sourcing). Tier-3: notifications, sharing, trust acceptance test.
+**Open:** build-time definitions only (Q7 analytics, Q8 scoring, Q14 agent-log source). Nothing blocks code.
 
-**Only Adrian can unblock:** run the bulk-enrolment prompt (PLAYBOOK.md) in Claude Code on the Mac mini; Phase 5's two closing questions.
+**Only Adrian can unblock:** step 2 of the build (be at the Mac mini to build the reporter) and step 3 (pick + approve enrolment wave one). Step 1 (/mission skill v0) can start in any session, now.

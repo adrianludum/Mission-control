@@ -1,16 +1,16 @@
 # Mission Control — Tasks
 *Blockers are entries marked **owner: Adrian** — jobs only he can do.*
 
-## To do
-- [ ] Build Mac mini state reporter (Decision 2.5) — cadence/format TBD in Phase 4
-- [ ] Build the /mission skill — construction/distribution TBD in Phase 4
-- [ ] Enrol first existing repo by back-fill (Decision 2.6) — pick the guinea pig — **owner: Adrian** (the pick)
-- [ ] Tier-2 definitions during build: Q7 (analytics mapping), Q8 (risk/staleness/incompleteness scoring), Q14 (agent-log sourcing)
+## To do (build order, Decision 6.1)
+- [ ] 1. Build /mission skill v0 — reads only this repo, worm wordmark, one tile, drill-down
+- [ ] 2. Build reporter at the Mac mini — Claude Code session: scan script + launchd plist + first snapshot — **owner: Adrian** (must be at the machine to kick it off)
+- [ ] 3. Enrolment wave one — run PLAYBOOK bulk prompt, 3–5 real repos — **owner: Adrian** (picks the repos, approves pairing table)
+- [ ] 4. Discipline skill — continuous-checkpoint instruction set for working sessions; break-in period starts
+- [ ] During build (Tier 2): Q7 analytics mapping, Q8 risk scoring, Q14 agent-log sourcing
+- [ ] At beta (Tier 3): notifications, sharing, trust acceptance test
 
 ## Done
 - [x] 2026-08-10 — Repo pushed to GitHub; files-as-truth architecture live
-- [x] 2026-08-10 — Phase 2 decisions 2.1–2.6 logged; Q2, Q3, Q6, Q13, Q16 closed
-- [x] 2026-08-10 — Dogfood migration: this repo moved to `.mission/` standard
-- [x] 2026-08-10 — Phase 3 complete: journeys J1–J4 in PRD
-- [x] 2026-08-10 — Spike Q17 run by Adrian (result: sessions can't create repos → Decision 4.2)
-- [x] 2026-08-10 — Q15 closed from engineering knowledge (Decision 4.1)
+- [x] 2026-08-10 — Discovery Phases 1–6 complete: 29 decisions, PRD stamped ready-to-build
+- [x] 2026-08-10 — Dogfood migration to `.mission/` standard; PLAYBOOK.md ops cheat sheet
+- [x] 2026-08-10 — Spikes closed: Q17 (sessions can't create repos → manual birth), Q15 (chat history unreachable → net narrowed)
