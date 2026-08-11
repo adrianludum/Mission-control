@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-11T11:13:06Z*
+*Generated: 2026-08-11T11:27:34Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 20*
@@ -13,7 +13,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/appludumv4.git) |
-| Last commit | 2026-08-05T23:35:01+01:00 — Add top-level README; drop duplicate root coach-web html |
+| Last commit | 2026-08-11T12:21:42+01:00 — mission-control: enrol — seed .mission/ |
 
 ## Chief of Staff
 
@@ -46,7 +46,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/familysite.git) |
-| Last commit | 2026-08-04T18:26:50+12:00 — Fix iOS crash: never load the 2.5GB on-device model on phones |
+| Last commit | 2026-08-11T12:21:43+01:00 — mission-control: enrol — seed .mission/ |
 
 ## HRR-Commentator-2026
 
@@ -57,7 +57,7 @@
 | Untracked | 3 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/hrr.git) |
-| Last commit | 2026-07-09T06:48:20+01:00 — youtube: hand-curated historic line-ups — P.C. Smith, Leander, Wargrave 2022 |
+| Last commit | 2026-08-11T12:21:51+01:00 — mission-control: enrol — seed .mission/ |
 
 ## imagesAi
 
@@ -68,7 +68,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/ImageAI.git) |
-| Last commit | 2026-08-03T11:49:14+01:00 — Add OCR (text-in-image) search |
+| Last commit | 2026-08-11T12:21:44+01:00 — mission-control: enrol — seed .mission/ |
 
 ## language
 
@@ -79,7 +79,7 @@
 | Untracked | 4 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/language.git) |
-| Last commit | 2026-07-14T14:17:53+01:00 — Discovery decisions, learnings, and working Spanish audio-loop prototype |
+| Last commit | 2026-08-11T12:21:53+01:00 — mission-control: enrol — seed .mission/ |
 
 ## live-video-streaming
 
@@ -142,10 +142,10 @@
 | --- | --- |
 | Branch | claude/mission-control-setup-wnn4tr |
 | Uncommitted | 0 |
-| Untracked | 1 |
+| Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-11T02:40:15Z — checkpoint: Routine first firing verified (board 02:19 UTC); duplicate :13 Routine deleted, race logged to FEEDBACK-LOG |
+| Last commit | 2026-08-11T12:22:56+01:00 — checkpoint: wave one closed in TASKS/SYNOPSIS; new Adrian-owned decisions logged |
 
 ## new-ludum-website 2
 
@@ -200,7 +200,7 @@
 | Untracked | 0 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-07-22T14:45:34+02:00 — fix: honest Connected-apps section — Ludum real, unbuilt integrations pale 'Soon' rows |
+| Last commit | 2026-08-11T12:21:50+01:00 — mission-control: enrol — seed .mission/ |
 
 ## ULBC-salesforce
 
@@ -222,4 +222,4 @@
 | Untracked | 0 |
 | Unpushed | claude/fervent-yalow-bca81d: no upstream; claude/strange-khorana-138bb8: no upstream; design-rebuild: 4 ahead |
 | Remote | origin (https://github.com/adrianludum/WorldRowingResults.git) |
-| Last commit | 2026-07-28T08:27:05Z — data: update results (2026-07-28) |
+| Last commit | 2026-08-11T12:21:47+01:00 — mission-control: enrol — seed .mission/ |
