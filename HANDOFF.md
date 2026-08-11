@@ -6,10 +6,11 @@
 Read `.mission/SYNOPSIS.md` first, then `TASKS.md`. Full reasoning trail: `.mission/DECISIONS.md` (now 30 decisions). Ops cheat sheet: `PLAYBOOK.md`.
 
 ## What's next (in order)
-1. **Create the hourly board-refresh Routine** — designed in Decision 7.1, blocked only on Adrian approving the trigger-creation tool call in a session. Ask any session to "create the board refresh routine".
-2. **Install the reporter at the Mac mini** — `reporter/INSTALL.md`, ~2 min at the machine. Until then every board honestly shows "Mac mini has not reported".
-3. **Enrolment wave one** — `/enrol` in a Claude Code session at the Mac mini; Adrian picks 3–5 repos and approves the pairing table.
-4. Then: break-in period (Decision 1.7) — use /mission daily, correct via repo chats, FEEDBACK-LOG is the tuning record. Tier-2 questions (Q7 analytics, Q8 scoring, Q14 agent-log source) decided along the way.
+1. **Install the reporter at the Mac mini** — `reporter/INSTALL.md`, ~2 min at the machine. Until then every board honestly shows "Mac mini has not reported".
+2. **Enrolment wave one** — `/enrol` in a Claude Code session at the Mac mini; Adrian picks 3–5 repos and approves the pairing table.
+3. Then: break-in period (Decision 1.7) — use /mission daily, correct via repo chats, FEEDBACK-LOG is the tuning record. Tier-2 questions (Q7 analytics, Q8 scoring, Q14 agent-log source) decided along the way.
+
+The hourly board-refresh Routine (Decision 7.1) is **live** as of 2026-08-11: "Mission Control board refresh", hourly at :17 UTC, fresh session per fire, republishes the standing URL in `BOARD.md`. First-firing verification is an open task in `.mission/TASKS.md`.
 
 ## To resume in a new session
 Paste:
