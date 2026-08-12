@@ -2,13 +2,14 @@
 *Blockers are entries marked **owner: Adrian** — jobs only he can do.*
 
 ## To do
-- [ ] Enrolment wave two — surveyed and written to `CANDIDATES.md` as 8 ready candidates plus a needs-work group. **Tick what you want and run `/roster`**; nothing else is pending
+- [ ] Enrolment wave two — **tick what you want in the Roster band on the board**, hit Copy, paste it into any Claude chat. 8 ready candidates plus a needs-work group; 47 projects listed in total
 - [ ] Decide the `Campaign_CRM.git` collision — `ludum-campaigns` and `ludum-outreach` are two divergent working copies of the *same* remote, on different feature branches 3 months apart. Neither is enrollable until one is canonical — **owner: Adrian**
 - [ ] Get `training_status`'s `.mission/` onto a shared branch — it was seeded onto `feat/resting-measurements` only, so the board cannot read it from the current checkout (the 2026-08-12 render read it from that branch directly). Fix `/enrol` to seed onto the default branch, and have `/roster` flag "indexed but unreadable" as drift
 - [ ] Verify the watch Routine's first firing (2026-08-13 07:12 UTC). Expected result: **nothing sent** — no condition currently qualifies. A message on day one means the thresholds are wrong
 - [ ] Housekeeping surfaced by the wave-two survey (not blocking): `wrr-worktrees` is 9.7G of dead worktrees pointing at the old `/Users/adriancassidy` home path, all `prunable`; two Firebase service-account private keys sit loose in `_archive/boat-hub-v1/` (verified never committed to any remote); `ludum-app/` and `UK Domestic Results/` are empty stubs holding only `.claude/settings.local.json`
 
 ## Done
+- [x] 2026-08-12 — **Roster picker shipped on the board** (Decision 9.7): all 47 surveyed projects as tickable rows grouped as CANDIDATES.md groups them, diffing against the rendered state and generating a paste-ready enrol/retire instruction with a Copy button. Built into `template.html` and the /mission skill, so the hourly Routine keeps rendering it. No Save control — the page is sandboxed and cannot write the repo, and saying otherwise would be a lie
 - [x] 2026-08-12 — **Tier 3 closed — no open questions remain at any tier.** Q10 built as the escalation-only watch (`/mission-watch` + `watch-state.md` + daily Routine `trig_01TssVRkUBnajuBJ7tSUQ8fQ` at 07:12 UTC, silent by default); Q11 closed by decision (sharing stays out); the trust threshold parked since 3.5 specified in `TRUST-TEST.md`. Decisions 9.4, 9.6, 9.5
 - [x] 2026-08-12 — **Roster shipped** (Decision 9.3, on Adrian's ask for "a way of selecting which project to enrol or remove later"): `CANDIDATES.md` control surface + `/roster` skill; `/enrol` now reads the roster first; retirement defined as removing the board row only. Every folder on the mini surveyed into it — 8 ready candidates, 4 needing work, 14 nested repos, 20 ignored with reasons
 - [x] 2026-08-12 — **Reporter extended to depth-2**, 20 → 34 repos: container folders (`events/`, `fitness/`, `rowing/`, …) hold real projects a depth-1 scan never saw. Nested repos are named `<container>/<repo>`; the scan never descends into a repo. Dry-run verified, snapshot regenerated

@@ -256,3 +256,9 @@
 - **Why**: The PRD scoped v1 as strictly personal and there are no collaborators to serve. Building a sharing surface now would mean designing for a hypothetical reader and splitting every future render decision two ways — while the real cost of the board being private is currently zero. The prior-art note stands: team-scale portals were rejected at discovery as far too heavy for a solo builder. Reopen if a collaborator actually appears.
 - **Date**: 2026-08-12
 - **Supersedes**: Closes Q11, open since discovery.
+
+### Decision 9.7 — The roster picker lives on the board and produces an instruction, never a save
+- **What**: The board renders a **Roster** band from `CANDIDATES.md` — every surveyed project as a tickable row, grouped as that file groups them, with Ignored collapsed. Ticking diffs against the rendered state and produces a paste-ready instruction ("Enrol: …, Retire: …") with a Copy button. The page never claims to save: it has no Save or Apply control, because a published artifact is static and sandboxed and cannot write to the repo. `/mission` renders the band; `/roster` applies what gets pasted.
+- **Why**: Adrian asked to pick from a list rather than hand-edit markdown. The available artifact capabilities are only `downloads` and `mcp`, and there is no GitHub connector — so genuine write-back is not on the table, and a Save button would be a lie the trust bar (1.7) cannot afford. Generating the instruction instead is honest and reuses a pattern the board already has: the launch pad has always produced paste-ready prompts. Copy uses `execCommand` first because the Clipboard API is frequently blocked inside the sandboxed frame, and leaves the text selected if both fail — which also solves Adrian's separate complaint that URLs are hard to copy out of an SSH terminal.
+- **Date**: 2026-08-12
+- **Supersedes**: Extends 9.3 — CANDIDATES.md remains the source of truth; this adds a second door onto it.

@@ -72,6 +72,17 @@ Each project detail view must answer Decision 1.2's seven items:
 6. Tasks completed vs remaining
 7. Read-only agent activity log — sourced **solely from that repo's `.mission/AGENT-LOG.md`** (Decision 8.3). Cross-check it against recent commits: commits since the newest log entry are rendered as one honest gap line — "unlogged activity: N commits since last log entry" — which also trips the contradiction rule (§3). Never scrape transcripts at render time; Mac mini `~/.claude` transcripts are reconstruction-only inputs (4.1).
 
+### The roster band (Decision 9.3)
+
+Below the two status bands, render a **Roster** section from `CANDIDATES.md` — the picker Adrian uses to choose what is tracked, at the `<!-- DATA:ROSTER -->` injection point.
+
+- One `label.row` per project, **grouped exactly as `CANDIDATES.md` groups them** (On the board / Ready to enrol / Needs work first / Nested / Ignored). Carry each group's explanatory note across; for "Needs work first" rows put the blocker in `.row-why.blocked` so the reason is visible before Adrian ticks it.
+- A project currently on the board gets `checked` **and** `data-on="1"`. One not on the board gets neither. These must agree at render time — the page diffs against `data-on`, so any mismatch makes the board open already showing phantom changes.
+- Set `data-name` to the display name exactly as `INDEX.md` and `CANDIDATES.md` spell it; the generated instruction quotes it back, and a session applies it by matching that name.
+- Put **Ignored** rows inside a collapsed `<details>` — they are decisions already made, and they are the longest group. They stay tickable so a change of mind costs nothing.
+
+The page is static and sandboxed: it cannot write `CANDIDATES.md`, and must never imply it can. Ticking produces a paste-ready instruction, nothing more. Never render a "Save" or "Apply" control.
+
 The detail view **ends in a launch pad** (Decision 3.2): the top next action, plus the exact prompt to paste to open a context-loaded work chat on that repo (e.g. "Open a chat connected to <repo>. Read .mission/ — SYNOPSIS first — then: <top next action>.").
 
 ## 5. Emotional contract (Decision 5.2)

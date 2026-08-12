@@ -131,6 +131,58 @@
   .plan { font-variant-numeric: tabular-nums; color: var(--muted); }
   .go { color: var(--worm); font-weight: 700; }
 
+  /* ---- roster picker (Decision 9.3): tick to enrol, untick to retire ---- */
+  .roster-group { margin-top: 16px; }
+  .roster-group > h3 {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 2px;
+  }
+  .roster-group > .note { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .rows { display: flex; flex-direction: column; gap: 1px; background: var(--grid); border: 1px solid var(--grid); border-radius: 10px; overflow: hidden; }
+  label.row {
+    display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; min-height: 44px;
+    background: var(--surface); cursor: pointer;
+  }
+  label.row:hover { background: var(--wash); }
+  label.row:focus-within { outline: 2px solid var(--worm); outline-offset: -2px; }
+  label.row input { width: 18px; height: 18px; margin: 2px 0 0; flex: none; accent-color: var(--worm); cursor: pointer; }
+  .row-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .row-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .row-path { font-size: 11.5px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; }
+  .row-why { font-size: 12.5px; color: var(--ink-2); }
+  .row-why.blocked { color: var(--serious); }
+  .changed { display: none; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  label.row.diff .changed { display: inline; color: var(--worm); }
+  label.row.diff { background: var(--wash); box-shadow: inset 3px 0 0 var(--worm); }
+
+  /* the generated instruction — reuses the launch-pad idiom */
+  .basket { margin-top: 22px; border: 2px solid var(--worm); border-radius: 12px; padding: 16px; }
+  .basket h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--worm); }
+  .basket .summary { font-size: 15px; font-weight: 600; margin-top: 8px; }
+  .basket .how { font-size: 12.5px; color: var(--muted); margin-top: 10px; }
+  .basket textarea {
+    width: 100%; margin-top: 6px; padding: 12px; background: var(--wash);
+    border: 1px solid var(--border); border-radius: 8px; color: var(--ink-2);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12.5px; line-height: 1.5; resize: vertical; min-height: 92px;
+  }
+  .basket textarea:focus { outline: 2px solid var(--worm); outline-offset: 1px; }
+  .basket .acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; align-items: center; }
+  button.act {
+    font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
+    min-height: 44px; padding: 8px 18px; border-radius: 999px;
+    background: var(--worm); color: #fff; border: 1px solid var(--worm);
+  }
+  button.act.ghost { background: transparent; color: var(--ink); border-color: var(--border); }
+  button.act:hover { filter: brightness(1.08); }
+  button.act.ghost:hover { border-color: var(--worm); color: var(--worm); }
+  button.act:focus-visible { outline: 2px solid var(--worm); outline-offset: 2px; }
+  .basket .said { font-size: 12.5px; color: var(--good-text); font-weight: 600; }
+  .basket[data-dirty="no"] .summary { color: var(--ink-2); font-weight: 400; font-size: 13.5px; }
+  .basket[data-dirty="no"] .how,
+  .basket[data-dirty="no"] textarea,
+  .basket[data-dirty="no"] .acts { display: none; }
+
   /* ---- detail views ---- */
   .detail[hidden], #board[hidden] { display: none; }
   .backbar { display: flex; align-items: center; gap: 12px; margin-top: 22px; }
@@ -273,6 +325,40 @@
     <!-- /DATA:TILES-DORMANT -->
   </section>
 
+  <section class="band" aria-label="Project roster">
+    <h2>Roster</h2>
+    <div class="sub">What is tracked · tick to enrol, untick to take off the board — nothing is deleted either way</div>
+
+    <!-- DATA:ROSTER — one label.row per project in CANDIDATES.md, grouped as that file groups them.
+         data-on="1" marks a project currently on the board; the checkbox's checked state must match
+         it at render time, so the diff below starts empty. -->
+    <div class="roster-group">
+      <h3>On the board</h3>
+      <div class="rows">
+        <label class="row">
+          <input type="checkbox" checked data-on="1" data-name="Mission Control">
+          <span class="row-body">
+            <span class="row-name">Mission Control <span class="changed">retire</span></span>
+            <span class="row-path">~/Projects/mission-control</span>
+          </span>
+        </label>
+      </div>
+    </div>
+    <!-- /DATA:ROSTER -->
+
+    <div class="basket" data-dirty="no">
+      <h4>Your changes</h4>
+      <div class="summary">Nothing changed — the board matches the roster.</div>
+      <div class="how">Paste this into any Claude chat to apply it:</div>
+      <textarea readonly rows="4" aria-label="Instruction to apply your roster changes"></textarea>
+      <div class="acts">
+        <button class="act" type="button" data-copy>Copy</button>
+        <button class="act ghost" type="button" data-reset>Reset</button>
+        <span class="said" hidden>Copied</span>
+      </div>
+    </div>
+  </section>
+
 </div><!-- /board -->
 
 <!-- ============ per-project detail views (all shipped in this one render) ============ -->
@@ -375,6 +461,89 @@
     document.querySelectorAll('button.back').forEach(function (b) {
       b.addEventListener('click', back);
     });
+  })();
+
+  // Roster picker (Decision 9.3). The page is static and sandboxed — it cannot write
+  // CANDIDATES.md itself, so it produces the exact instruction to paste instead.
+  (function () {
+    var basket = document.querySelector('.basket');
+    if (!basket) return;
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.rows input[type=checkbox]'));
+    var out = basket.querySelector('textarea');
+    var summary = basket.querySelector('.summary');
+    var said = basket.querySelector('.said');
+
+    function name(b) { return b.dataset.name || ''; }
+    function list(a) { return a.map(function (n) { return '"' + n + '"'; }).join(', '); }
+
+    function update() {
+      var add = [], drop = [];
+      boxes.forEach(function (b) {
+        var on = b.dataset.on === '1';
+        var changed = b.checked !== on;
+        b.closest('label.row').classList.toggle('diff', changed);
+        if (changed) (b.checked ? add : drop).push(name(b));
+      });
+
+      if (!add.length && !drop.length) {
+        basket.dataset.dirty = 'no';
+        summary.textContent = 'Nothing changed — the board matches the roster.';
+        out.value = '';
+        said.hidden = true;
+        return;
+      }
+
+      basket.dataset.dirty = 'yes';
+      var bits = [];
+      if (add.length) bits.push(add.length + ' to enrol');
+      if (drop.length) bits.push(drop.length + ' to take off');
+      summary.textContent = bits.join(' · ');
+
+      var lines = ['Update the Mission Control roster in adrianludum/Mission-control, then run /roster to apply it.'];
+      if (add.length) lines.push('Enrol: ' + list(add) + '.');
+      if (drop.length) lines.push('Retire (remove from the board only — do not delete anything): ' + list(drop) + '.');
+      lines.push('Tick and untick the matching rows in CANDIDATES.md to match, then commit and push.');
+      out.value = lines.join('\n');
+      said.hidden = true;
+    }
+
+    boxes.forEach(function (b) { b.addEventListener('change', update); });
+
+    basket.querySelector('[data-copy]').addEventListener('click', function () {
+      out.removeAttribute('readonly');
+      out.focus();
+      out.select();
+      out.setSelectionRange(0, out.value.length); // iOS needs the explicit range
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      out.setAttribute('readonly', '');
+      if (ok) {
+        said.hidden = false;
+        setTimeout(function () { said.hidden = true; }, 2200);
+        return;
+      }
+      // Clipboard API is often blocked in a sandboxed frame; if execCommand also failed,
+      // the text stays selected so a manual copy still works.
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(out.value).then(function () {
+          said.hidden = false;
+          setTimeout(function () { said.hidden = true; }, 2200);
+        }, function () {
+          said.hidden = false;
+          said.textContent = 'Selected — press Cmd+C';
+        });
+      } else {
+        said.hidden = false;
+        said.textContent = 'Selected — press Cmd+C';
+      }
+    });
+
+    basket.querySelector('[data-reset]').addEventListener('click', function () {
+      boxes.forEach(function (b) { b.checked = b.dataset.on === '1'; });
+      update();
+    });
+
+    update();
   })();
 </script>
 
