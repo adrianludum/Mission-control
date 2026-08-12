@@ -2,7 +2,6 @@
 *Blockers are entries marked **owner: Adrian** — jobs only he can do.*
 
 ## To do
-- [ ] Give `drone-rowing-analysis` a remote — it now has an initial commit locally but still exists on one disk only. `gh repo create` works at the mini (see LEARNINGS); needs a name + visibility decision — **owner: Adrian**
 - [ ] Enrolment wave two — surveyed and written to `CANDIDATES.md` as 8 ready candidates plus a needs-work group. **Tick what you want and run `/roster`**; nothing else is pending
 - [ ] Decide the `Campaign_CRM.git` collision — `ludum-campaigns` and `ludum-outreach` are two divergent working copies of the *same* remote, on different feature branches 3 months apart. Neither is enrollable until one is canonical — **owner: Adrian**
 - [ ] Get `training_status`'s `.mission/` onto a shared branch — it was seeded onto `feat/resting-measurements` only, so the board cannot read it from the current checkout (the 2026-08-12 render read it from that branch directly). Fix `/enrol` to seed onto the default branch, and have `/roster` flag "indexed but unreadable" as drift
