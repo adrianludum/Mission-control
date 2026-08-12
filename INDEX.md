@@ -5,6 +5,10 @@ promotion ("sync with git X") appends a row; retirement ("retire X") removes one
 hand-editable too — but no workflow requires Adrian to remember to. `/mission` reads this
 file first; only repos listed here appear on the board.
 
+**To change what is tracked, edit [`CANDIDATES.md`](CANDIDATES.md), not this file** (Decision 9.3).
+The roster is the control surface — tick to enrol, untick to retire — and `/roster` writes the
+resulting rows here. This file is the output of that decision, not the place to make it.
+
 **Analytics source vocabulary** (Decision 8.2): `vercel:<project-name>` · `supabase:<project-ref>`
 (counts `auth.users` unless Notes names another query) · `manual:<where the number lives>` · `—`
 (no live users to count). /mission resolves these live when it has connector access and caches to

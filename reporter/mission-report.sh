@@ -112,27 +112,51 @@ EOF
 "
 }
 
-for dir in "$SCAN_ROOT"/*/; do
-  [ -d "$dir" ] || continue
-  dir="${dir%/}"
-  name="${dir##*/}"
-  if [ ! -d "$dir/.git" ]; then
-    log "skip (not a git repo): $name"
-    continue
-  fi
+# Scan one repo and append its section, or a scan-failed stub. Still dumb: no judgement.
+handle_repo() {
+  h_dir="$1"
+  h_name="$2"
   REPO_COUNT=$((REPO_COUNT + 1))
-  if scan_repo "$dir" "$name"; then
-    log "scanned: $name"
+  if scan_repo "$h_dir" "$h_name"; then
+    log "scanned: $h_name"
   else
-    log "WARNING: scan failed for $name (continuing)"
+    log "WARNING: scan failed for $h_name (continuing)"
     SECTIONS="${SECTIONS}
-## ${name}
+## ${h_name}
 
 | Fact | Value |
 | --- | --- |
 | Branch | ? (scan failed) |
 "
   fi
+}
+
+# Depth 2: a direct child that is a repo is scanned as itself; a direct child that is NOT a
+# repo is treated as a container and its own children are checked. Container folders
+# (events/, fitness/, rowing/, ...) hold real projects that a depth-1 scan never sees.
+# Nested repos are named "<container>/<repo>" so their INDEX.md path stays unambiguous.
+# Never descend INTO a repo — a repo's subdirectories are its own business.
+for dir in "$SCAN_ROOT"/*/; do
+  [ -d "$dir" ] || continue
+  dir="${dir%/}"
+  name="${dir##*/}"
+
+  if [ -d "$dir/.git" ]; then
+    handle_repo "$dir" "$name"
+    continue
+  fi
+
+  # Not a repo — look one level in for repos it contains.
+  found_nested=0
+  for sub in "$dir"/*/; do
+    [ -d "$sub" ] || continue
+    sub="${sub%/}"
+    [ -d "$sub/.git" ] || continue
+    found_nested=1
+    handle_repo "$sub" "${name}/${sub##*/}"
+  done
+
+  [ "$found_nested" -eq 0 ] && log "skip (not a git repo): $name"
 done
 
 {

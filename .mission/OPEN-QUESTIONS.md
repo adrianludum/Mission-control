@@ -18,8 +18,11 @@
 - ~~Q15: How reachable is Claude chat history programmatically?~~ → **Answered**: Claude Code transcripts on the Mac mini are readable (`~/.claude`); claude.ai chats have no API — unreachable except manual export. Reconstruction coverage narrowed accordingly (Decision 4.1).
 
 ## Tier 3 — Can wait until beta
-- Q10: Notifications/nudges ("Boat Hub has an unpushed branch for 3 weeks")?
-- Q11: Sharing/team view, or strictly personal?
+- ~~Q10: Notifications/nudges ("Boat Hub has an unpushed branch for 3 weeks")?~~ → **Answered**: escalation-only and silent by default — `/mission-watch` + a scheduled Routine, firing on exactly four conditions (single-copy work, reporter silent >24h, dirty/unpushed >7d, verified blocker >14d), with a 14-day cooling period in `snapshot/watch-state.md` so nothing is raised twice (Decision 9.4).
+- ~~Q11: Sharing/team view, or strictly personal?~~ → **Answered**: strictly personal, closed by decision rather than build. The standing artifact URL stays private and can be shared ad hoc if a specific need arises; reopen only if a collaborator actually appears (Decision 9.6).
+- ~~Trust acceptance test (parked with this tier by the note to Decision 3.5)~~ → **Answered**: four clauses over a 14-day window — zero material corrections, ≥10 renders read, ≥1 escalation the system saw first, no already-resolved blocker rendered. Spec in `TRUST-TEST.md`, run on demand from existing FEEDBACK-LOG data (Decision 9.5).
+
+**Tier 3 is closed.** No open questions remain at any tier.
 
 ## Answered
 - ~~Q1: Primary problem moment~~ → **Re-entry after days away** (Decision 1.1)

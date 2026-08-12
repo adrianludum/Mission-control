@@ -15,10 +15,16 @@ You are running an enrolment wave (build step 3, Decision 6.1): survey local pro
 - **App access**: each repo needs the Claude GitHub App granted. A repo that 403s on push/API is not an error to debug — list it in the report as **"needs app access"** (fix: grant the app at github.com → Settings → Applications) and continue.
 - **Ambiguity goes to Adrian**, via AskUserQuestion — never guess a pairing or a merge direction.
 
+## Start at the roster
+
+`CANDIDATES.md` in the hub is the standing control surface for which projects are tracked (Decision 9.3) — **read it first**. A ticked box that has no `INDEX.md` row is a project Adrian has already chosen to enrol: that is your work list, and the tick *is* the approval, so the pairing table below is not needed for it. Use `/roster` to survey, reconcile and apply ticks; use this skill for the mechanical wire-and-seed of a chosen project.
+
+The full-survey flow below still applies when the roster does not answer the question — a first wave on a new machine, a root Adrian names explicitly, or a project not yet on the roster at all. Anything it surveys should be written back to `CANDIDATES.md` so the next run starts from a complete roster.
+
 ## Flow
 
 ### 1. Survey
-Survey the **direct child folders** of `~/Projects` (or a different root if Adrian names one — ask only if he hinted at one). For each folder note: is it a git repo (`.git` present); its remotes (`git remote -v`); current branch; last commit date; uncommitted/unpushed state. Non-repo folders are candidates too (they may need `git init`) — include them, marked as such.
+Survey the **direct child folders** of `~/Projects` (or a different root if Adrian names one — ask only if he hinted at one), **and one level below them** — container folders like `events/`, `fitness/` and `rowing/` hold real repos that a depth-1 scan misses entirely (see LEARNINGS). For each folder note: is it a git repo (`.git` present); its remotes (`git remote -v`); current branch; last commit date; uncommitted/unpushed state. Non-repo folders are candidates too (they may need `git init`) — include them, marked as such.
 
 ### 2. Pairing table — present BEFORE acting
 List the GitHub repos Adrian mentions or that the remotes reveal (`gh repo list` if available). Build a PAIRING TABLE:

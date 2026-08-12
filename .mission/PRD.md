@@ -101,7 +101,9 @@ Serverless in the literal sense: no hosted app. **GitHub is the database, Claude
 - **Unpromoted ideas die invisible** — accepted cost of manual curation (2.2).
 
 ## 12. Open Questions
-See OPEN-QUESTIONS.md. Tier-2 all closed 2026-08-11: Q8 scoring rubric (8.1), Q7 analytics mapping + cache (8.2), Q14 agent-log sourcing (8.3), Q9 mobile-in by shipped reality. Remaining: Q10/Q11 + trust acceptance test — Tier 3, beta.
+**None. All tiers closed.** Tier-2 closed 2026-08-11: Q8 scoring rubric (8.1), Q7 analytics mapping + cache (8.2), Q14 agent-log sourcing (8.3), Q9 mobile-in by shipped reality. Tier-3 closed 2026-08-12: Q10 notifications → escalation-only watch, silent by default (9.4); Q11 sharing → strictly personal, closed by decision not build (9.6); trust acceptance test → four clauses over 14 days, spec in `TRUST-TEST.md` (9.5).
+
+Note that §5's out-of-scope list is now partly historical: "notifications/nudges (Tier 3)" shipped as the escalation-only watch, and "scheduled delivery" shipped twice (the hourly board Routine, the daily watch). Team/sharing remains genuinely out of scope by decision.
 
 ## 13. Build Plan (Decision 6.1)
 1. **/mission skill v0** — reads only this repo; Mission Control tracks itself. Worm wordmark, one tile, drill-down, synopsis assembly. Full read path proven.

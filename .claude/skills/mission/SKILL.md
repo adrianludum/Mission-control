@@ -32,6 +32,21 @@ Mostly **assemble** the stored `SYNOPSIS.md` texts — do not re-derive what a c
 - the **cross-project layer** (ordering, headline, portfolio-level observations), and
 - any project whose git/snapshot evidence **contradicts** its stored synopsis (commits after the last checkpoint, unexplained dirty state). Re-synthesise that project on the spot from its files + git evidence, and say the synopsis was stale.
 
+### 3a. Verify machine-checkable blockers before rendering them (Decision 9.2)
+
+A blocker in `TASKS.md` is a claim about the world that was true when it was written. Nothing re-checks it. Before rendering any `owner: Adrian` blocker, ask whether the snapshot — or, when you have shell access, one cheap command — can falsify it:
+
+- "repo has no remote" → the snapshot's Remote row, or `git remote -v`
+- "work is uncommitted / unpushed" → the snapshot's Uncommitted / Untracked / Unpushed rows
+- "the reporter/schedule is not running" → the snapshot's own age, or `launchctl print gui/$(id -u)/<label>`
+- "repo has no commits" → the snapshot's Last commit row
+
+Where the evidence contradicts the file, **render the corrected state**, drop the blocker from the pressure score, and add one line naming the stale entry — *"TASKS.md still lists this as blocked; the snapshot shows it resolved."* Do not silently rewrite `TASKS.md` from a render; /mission is the reading room. Flagging it is enough — the next disciplined session in that repo fixes the file.
+
+Judgement blockers ("decide what happens to X", "pick which copy is canonical") are **not** machine-checkable. Leave them exactly as written; only Adrian closes those.
+
+This exists because the reporter's schedule was fixed for a full day while `SYNOPSIS.md` and `TASKS.md` still reported it broken and its blocker aged toward critical. A board that is confidently wrong about what is still broken sends Adrian to fix what already works — a faster route to trust-decay (1.7) than being vague ever was.
+
 ## 4. Output (Decision 4.4)
 
 One **self-contained HTML artifact**, rendered from the template at `.claude/skills/mission/template.html`:

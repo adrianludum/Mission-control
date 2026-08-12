@@ -1,10 +1,10 @@
 # Mission Control — Synopsis
 *Overwritten at every checkpoint. Written 2026-08-12 by a Mac mini session.*
 
-**Where it stands:** The system is built and running unattended. The reporter's hourly schedule is **live** — the LaunchAgent is loaded in `gui/501` and has pushed an unbroken hourly snapshot since 2026-08-11T22:32Z; the board-refresh Routine fires at :17. Eight projects are enrolled. Today cleared all three loose-work blockers: `language`'s Flutter client and LiveKit server and `drone-rowing-analysis`'s entire codebase were untracked on one disk and are now committed (drone had *zero* commits), and HRR's in-flight work is pushed.
+**Where it stands:** Feature-complete. **No open questions remain at any tier.** Tier 3 closed today: notifications shipped as an escalation-only watch that stays silent on a good day (`/mission-watch` + a daily Routine at 07:12 UTC); sharing closed by decision as strictly personal; the trust threshold parked since Decision 3.5 is now specified in `TRUST-TEST.md`. Enrolment moved from a one-shot pairing table to a standing roster (`CANDIDATES.md` + `/roster`) on Adrian's ask. The reporter now scans depth-2 — 34 repos instead of 20. Both unattended Routines are live: board hourly at :17, watch daily at 07:12.
 
-**Open:** enrolment wave two — 8 clean candidates surveyed, pairing table awaits approval. Tier-3 (notifications, sharing, trust acceptance test) is the last unbuilt work. The wave-two survey also found 16 git repos nested inside container folders that the reporter's depth-1 scan cannot see.
+**Open:** the roster's 8 ready candidates are surveyed but unticked — enrolment is now a choice Adrian makes whenever he wants, not a pending task. Break-in period runs until `TRUST-TEST.md` passes.
 
-**Only Adrian can unblock:** (1) a name + visibility for `drone-rowing-analysis`'s new remote — `gh` at the mini has `repo` scope, so creation is now automatable; (2) which of `ludum-campaigns` / `ludum-outreach` is canonical — they are two divergent checkouts of the same `Campaign_CRM.git`; (3) approval of the wave-two pairing table.
+**Only Adrian can unblock:** (1) tick whatever he wants on the board and run `/roster`; (2) decide which of `ludum-campaigns` / `ludum-outreach` is canonical — two divergent checkouts of the same `Campaign_CRM.git`.
 
-**Trust finding worth keeping:** the reporter blocker was fixed for a day while TASKS.md and this file still reported it broken. Nothing re-checks a blocker once written — /mission should verify cheap machine-checkable blockers against live evidence before rendering them.
+**Watch for tomorrow:** the watch Routine's first firing at 07:12 UTC should send **nothing** — no condition currently qualifies. A message on day one means the thresholds are wrong, not that something is broken.
