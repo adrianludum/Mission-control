@@ -16,7 +16,7 @@ You are the reading room. You never write project state here; you read, assemble
    - **With connector access** (interactive sessions): resolve each source live — Vercel via its analytics tool, Supabase via a count query — then overwrite `snapshot/analytics.md` with the fetched numbers and a `*Generated: <UTC ISO>*` timestamp (machine-maintained cache; the second permitted write, alongside BOARD.md recovery).
    - **Without connector access** (the hourly Routine fires connector-less): read `snapshot/analytics.md` and label the age — "412 users · as of 9h ago". Cache older than 7 days or missing → render "—" with "analytics unreported", per the loud-degradation register (2.5). Never present a cached count as current.
 
-**v0 scope note:** today the index holds only Mission-control itself (n=1). This read path is written generally — never assume n=1; loop over whatever the index contains.
+**Scope note:** the index held only Mission-control at v0 (n=1); since enrolment wave one it holds several projects, and the roster (`CANDIDATES.md`, Decision 9.3) can change that count between any two renders. Never assume a count — loop over whatever the index contains.
 
 ## 2. Staleness rule (Decision 2.5) — non-negotiable
 
