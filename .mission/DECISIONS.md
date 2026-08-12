@@ -220,3 +220,15 @@
 - **Why**: The log file is the only source every surface can read (phone sessions can't reach `~/.claude`), and discipline (3.4) already guarantees its freshness for tracked work. The commit cross-check catches undisciplined sessions honestly — a visible gap, not a fabricated history.
 - **Date**: 2026-08-11
 - **Supersedes**: —
+
+### Decision 9.1 — Repo creation is automatable at the Mac mini via `gh`; manual birth is the fallback, not the rule
+- **What**: Where a session has shell access to the mini, promotion and enrolment may create GitHub repos with `gh repo create` (authenticated as `adrianludum`, scopes `gist, read:org, repo, workflow`). Connector-only sessions (phone, Routine-fired) keep the manual-birth path from 4.2. Tooling prefers `gh` when present, degrades to asking Adrian otherwise. Repo name and visibility remain Adrian's call — the automation removes the mechanical step, not the decision.
+- **Why**: Q17's spike tested the GitHub *app* installation token, which is repo-scoped and 403s on creation, and 4.2 generalised that to "sessions can't create repos". That was too broad: the constraint is a property of the credential, not of sessions. The mini holds a user token that can. Keeping manual birth as the universal rule would impose a hand-off on the one machine that does not need it — `drone-rowing-analysis` sat uncommitted and remote-less for a day partly because the path looked blocked.
+- **Date**: 2026-08-12
+- **Supersedes**: Narrows Decision 4.2 — its finding holds for connector-only sessions; it no longer holds at the mini.
+
+### Decision 9.2 — /mission verifies machine-checkable blockers against live evidence before rendering them
+- **What**: Blockers read from `TASKS.md` that can be cheaply falsified from the snapshot or the shell (a LaunchAgent said to be unloaded, a repo said to have no remote, work said to be uncommitted) are checked against live evidence at render. Where evidence contradicts the file, the board renders the corrected state and flags the stale entry rather than repeating it. Judgement blockers ("decide X") are untouched — they are not machine-checkable.
+- **Why**: The reporter's schedule was fixed for a full day while `SYNOPSIS.md` and `TASKS.md` still reported it broken and its blocker aged toward "critical". Nothing in the system re-checks a blocker once written. This is trust-decay (1.7) from the unexpected direction: not a briefing 90% right about risk, but one confidently wrong about what is still broken — which is worse, because it sends Adrian to fix what already works. The contradiction rule (2.7) already exists for synopses; this extends the same scepticism to blockers.
+- **Date**: 2026-08-12
+- **Supersedes**: Extends Decision 2.7's contradiction rule to TASKS.md blockers.
