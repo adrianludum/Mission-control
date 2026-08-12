@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-12T15:34:03Z*
+*Generated: 2026-08-12T16:34:10Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -273,11 +273,11 @@
 | Fact | Value |
 | --- | --- |
 | Branch | claude/mission-control-setup-wnn4tr |
-| Uncommitted | 1 |
+| Uncommitted | 0 |
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-12T16:28:00+01:00 — checkpoint: close Tier 3, ship the roster, extend reporter to depth-2 |
+| Last commit | 2026-08-12T16:54:30+01:00 — feat: roster picker on the board (Decision 9.7) |
 
 ## new-ludum-website 2
 
