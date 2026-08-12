@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-12T16:34:10Z*
+*Generated: 2026-08-12T17:34:17Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-12T16:54:30+01:00 — feat: roster picker on the board (Decision 9.7) |
+| Last commit | 2026-08-12T17:34:15+01:00 — reporter: snapshot 2026-08-12T16:34:10Z |
 
 ## new-ludum-website 2
 
