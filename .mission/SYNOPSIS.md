@@ -1,10 +1,8 @@
 # Mission Control — Synopsis
-*Overwritten at every checkpoint. Written 2026-08-12 by a Mac mini session.*
+*Overwritten at every checkpoint. Written 2026-08-12 by a cloud session.*
 
-**Where it stands:** Feature-complete. **No open questions remain at any tier.** Tier 3 closed today: notifications shipped as an escalation-only watch that stays silent on a good day (`/mission-watch` + a daily Routine at 07:12 UTC); sharing closed by decision as strictly personal; the trust threshold parked since Decision 3.5 is now specified in `TRUST-TEST.md`. Enrolment moved from a one-shot pairing table to a standing roster (`CANDIDATES.md` + `/roster`) on Adrian's ask. The reporter now scans depth-2 — 34 repos instead of 20. Both unattended Routines are live: board hourly at :17, watch daily at 07:12.
+**Where it stands:** Feature-complete, and the roster has now been exercised for real: enrolment wave two ran via `/roster` from a cloud session — 7 of Adrian's 8 named projects enrolled (ULBC-salesforce, Drone Rowing Analysis, BoatHUB, Race Timing, AI Gym Hub, Gym Hub, Timer App), each seeded and indexed. The board goes from 8 to 15 projects. Both unattended Routines remain live (board hourly at :17, watch daily at 07:12).
 
-**Open:** the roster's 8 ready candidates are surveyed but unticked — enrolment is now a choice Adrian makes whenever he wants, not a pending task. Break-in period runs until `TRUST-TEST.md` passes.
+**Open:** Campaign CRM is ticked but held — enrolment waits on the canonical-folder decision. BoatHUB's `.mission/` sits on branch `claude/mission-control-roster-update-abe98y` pending merge to main (same drift class as training_status). Gym Hub / AI Gym Hub supersession and Timer App / Race Timing overlap are recorded as open questions in their seeds. Break-in period runs until `TRUST-TEST.md` passes.
 
-**Only Adrian can unblock:** (1) tick whatever he wants on the board and run `/roster`; (2) decide which of `ludum-campaigns` / `ludum-outreach` is canonical — two divergent checkouts of the same `Campaign_CRM.git`.
-
-**Watch for tomorrow:** the watch Routine's first firing at 07:12 UTC should send **nothing** — no condition currently qualifies. A message on day one means the thresholds are wrong, not that something is broken.
+**Only Adrian can unblock:** (1) decide which of `ludum-campaigns` / `ludum-outreach` is canonical so Campaign CRM enrols; (2) merge BoatHUB's seed branch (and training_status's) to the default branch so the board can read them.

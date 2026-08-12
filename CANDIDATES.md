@@ -13,7 +13,8 @@ does the same thing and keeps this file in sync.
 history; it simply stops being rendered. Re-tick it any time.
 
 *Roster surveyed 2026-08-12. Facts (branch, dirt, last commit) come from `snapshot/mac-mini.md`
-and are refreshed by `/roster`; this file records decisions, not live state.*
+and are refreshed by `/roster`; this file records decisions, not live state. Ticks applied by
+`/roster` 2026-08-12 (cloud session): 7 enrolled, Campaign CRM ticked but held on its blocker.*
 
 ---
 
@@ -27,13 +28,18 @@ and are refreshed by `/roster`; this file records decisions, not live state.*
 - [x] **Training Status** — `~/Projects/training_status` — `adrianludum/training-status`
 - [x] **HRR 2026 Commentator Dossier** — `~/Projects/HRR-Commentator-2026` — `adrianludum/hrr`
 - [x] **Learn a Language** — `~/Projects/language` — `adrianludum/language`
+- [x] **ULBC-salesforce** — `~/Projects/ULBC-salesforce` — `adrianludum/ULBC-Salesforce`
+- [x] **Drone Rowing Analysis** — `~/Projects/drone-rowing-analysis` — `adrianludum/drone-rowing-analysis`
+- [x] **BoatHUB** — `~/Projects/rowing/boat-hub` — `adrianludum/BoatHUB`
+- [x] **Race Timing** — `~/Projects/events/race-timing-app` — `adrianludum/race-timing-app`
+- [x] **AI Gym Hub** — `~/Projects/fitness/ai-gym-hub` — `adrianludum/ai-gym-hub`
+- [x] **Gym Hub** — `~/Projects/fitness/gym-hub` — `adrianludum/gym-hub`
+- [x] **Timer App** — `~/Projects/events/timer-app` — `adrianludum/timer-app`
 
 ## Candidates — ready to enrol, tick to add
 
 Clean trees with real remotes. Nothing needs fixing first.
 
-- [ ] **ULBC-salesforce** — `~/Projects/ULBC-salesforce` — `adrianludum/ULBC-Salesforce`
-      Salesforce/SFDX build for ULBC — donations, Gift Aid, Stripe-as-rail. Newest work of the unenrolled set (2026-07-09), clean. Keeps its own `DECISIONS.md` for `.mission/` to absorb.
 - [ ] **Regatta Stream** — `~/Projects/live-video-streaming` — `adrianludum/regatta-stream`
       White-label live + on-demand event streaming (Next.js). 1 modified, 2 untracked.
 - [ ] **The Team Builder** — `~/Projects/the-team-builder` — `adrianludum/the-team-builder`
@@ -44,10 +50,6 @@ Clean trees with real remotes. Nothing needs fixing first.
       ludumevents.com marketing page — single static HTML, no build step. Clean.
 - [ ] **PDF Editor** — `~/Projects/pdf-editor` — `adrianludum/pdf-editor`
       Python (uv) local PDF-in/PDF-out editor — edit text as markdown, keep images. Clean.
-- [ ] **Drone Rowing Analysis** — `~/Projects/drone-rowing-analysis` — `adrianludum/drone-rowing-analysis`
-      Synthetic-first CV engine recovering sweep-eight biomechanics from overhead drone video. Repo created and pushed 2026-08-12.
-- [ ] **BoatHUB** — `~/Projects/rowing/boat-hub` — `adrianludum/BoatHUB`
-      Firebase-backed BoatHUB (v2 of the archived v1). Fully clean tree. Nested path — the reporter cannot see it until depth-2 scanning lands.
 
 ## Needs work before enrolling
 
@@ -59,18 +61,18 @@ Ticking these is allowed — `/roster` will tell you what it hit and stop that p
       Next.js marketing site, clean tree, 944M. **Folder name is a Finder duplicate** (" 2") — rename before enrolling so `INDEX.md` does not carry it.
 - [ ] **new-ludum** — `~/Projects/new-ludum` — `adrianludum/new-ludum`
       Monorepo skeleton (`apps/`, `packages/`, `discovery/`). **Confirm it is not superseded by Ludum v2** before enrolling.
-- [ ] **Campaign CRM** — `~/Projects/ludum-campaigns` *or* `~/Projects/ludum-outreach` — `adrianludum/Campaign_CRM`
+- [x] **Campaign CRM** — `~/Projects/ludum-campaigns` *or* `~/Projects/ludum-outreach` — `adrianludum/Campaign_CRM`
       **Both folders are working copies of the same remote**, on different feature branches 3 months apart. Pick which is canonical, merge or retire the other, then enrol once. **owner: Adrian**
+      *Ticked 2026-08-12; `/roster` stopped it here rather than guess — enrolment (seed + index) runs automatically once the canonical folder is decided.*
 
 ## Nested repos — surveyed, undecided
 
 Sixteen repos live inside container folders (`events/`, `fitness/`, `rowing/`, …) that the reporter's
 depth-1 scan never sees. Almost all carry a single bulk `Initial commit` / `Sync: commit local changes`
 from `sync-repos.sh` on 2026-06-12 — one artificial commit, not development history. Listed so the
-decision is recorded rather than forgotten.
+decision is recorded rather than forgotten. *Four of the sixteen (Race Timing, AI Gym Hub, Gym Hub,
+Timer App) were enrolled 2026-08-12 and moved to Enrolled above.*
 
-- [ ] **Race Timing** — `~/Projects/events/race-timing-app` — `adrianludum/race-timing-app` — Flutter + Firebase crew race timer with OBS overlays
-- [ ] **AI Gym Hub** — `~/Projects/fitness/ai-gym-hub` — `adrianludum/ai-gym-hub` — BLE data collection for gyms
 - [ ] **Rowing Analyser** — `~/Projects/rowing/rowing-analyser` — `adrianludum/PacingChart` — Python pacing/stroke analysis
 - [ ] **Rowing HR Hub (Pi)** — `~/Projects/rowing/rowing-hr-hub-pi` — `adrianludum/rowing-hr-hub-pi` — Raspberry Pi heart-rate hub for boats
 - [ ] **Coach Dashboard** — `~/Projects/rowing/coach-dashboard` — `adrianludum/coach-dashboard` — React real-time athlete monitoring
@@ -80,9 +82,7 @@ decision is recorded rather than forgotten.
 - [ ] **Loom Scraper** — `~/Projects/Loom Video scraper/ludum-loom-package` — `adrianludum/ludum-loom-package` — `ludum-loom-cli`, 1 unpushed commit
 - [ ] **Modern Event App** — `~/Projects/events/modern-event-app` — `adrianludum/ModernEventApp` — event app, no description
 - [ ] **Female Health App** — `~/Projects/fitness/female-health-app` — `adrianludum/female-health-app` — has `discovery/` + CLAUDE.md, no README
-- [ ] **Gym Hub** — `~/Projects/fitness/gym-hub` — `adrianludum/gym-hub` — overlaps AI Gym Hub; likely one supersedes the other
 - [ ] **Event Sphere** — `~/Projects/events/event-sphere` — `adrianludum/event-sphere` — Expo starter, barely past scaffold
-- [ ] **Timer App** — `~/Projects/events/timer-app` — `adrianludum/timer-app` — scaffold only
 
 ## Ignored — not projects
 
