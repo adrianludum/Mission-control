@@ -1,19 +1,8 @@
 # Mac mini snapshot
-*Generated: 2026-08-12T15:22:15Z*
+*Generated: 2026-08-12T15:34:03Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
-
-## app.ludum
-
-| Fact | Value |
-| --- | --- |
-| Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
-| Unpushed | none |
-| Remote | origin (https://github.com/adrianludum/appludumv4.git) |
-| Last commit | 2026-08-11T12:21:42+01:00 — mission-control: enrol — seed .mission/ |
 
 ## Chief of Staff
 
@@ -25,6 +14,61 @@
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/the-chief.git) |
 | Last commit | 2026-06-12T11:29:16+01:00 — Sync: commit local changes |
+
+## HRR-Commentator-2026
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/hrr.git) |
+| Last commit | 2026-08-12T16:29:55+01:00 — checkpoint: refresh .mission state after committing loose review work |
+
+## Loom Video scraper/ludum-loom-package
+
+| Fact | Value |
+| --- | --- |
+| Branch | master |
+| Uncommitted | 0 |
+| Untracked | 3 |
+| Unpushed | master: no upstream |
+| Remote | origin (https://github.com/adrianludum/ludum-loom-package.git) |
+| Last commit | 2026-06-12T09:15:27Z — Initial commit |
+
+## ULBC-salesforce
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/ULBC-Salesforce.git) |
+| Last commit | 2026-07-09T10:07:07+01:00 — Phase 7: Gift Aid claims, declaration hardening, Stripe-as-rail pivot (Decisions 7.1–7.9) |
+
+## World Rowing Results
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | claude/fervent-yalow-bca81d: no upstream; claude/strange-khorana-138bb8: no upstream; design-rebuild: 4 ahead |
+| Remote | origin (https://github.com/adrianludum/WorldRowingResults.git) |
+| Last commit | 2026-08-11T12:21:47+01:00 — mission-control: enrol — seed .mission/ |
+
+## app.ludum
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/appludumv4.git) |
+| Last commit | 2026-08-11T12:21:42+01:00 — mission-control: enrol — seed .mission/ |
 
 ## drone-rowing-analysis
 
@@ -136,17 +180,6 @@
 | Remote | origin (https://github.com/adrianludum/gym-hub.git) |
 | Last commit | 2026-06-12T09:31:26Z — Initial commit |
 
-## HRR-Commentator-2026
-
-| Fact | Value |
-| --- | --- |
-| Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
-| Unpushed | none |
-| Remote | origin (https://github.com/adrianludum/hrr.git) |
-| Last commit | 2026-08-12T16:12:39+01:00 — Commit in-flight review edits, previews and proposal docs |
-
 ## imagesAi
 
 | Fact | Value |
@@ -167,7 +200,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/language.git) |
-| Last commit | 2026-08-12T16:12:10+01:00 — Add Flutter client and LiveKit server; ignore build artefacts |
+| Last commit | 2026-08-12T16:29:38+01:00 — checkpoint: refresh .mission state after committing app/ and server/ |
 
 ## live-video-streaming
 
@@ -179,17 +212,6 @@
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/regatta-stream.git) |
 | Last commit | 2026-06-02T15:09:02+01:00 — Add /api/health diagnostic endpoint |
-
-## Loom Video scraper/ludum-loom-package
-
-| Fact | Value |
-| --- | --- |
-| Branch | master |
-| Uncommitted | 0 |
-| Untracked | 3 |
-| Unpushed | master: no upstream |
-| Remote | origin (https://github.com/adrianludum/ludum-loom-package.git) |
-| Last commit | 2026-06-12T09:15:27Z — Initial commit |
 
 ## ludum-campaigns
 
@@ -251,11 +273,11 @@
 | Fact | Value |
 | --- | --- |
 | Branch | claude/mission-control-setup-wnn4tr |
-| Uncommitted | 2 |
-| Untracked | 2 |
+| Uncommitted | 1 |
+| Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-12T16:14:54+01:00 — checkpoint: clear loose-work blockers, correct stale reporter state, log Decisions 9.1-9.2 |
+| Last commit | 2026-08-12T16:28:00+01:00 — checkpoint: close Tier 3, ship the roster, extend reporter to depth-2 |
 
 ## new-ludum-website 2
 
@@ -355,25 +377,3 @@
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-08-12T07:52:17Z — fix: unblock app→cloud sync + wire Ludum sandbox delivery end-to-end |
-
-## ULBC-salesforce
-
-| Fact | Value |
-| --- | --- |
-| Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
-| Unpushed | none |
-| Remote | origin (https://github.com/adrianludum/ULBC-Salesforce.git) |
-| Last commit | 2026-07-09T10:07:07+01:00 — Phase 7: Gift Aid claims, declaration hardening, Stripe-as-rail pivot (Decisions 7.1–7.9) |
-
-## World Rowing Results
-
-| Fact | Value |
-| --- | --- |
-| Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
-| Unpushed | claude/fervent-yalow-bca81d: no upstream; claude/strange-khorana-138bb8: no upstream; design-rebuild: 4 ahead |
-| Remote | origin (https://github.com/adrianludum/WorldRowingResults.git) |
-| Last commit | 2026-08-11T12:21:47+01:00 — mission-control: enrol — seed .mission/ |
