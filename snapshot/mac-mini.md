@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-12T09:33:25Z*
+*Generated: 2026-08-12T10:33:31Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 20*
@@ -167,7 +167,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-12T09:33:24+01:00 — reporter: snapshot 2026-08-12T08:33:19Z |
+| Last commit | 2026-08-12T10:33:30+01:00 — reporter: snapshot 2026-08-12T09:33:25Z |
 
 ## new-ludum-website 2
 
@@ -217,9 +217,9 @@
 
 | Fact | Value |
 | --- | --- |
-| Branch | feat/resting-measurements |
-| Uncommitted | 0 |
+| Branch | claude/ludum-sandbox-sync-issue-kts95w |
+| Uncommitted | 1 |
 | Untracked | 0 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-08-11T12:21:50+01:00 — mission-control: enrol — seed .mission/ |
+| Last commit | 2026-08-12T07:52:17Z — fix: unblock app→cloud sync + wire Ludum sandbox delivery end-to-end |
