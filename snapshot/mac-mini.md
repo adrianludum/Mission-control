@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-13T10:36:18Z*
+*Generated: 2026-08-13T11:36:25Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-13T10:36:17+01:00 — reporter: snapshot 2026-08-13T09:36:11Z |
+| Last commit | 2026-08-13T11:36:24+01:00 — reporter: snapshot 2026-08-13T10:36:18Z |
 
 ## new-ludum-website 2
 
@@ -317,11 +317,11 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 9 |
+| Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | main: 1 ahead |
+| Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/BoatHUB.git) |
-| Last commit | 2026-08-13T11:33:33+01:00 — deps(F4): clear all dependency advisories and make the audit a hard gate |
+| Last commit | 2026-08-13T11:42:11+01:00 — security(A7): close open registration, gate on verified email |
 
 ## rowing/coach-dashboard
 
