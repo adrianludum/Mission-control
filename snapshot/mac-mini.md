@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-13T05:35:42Z*
+*Generated: 2026-08-13T06:35:49Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-13T05:35:40+01:00 — reporter: snapshot 2026-08-13T04:35:35Z |
+| Last commit | 2026-08-13T06:35:48+01:00 — reporter: snapshot 2026-08-13T05:35:42Z |
 
 ## new-ludum-website 2
 
@@ -317,8 +317,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
+| Uncommitted | 28 |
+| Untracked | 24 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/BoatHUB.git) |
 | Last commit | 2026-06-12T11:31:01+01:00 — Sync: commit local changes |
