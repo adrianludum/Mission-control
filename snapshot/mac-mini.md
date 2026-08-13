@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-13T13:36:39Z*
+*Generated: 2026-08-13T14:36:46Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -277,15 +277,15 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-13T13:36:37+01:00 — reporter: snapshot 2026-08-13T12:36:32Z |
+| Last commit | 2026-08-13T14:36:44+01:00 — reporter: snapshot 2026-08-13T13:36:39Z |
 
 ## new-ludum-website 2
 
 | Fact | Value |
 | --- | --- |
 | Branch | fix/pricing-annual-and-telemetry |
-| Uncommitted | 0 |
-| Untracked | 0 |
+| Uncommitted | 1 |
+| Untracked | 11 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/ludum-website.git) |
 | Last commit | 2026-06-15T10:48:55+01:00 — Fix pricing page inconsistencies (annual discount + Telemetry card) |
@@ -321,7 +321,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/BoatHUB.git) |
-| Last commit | 2026-08-13T11:42:11+01:00 — security(A7): close open registration, gate on verified email |
+| Last commit | 2026-08-13T14:46:59+01:00 — docs: rewrite the deploy runbook for the new ordering |
 
 ## rowing/coach-dashboard
 
