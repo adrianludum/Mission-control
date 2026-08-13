@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-13T09:36:11Z*
+*Generated: 2026-08-13T10:36:18Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-13T09:36:09+01:00 — reporter: snapshot 2026-08-13T08:36:04Z |
+| Last commit | 2026-08-13T10:36:17+01:00 — reporter: snapshot 2026-08-13T09:36:11Z |
 
 ## new-ludum-website 2
 
@@ -317,11 +317,11 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 28 |
-| Untracked | 24 |
-| Unpushed | none |
+| Uncommitted | 9 |
+| Untracked | 0 |
+| Unpushed | main: 1 ahead |
 | Remote | origin (https://github.com/adrianludum/BoatHUB.git) |
-| Last commit | 2026-06-12T11:31:01+01:00 — Sync: commit local changes |
+| Last commit | 2026-08-13T11:33:33+01:00 — deps(F4): clear all dependency advisories and make the audit a hard gate |
 
 ## rowing/coach-dashboard
 
@@ -372,7 +372,7 @@
 | Fact | Value |
 | --- | --- |
 | Branch | claude/ludum-sandbox-sync-issue-kts95w |
-| Uncommitted | 1 |
+| Uncommitted | 6 |
 | Untracked | 1 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
