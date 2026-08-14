@@ -35,8 +35,8 @@ and are refreshed by `/roster`; this file records decisions, not live state. Tic
       *For coaches timing their own crews. Shares the Firebase project `timerapp-31f63` with Broadcast Timing App but is a separate product — do not retire either as the other's prototype (its Decision 0.5).*
 - [x] **AI Gym Hub** — `~/Projects/fitness/ai-gym-hub` — `adrianludum/ai-gym-hub`
 - [x] **Gym Hub** — `~/Projects/fitness/gym-hub` — `adrianludum/gym-hub`
-- [x] **Broadcast Timing App** — `~/Projects/events/broadcast-timing-app` — `adrianludum/timer-app`
-      *Renamed from "Timer App" 2026-08-14, folder renamed with it. Times races being filmed live — distinct product from Race Timing (coaches timing crews), not its prototype. **The GitHub repo is still `timer-app`** — folder and remote no longer match.*
+- [x] **Broadcast Timing App** — `~/Projects/events/broadcast-timing-app` — `adrianludum/broadcast-timing-app`
+      *Renamed throughout on 2026-08-14 (was "Timer App" / `timer-app`); board, folder and repo now agree. Times races being filmed live — distinct product from Race Timing (coaches timing crews), not its prototype.*
 
 ## Candidates — ready to enrol, tick to add
 
