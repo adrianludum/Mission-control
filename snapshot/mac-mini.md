@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-14T06:38:50Z*
+*Generated: 2026-08-14T07:38:57Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-14T06:38:48+01:00 — reporter: snapshot 2026-08-14T05:38:43Z |
+| Last commit | 2026-08-14T07:38:55+01:00 — reporter: snapshot 2026-08-14T06:38:50Z |
 
 ## new-ludum-website 2
 
@@ -372,8 +372,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | claude/ludum-sandbox-sync-issue-kts95w |
-| Uncommitted | 6 |
+| Uncommitted | 0 |
 | Untracked | 1 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
+| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-sandbox-sync-issue-kts95w: 3 ahead; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-08-12T07:52:17Z — fix: unblock app→cloud sync + wire Ludum sandbox delivery end-to-end |
+| Last commit | 2026-08-14T08:26:54+01:00 — Merge origin/claude/ludum-sandbox-sync-issue-kts95w |
