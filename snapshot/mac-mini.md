@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-14T09:39:11Z*
+*Generated: 2026-08-14T10:39:18Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -43,7 +43,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 0 |
-| Untracked | 0 |
+| Untracked | 1 |
 | Unpushed | main: 3 ahead |
 | Remote | origin (https://github.com/adrianludum/ULBC-Salesforce.git) |
 | Last commit | 2026-08-14T10:29:03+01:00 — docs: reconcile PRD / OPEN-QUESTIONS / NEXT-SESSION with deployed Phase 7 |
@@ -55,9 +55,9 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | main: 2 ahead |
+| Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/WorldRowingResults.git) |
-| Last commit | 2026-08-14T10:33:52+01:00 — mission: record the branch triage and the automation-trust verdict |
+| Last commit | 2026-08-14T10:55:26+01:00 — mission: outage closed — fix deployed, live site verified |
 
 ## app.ludum
 
@@ -80,6 +80,17 @@
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/drone-rowing-analysis.git) |
 | Last commit | 2026-08-12T16:13:15+01:00 — Initial commit — synthetic-first drone rowing biomechanics engine |
+
+## events/broadcast-timing-app
+
+| Fact | Value |
+| --- | --- |
+| Branch | master |
+| Uncommitted | 0 |
+| Untracked | 3 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/broadcast-timing-app.git) |
+| Last commit | 2026-08-14T11:36:36+01:00 — mission: this app is locked out of its own database |
 
 ## events/event-sphere
 
@@ -123,18 +134,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/race-timing-app.git) |
-| Last commit | 2026-08-14T10:29:26+01:00 — mission: keep Race Timing over Timer App; tidy working copy |
-
-## events/timer-app
-
-| Fact | Value |
-| --- | --- |
-| Branch | master |
-| Uncommitted | 0 |
-| Untracked | 3 |
-| Unpushed | none |
-| Remote | origin (https://github.com/adrianludum/timer-app.git) |
-| Last commit | 2026-06-12T09:15:28Z — Initial commit |
+| Last commit | 2026-08-14T11:36:52+01:00 — Rules: cover both apps, and wire them into firebase.json |
 
 ## familysite
 
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-14T09:39:09+01:00 — reporter: snapshot 2026-08-14T08:39:04Z |
+| Last commit | 2026-08-14T11:37:03+01:00 — board: Broadcast Timing App blocked on a database-rules deploy |
 
 ## new-ludum-website 2
 
@@ -372,8 +372,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | claude/ludum-sandbox-sync-issue-kts95w |
-| Uncommitted | 2 |
+| Uncommitted | 0 |
 | Untracked | 1 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-sandbox-sync-issue-kts95w: 5 ahead; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
+| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-sandbox-sync-issue-kts95w: 7 ahead; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-08-14T10:23:45+01:00 — fix: reject monitor stroke-rate spikes before they reach Ludum |
+| Last commit | 2026-08-14T11:25:24+01:00 — fix: record segment distance in the warmup (window was open at the bottom) |
