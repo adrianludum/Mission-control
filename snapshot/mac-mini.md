@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-14T08:39:04Z*
+*Generated: 2026-08-14T09:39:11Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -42,11 +42,11 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 17 |
-| Untracked | 5 |
-| Unpushed | none |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | main: 3 ahead |
 | Remote | origin (https://github.com/adrianludum/ULBC-Salesforce.git) |
-| Last commit | 2026-07-09T10:07:07+01:00 — Phase 7: Gift Aid claims, declaration hardening, Stripe-as-rail pivot (Decisions 7.1–7.9) |
+| Last commit | 2026-08-14T10:29:03+01:00 — docs: reconcile PRD / OPEN-QUESTIONS / NEXT-SESSION with deployed Phase 7 |
 
 ## World Rowing Results
 
@@ -55,9 +55,9 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/fervent-yalow-bca81d: no upstream; claude/strange-khorana-138bb8: no upstream; design-rebuild: 4 ahead |
+| Unpushed | main: 2 ahead |
 | Remote | origin (https://github.com/adrianludum/WorldRowingResults.git) |
-| Last commit | 2026-08-11T12:21:47+01:00 — mission-control: enrol — seed .mission/ |
+| Last commit | 2026-08-14T10:33:52+01:00 — mission: record the branch triage and the automation-trust verdict |
 
 ## app.ludum
 
@@ -119,11 +119,11 @@
 | Fact | Value |
 | --- | --- |
 | Branch | master |
-| Uncommitted | 1 |
-| Untracked | 3 |
+| Uncommitted | 0 |
+| Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/race-timing-app.git) |
-| Last commit | 2026-06-12T09:15:28Z — Initial commit |
+| Last commit | 2026-08-14T10:29:26+01:00 — mission: keep Race Timing over Timer App; tidy working copy |
 
 ## events/timer-app
 
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-14T08:39:02+01:00 — reporter: snapshot 2026-08-14T07:38:57Z |
+| Last commit | 2026-08-14T09:39:09+01:00 — reporter: snapshot 2026-08-14T08:39:04Z |
 
 ## new-ludum-website 2
 
@@ -372,8 +372,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | claude/ludum-sandbox-sync-issue-kts95w |
-| Uncommitted | 3 |
+| Uncommitted | 2 |
 | Untracked | 1 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-sandbox-sync-issue-kts95w: 3 ahead; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
+| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-sandbox-sync-issue-kts95w: 5 ahead; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-08-14T08:26:54+01:00 — Merge origin/claude/ludum-sandbox-sync-issue-kts95w |
+| Last commit | 2026-08-14T10:23:45+01:00 — fix: reject monitor stroke-rate spikes before they reach Ludum |
