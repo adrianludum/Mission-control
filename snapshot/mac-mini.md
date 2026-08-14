@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-14T14:39:46Z*
+*Generated: 2026-08-14T15:39:52Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-14T14:39:44+01:00 — reporter: snapshot 2026-08-14T13:39:39Z |
+| Last commit | 2026-08-14T15:39:51+01:00 — reporter: snapshot 2026-08-14T14:39:46Z |
 
 ## new-ludum-website 2
 
@@ -372,8 +372,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | claude/ludum-sandbox-sync-issue-kts95w |
-| Uncommitted | 2 |
-| Untracked | 4 |
+| Uncommitted | 4 |
+| Untracked | 7 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-08-14T14:38:59+01:00 — Merge main (squash of #7) — its content is already on this branch |
