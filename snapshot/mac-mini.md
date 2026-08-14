@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-14T05:38:43Z*
+*Generated: 2026-08-14T06:38:50Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -42,8 +42,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
+| Uncommitted | 17 |
+| Untracked | 5 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/ULBC-Salesforce.git) |
 | Last commit | 2026-07-09T10:07:07+01:00 — Phase 7: Gift Aid claims, declaration hardening, Stripe-as-rail pivot (Decisions 7.1–7.9) |
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-14T05:38:41+01:00 — reporter: snapshot 2026-08-14T04:38:36Z |
+| Last commit | 2026-08-14T06:38:48+01:00 — reporter: snapshot 2026-08-14T05:38:43Z |
 
 ## new-ludum-website 2
 
