@@ -9,7 +9,5 @@ Cooling period before re-raising a still-true condition: **14 days**.
 
 | Key | Project | First raised | Last raised | Condition |
 |---|---|---|---|---|
-
-*Empty: nothing has been escalated. The three conditions that would have qualified on 2026-08-12 —
-`language` and `drone-rowing-analysis` holding unpushed source, and `drone-rowing-analysis` having
-no remote — were all resolved the same day, so none was ever raised.*
+| blocker-14d:ulbc-oq051 | ULBC-salesforce | 2026-08-16 | 2026-08-16 | owner:Adrian, open since 2026-04-29 — OQ-051, new email account/hosting decision, gates resuming OQ-039..045 |
+| blocker-14d:ulbc-martin-peel-stripe-xero | ULBC-salesforce | 2026-08-16 | 2026-08-16 | owner:Adrian, open since 2026-07-08 (Decision 7.9) — confirm with Martin Peel how Stripe money lands in Xero, decides if payout-splitting is needed |
