@@ -57,3 +57,50 @@ that was logged but never landed. The pattern is not carelessness in any one ses
 **nothing re-reads the world to confirm what the files assert.** That is what §3a started and what the
 healer's audit should finish.
 
+## Full code / git / sync audit (2026-08-17, cloud session)
+
+An end-to-end review of the reporter, the healer, the five skills, the git layout and the
+snapshot↔index↔roster agreement. Four findings that were not previously recorded.
+
+**The healer cannot succeed as written — two defects, both in the part nobody has run yet.**
+(1) Its post-run audit reads every `~/`-prefixed path out of `INDEX.md`, and the hub is row one,
+so the hub is audited like a project repo — against an allowlist of `.mission/**` and `CLAUDE.md`
+only. Charter steps 1 and 3 *require* it to edit `INDEX.md` and `CANDIDATES.md`, so every run that
+actually heals something ends `ERROR: the healer wrote outside .mission/` and `exit 1`. A quiet day
+passes; a productive day looks like a violation. The hub needs its own allowlist
+(`INDEX.md`, `CANDIDATES.md`, `snapshot/**`, `.mission/**`), or exclusion from the loop.
+(2) `--permission-mode acceptEdits` auto-approves *edits*; every git operation is a Bash call, and
+this repo carries no `.claude/settings.json` permission allowlist, so in headless `-p` mode those
+calls are denied. The healer would edit files and be unable to commit or push them — its entire
+purpose. The flag probe cannot catch this: it asks for a text reply, which needs no tool at all.
+A probe that proves the premise has to run one harmless *command* (`git status`), not one sentence.
+
+**Two of the watch's four escalation conditions are not computable from the data the reporter
+produces.** Conditions #1 (single-copy work) and #3 (dirty/unpushed >7 days) both need file
+identity or file age; the snapshot records `Uncommitted: N` and `Untracked: N` — counts, no names,
+no ages. Nearly every repo on the mini shows exactly 3 untracked (house noise: `.claude/`,
+`.DS_Store`), so AI Gym Hub's three real specification documents are, from the snapshot,
+indistinguishable from that noise. That is the concrete answer to the 2026-08-17 question "does the
+watch inspect untracked files at all" — it cannot; the data is not there. It also explains why the
+only escalations ever raised are the two ULBC blockers, which come from `TASKS.md`, not the
+snapshot. Reporting the first few untracked paths and an oldest-mtime would make both conditions
+real. Related and already visible today: 13 no-upstream branches across 5 repos, one of them
+enrolled (`training_status`, including the prepared `mission/seed-on-main` fix) — textbook
+condition #1, never raised.
+
+**The reporter reports local-refs truth, not git truth.** It never fetches, so "unpushed" is
+measured against remote-tracking refs as stale as the last manual fetch, and *behind* is invisible
+entirely — the enrolment wave found `familysite` 29 behind and `World Rowing Results` 279 behind,
+and no snapshot would ever have said so. Two smaller ones from the same read: it sets no
+`GIT_TERMINAL_PROMPT=0` (the healer does) and takes no lock (the healer does), so an expired
+credential would hang a launchd run on a prompt with no terminal while the next hour starts anyway;
+and `scan_repo` cannot return non-zero (its last statement is an assignment), so the "scan failed"
+fallback is dead code and a broken repo reports plausible-looking values instead.
+
+**The hub has no `main`.** The default branch is `claude/mission-control-setup-wnn4tr`, a session
+branch, and the reporter, the healer and both INSTALL docs all push "whatever is checked out" —
+correct today, one wrong checkout from a split-brain hub. Four further session branches sit on the
+remote; all four were diffed and carry **no unique content** — only deletions and superseded
+state-file text — so they are safe to delete, and they are the same class of stranded branch that
+caused the duplicate-Routine incident. Separately, 45 of the 50 commits are reporter snapshots
+(24/day and growing), so `git log` no longer shows the project's real history without a path filter.
