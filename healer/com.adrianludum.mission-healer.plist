@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.adrianludum.mission-healer</string>
+
+    <!-- launchd does NOT expand $HOME, and does NOT read your shell profile.
+         Absolute paths only. These are THIS machine's real paths — the mini's
+         home is adriancassidyhome and the clone dir is lowercase. -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/adriancassidyhome/Projects/mission-control/healer/mission-heal.sh</string>
+    </array>
+
+    <!-- Daily at 07:40 local. Deliberately after the watch Routine (07:12 UTC)
+         so an escalation is raised on the day's state before healing changes it. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>7</integer>
+        <key>Minute</key>
+        <integer>40</integer>
+    </dict>
+
+    <!-- Deliberately false, unlike the reporter. A writer should not fire the
+         moment it is installed, or on every login. Test runs are manual. -->
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/adriancassidyhome/Library/Logs/mission-healer.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/adriancassidyhome/Library/Logs/mission-healer.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <!-- ~/.local/bin is where the native claude installer puts the binary. -->
+        <key>PATH</key>
+        <string>/Users/adriancassidyhome/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>/Users/adriancassidyhome</string>
+        <key>HUB_REPO</key>
+        <string>/Users/adriancassidyhome/Projects/mission-control</string>
+        <key>SCAN_ROOT</key>
+        <string>/Users/adriancassidyhome/Projects</string>
+    </dict>
+</dict>
+</plist>
