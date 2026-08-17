@@ -34,3 +34,26 @@ No tool combines live git state with *open loops* — undecided questions, unimp
 - **The reporter is blind to nested repos, and that hides real projects.** It scans direct children of `SCAN_ROOT` only (`mission-report.sh:115`), so it sees 20 repos — but `events/`, `fitness/`, `rowing/`, `make-alevels-easy/`, `Loom Video scraper/` and `_archive/` are plain container folders holding **16 further git repos** (boat-hub, race-timing-app, ai-gym-hub, rowing-analyser, …). Those are invisible to the board today. Depth-2 scanning would surface them; the cost is noise from archives.
 - **The hub clone's directory name is load-bearing in two places.** The script defaults `HUB_REPO` to `$HOME/Projects/Mission-control`; this clone is `~/Projects/mission-control` and only resolves by accident of macOS's case-insensitive filesystem. The plist now sets `HUB_REPO`/`SCAN_ROOT` explicitly rather than relying on that. INSTALL.md also still says `git push origin main` in its auth check — there is no `main` branch in this repo; the script itself is correct (it pushes whatever branch is checked out).
 - **First real scan is honest but coarse:** 20 of 35 folders in `~/Projects` are git repos; the other 15 (incl. actively-edited `rowing`, `fitness`, `wrr-worktrees`) are invisible to the reporter entirely, because it only scans direct children that contain `.git`. Worth knowing before enrolment wave one — an un-versioned project can't be tracked by this pipeline at all.
+
+## An agent log entry is a claim, not a receipt (2026-08-17)
+
+The hub's log records 2026-08-12 as "cloned, seeded and pushed ten-file `.mission/` to 7 repos". The
+2026-08-17 render was the first to reach every checkout directly, and found that for `ai-gym-hub` and
+`gym-hub` the seed is on **no branch at all** — both repos' last commit is still the June bulk-sync
+commit. Whatever happened, it did not land, and the log has read as done for five days.
+
+Three things follow. **A write is only proven by reading it back from the target** — the seeding session
+reported what it attempted, not what existed afterwards. **The unlogged-commits cross-check of Decision
+8.3 cannot catch this**, because it looks for commits with no log entry, and this is the mirror case: a
+log entry with no commit. The healer's post-run audit (9.9) is the right shape — it diffs each repo's
+HEAD before and after rather than trusting the run's own account of itself. And **`/mission-watch` missed
+the louder finding sitting underneath it**: AI Gym Hub has three real specification documents untracked
+since June, which is condition #1 (single-copy work) exactly, yet the only escalations ever raised were
+two ULBC blockers. Worth checking whether the watch inspects untracked files at all, or only branches.
+
+This is the third instance of the same class — the reporter blocker rendered for a day after it was
+fixed (2026-08-12), the rename and DB-block that never reached `.mission/` (2026-08-14), and now a seed
+that was logged but never landed. The pattern is not carelessness in any one session; it is that
+**nothing re-reads the world to confirm what the files assert.** That is what §3a started and what the
+healer's audit should finish.
+
