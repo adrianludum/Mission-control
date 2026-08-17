@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-17T08:47:18Z*
+*Generated: 2026-08-17T09:47:27Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | claude/mission-control-setup-wnn4tr: 1 ahead |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-17T07:51:23Z — feat: daily healer at the mini (Decision 9.9) - mechanical repair stops queueing behind Adrian |
+| Last commit | 2026-08-17T09:18:32Z — checkpoint: board re-rendered — 5 of 15 projects unreadable, seed drift wider than recorded |
 
 ## new-ludum-website 2
 
