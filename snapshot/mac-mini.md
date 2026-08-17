@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-17T06:47:04Z*
+*Generated: 2026-08-17T07:47:11Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -275,9 +275,9 @@
 | Branch | claude/mission-control-setup-wnn4tr |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | none |
+| Unpushed | claude/mission-control-setup-wnn4tr: 2 ahead |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-17T06:47:05+01:00 — reporter: snapshot 2026-08-17T05:46:59Z |
+| Last commit | 2026-08-17T07:42:59Z — checkpoint: resolve the Campaign_CRM collision (Decision 9.8 - ludum-outreach canonical, campaigns retires unmerged) |
 
 ## new-ludum-website 2
 
