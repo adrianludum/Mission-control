@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-17T09:47:27Z*
+*Generated: 2026-08-17T10:33:58Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -275,9 +275,9 @@
 | Branch | claude/mission-control-setup-wnn4tr |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/mission-control-setup-wnn4tr: 1 ahead |
+| Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-17T09:18:32Z — checkpoint: board re-rendered — 5 of 15 projects unreadable, seed drift wider than recorded |
+| Last commit | 2026-08-17T10:47:32+01:00 — reporter: snapshot 2026-08-17T09:47:27Z |
 
 ## new-ludum-website 2
 
@@ -373,7 +373,7 @@
 | --- | --- |
 | Branch | fix/build-26-release-guard |
 | Uncommitted | 0 |
-| Untracked | 2 |
+| Untracked | 4 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; fix/build-26-release-guard: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-08-17T08:07:51Z — fix: block offline release builds — tripwire, guard test, supported build script |
