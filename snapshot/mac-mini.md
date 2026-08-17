@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-17T07:47:11Z*
+*Generated: 2026-08-17T08:47:18Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -275,9 +275,9 @@
 | Branch | claude/mission-control-setup-wnn4tr |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/mission-control-setup-wnn4tr: 2 ahead |
+| Unpushed | claude/mission-control-setup-wnn4tr: 1 ahead |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-17T07:42:59Z — checkpoint: resolve the Campaign_CRM collision (Decision 9.8 - ludum-outreach canonical, campaigns retires unmerged) |
+| Last commit | 2026-08-17T07:51:23Z — feat: daily healer at the mini (Decision 9.9) - mechanical repair stops queueing behind Adrian |
 
 ## new-ludum-website 2
 
@@ -371,9 +371,9 @@
 
 | Fact | Value |
 | --- | --- |
-| Branch | claude/ludum-sandbox-sync-issue-kts95w |
-| Uncommitted | 4 |
-| Untracked | 4 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream |
+| Branch | fix/build-26-release-guard |
+| Uncommitted | 0 |
+| Untracked | 2 |
+| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; fix/build-26-release-guard: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-08-14T14:38:59+01:00 — Merge main (squash of #7) — its content is already on this branch |
+| Last commit | 2026-08-17T08:07:51Z — fix: block offline release builds — tripwire, guard test, supported build script |
