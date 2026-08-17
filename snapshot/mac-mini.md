@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-17T10:33:58Z*
+*Generated: 2026-08-17T11:34:10Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -142,10 +142,10 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 0 |
-| Untracked | 0 |
-| Unpushed | none |
+| Untracked | 1 |
+| Unpushed | main: 1 ahead |
 | Remote | origin (https://github.com/adrianludum/familysite.git) |
-| Last commit | 2026-08-11T12:21:43+01:00 — mission-control: enrol — seed .mission/ |
+| Last commit | 2026-08-17T11:18:41Z — What's on + Travel trip calendars, event images, shared event toolbars, AI event autofill |
 
 ## fitness/ai-gym-hub
 
@@ -156,7 +156,7 @@
 | Untracked | 4 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/ai-gym-hub.git) |
-| Last commit | 2026-06-12T09:31:26Z — Initial commit |
+| Last commit | 2026-08-12T16:15:32Z — mission-control: enrol — seed .mission/ |
 
 ## fitness/female-health-app
 
@@ -178,7 +178,7 @@
 | Untracked | 3 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/gym-hub.git) |
-| Last commit | 2026-06-12T09:31:26Z — Initial commit |
+| Last commit | 2026-08-12T16:55:49Z — mission-control: enrol — seed .mission/ |
 
 ## imagesAi
 
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-17T10:47:32+01:00 — reporter: snapshot 2026-08-17T09:47:27Z |
+| Last commit | 2026-08-17T11:34:08+01:00 — reporter: snapshot 2026-08-17T10:33:58Z |
 
 ## new-ludum-website 2
 
@@ -372,8 +372,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | fix/build-26-release-guard |
-| Uncommitted | 0 |
-| Untracked | 4 |
+| Uncommitted | 1 |
+| Untracked | 5 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; fix/build-26-release-guard: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-08-17T08:07:51Z — fix: block offline release builds — tripwire, guard test, supported build script |
