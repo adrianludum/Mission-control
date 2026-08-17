@@ -5,12 +5,17 @@
     <key>Label</key>
     <string>com.adrianludum.mission-reporter</string>
 
-    <!-- launchd does NOT expand $HOME — absolute paths required.
-         Adjust /Users/adrian if the username differs (see INSTALL.md). -->
+    <!-- launchd does NOT expand $HOME, and does NOT read your shell profile.
+         Absolute paths only. These are THIS machine's real paths — the mini's
+         home is adriancassidyhome and the clone dir is lowercase.
+         (Until 2026-08-17 this file said /Users/adrian/Projects/Mission-control,
+         which exists on no machine; the installed copy had been hand-corrected
+         at install time, so reinstalling from the repo would have replaced a
+         working agent with a dead one.) -->
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/adrian/Projects/Mission-control/reporter/mission-report.sh</string>
+        <string>/Users/adriancassidyhome/Projects/mission-control/reporter/mission-report.sh</string>
     </array>
 
     <key>StartInterval</key>
@@ -20,14 +25,24 @@
     <true/>
 
     <key>StandardOutPath</key>
-    <string>/Users/adrian/Library/Logs/mission-reporter.log</string>
+    <string>/Users/adriancassidyhome/Library/Logs/mission-reporter.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/adrian/Library/Logs/mission-reporter.log</string>
+    <string>/Users/adriancassidyhome/Library/Logs/mission-reporter.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
         <string>/usr/bin:/bin:/usr/local/bin:/opt/homebrew/bin</string>
+        <key>HOME</key>
+        <string>/Users/adriancassidyhome</string>
+        <!-- Set explicitly rather than left to the script's defaults: the
+             default HUB_REPO is $HOME/Projects/Mission-control, and this clone
+             is lowercase — it resolved only by the accident of a
+             case-insensitive filesystem. -->
+        <key>HUB_REPO</key>
+        <string>/Users/adriancassidyhome/Projects/mission-control</string>
+        <key>SCAN_ROOT</key>
+        <string>/Users/adriancassidyhome/Projects</string>
     </dict>
 </dict>
 </plist>

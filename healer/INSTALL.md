@@ -107,11 +107,13 @@ rm ~/Library/LaunchAgents/com.adrianludum.mission-healer.plist
 Env vars, override in the plist: `HUB_REPO`, `SCAN_ROOT`, `CLAUDE_BIN`,
 `CLAUDE_FLAGS`, `MAX_SECONDS` (default 1800, hard kill), `DRY_RUN=1`.
 
-## Known trap, inherited
+## Known trap, inherited — fixed 2026-08-17
 
-`reporter/com.adrianludum.mission-reporter.plist` in this repo still points at
-`/Users/adrian/Projects/Mission-control` — a path that does not exist on the
-mini. The *installed* reporter plist was corrected by hand at install time
-(2026-08-11) and is fine; the committed copy was never updated. Reinstalling the
-reporter from this repo would silently install a broken agent. This healer's
-plist carries the real paths.
+`reporter/com.adrianludum.mission-reporter.plist` used to point at
+`/Users/adrian/Projects/Mission-control`, a path that exists on no machine. The
+*installed* copy had been corrected by hand at install time (2026-08-11), so
+nothing was broken day to day — but reinstalling the reporter from this repo
+would have replaced a working agent with a dead one. The committed copy now
+carries the mini's real paths and sets `HUB_REPO` / `SCAN_ROOT` explicitly, as
+this healer's plist always did. Both agents can now be installed straight from
+the repo with no hand-editing.
