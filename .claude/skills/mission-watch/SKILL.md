@@ -20,15 +20,26 @@ anything he already knows.
 
 Exactly these. Nothing else escalates, however interesting it looks.
 
-1. **Work that exists in only one place.** A tracked repo with no remote, or with commits never
-   pushed anywhere, where the local state is the only copy. This is the one true emergency: a disk
+1. **Work that exists in only one place.** A tracked repo with no remote; a branch listed under
+   `Unpushed` as `no upstream` or `N ahead`; or **real files sitting untracked** — the snapshot's
+   `Untracked files` / `Uncommitted files` rows name them. This is the one true emergency: a disk
    failure loses it permanently.
+
+   Judge by the **names**, not the count. Almost every repo carries two or three ephemeral
+   untracked files — `.DS_Store`, `.claude/`, editor and lock files — and those are never an
+   escalation. A specification document, a script, a dataset, anything that reads like work is.
+   AI Gym Hub's three spec documents sat untracked since June and were never raised because the
+   snapshot only reported *how many*, and three was what every repo showed.
 2. **The reporter has gone silent for more than 24 hours.** `snapshot/mac-mini.md`'s `*Generated:*`
    timestamp is more than 24h old. The board degrades honestly on its own, but a silent reporter
    means every git fact on the board is unknown, and the cause is usually a mini that rebooted
    without a GUI login. Threshold is 24h, not the board's 3h — a laptop lid closed overnight is not news.
 3. **Uncommitted or unpushed work older than 7 days** in a repo that is otherwise active. Long
    enough that it is not work-in-flight; long enough that Adrian has forgotten it is there.
+   The age comes from the snapshot's **`Oldest dirty file`** row (days, plus the file it belongs
+   to) — do not infer it from the last-commit date, which says nothing about when the loose work
+   was touched. Apply the same names-not-counts judgement as #1: a 90-day-old `.DS_Store` is not
+   news.
 4. **An `owner: Adrian` blocker that has passed 14 days** — and only after verifying it per
    Decision 9.2. A blocker the world has already resolved must never be escalated.
 

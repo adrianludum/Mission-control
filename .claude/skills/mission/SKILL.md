@@ -99,10 +99,16 @@ Three measures per project, each computed from files. Where a step needs judgeme
 - Tiles show "last touched N d ago". Dormancy is not itself risk — parked-cleanly is a fine state.
 
 ### 6.2 Git risk (chips; from the snapshot and GitHub)
-Computed **only from a fresh snapshot** (§2). Levels, worst first:
+Computed **only from a fresh snapshot** (§2). Ages come from the snapshot's `Oldest dirty file`
+row, never from the last-commit date. Levels, worst first:
 - **critical** — uncommitted or unpushed work older than 7 days, or a local repo with no remote
 - **serious** — uncommitted/unpushed work 2–7 days old
 - **notice** — uncommitted/unpushed work under 2 days (normal work-in-flight, not alarming)
+
+Weigh the `Uncommitted files` / `Untracked files` names, not the raw counts: a repo whose three
+untracked files are `.DS_Store`, `.claude/` and a lockfile is **clean**, and saying otherwise
+makes every tile shout at once. `Behind` and `Last fetch` travel together — a behind-count from a
+clone last fetched three weeks ago is a stale reading, so label it rather than assert it.
 - **clean** — none of the above
 - **unknown** — snapshot stale or missing, or repo not in it. Displayed as "unknown", **sorts as serious** (honest uncertainty ranks high), never asserted as a fact.
 
