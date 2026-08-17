@@ -276,3 +276,9 @@
 - **Date**: 2026-08-17
 - **Supersedes**: Extends the read-only reporter of 2.5/4.3 with a write-side twin. Narrows the `owner: Adrian` convention set in 2.6.
 
+
+### Decision 9.10 — The healer's write permission is a CLI allowlist, and its probe must prove a write
+- **What**: `CLAUDE_FLAGS` carries `--allowedTools Bash(git:*) Bash(gh:*)` alongside `--permission-mode acceptEdits`, and the pre-flight probe creates a throwaway git repo, has a headless session commit in it, and then **verifies the commit by reading the repo's log** — not by reading the session's reply. A project `.claude/settings.json` allowlist is explicitly rejected as the mechanism. The hub is audited against its own allowlist (`INDEX.md`, `CANDIDATES.md`, `BOARD.md`, `snapshot/**`, `.mission/**`); repos enrolled mid-run are reported as un-audited rather than counted clean. `MAX_SECONDS` 900 → 1800.
+- **Why**: Measured, not assumed (2026-08-17 audit, run against the real CLI): under `acceptEdits` alone a headless session is denied `git add`/`git commit` outright — there is no terminal to approve them — so the healer would have edited files it could never save, doing half its job silently. Read-only git *is* auto-approved, which is exactly why the old probe passed: it asked for a sentence, and a sentence needs no tool. `settings.json` was tested too and is ignored unless the workspace has been trusted interactively — it fails silently, which is the worst property a guardrail can have. The audit fix is the same class of error in the other direction: the hub is row one of `INDEX.md`, so auditing it against the project allowlist flagged the registry edit the charter *requires*, meaning only a run that healed nothing could exit 0.
+- **Date**: 2026-08-17
+- **Supersedes**: Corrects the mechanism of Decision 9.9; its guardrails and charter are unchanged.

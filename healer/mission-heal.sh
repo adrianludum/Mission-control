@@ -23,7 +23,7 @@
 #   SCAN_ROOT     where project repos live      (default: $HOME/Projects)
 #   CLAUDE_BIN    claude executable             (default: first on PATH)
 #   CLAUDE_FLAGS  headless flags — see NOTE     (default: below)
-#   MAX_SECONDS   wall-clock kill switch        (default: 900)
+#   MAX_SECONDS   wall-clock kill switch        (default: 1800)
 #   DRY_RUN       1 = probe + report only, no healing run
 #
 # NOTE on CLAUDE_FLAGS: flag names move between Claude Code versions. These are
@@ -32,15 +32,27 @@
 #                           not exist — that is the whole point of this script.
 #   --dangerously-skip-permissions   too broad for an unattended writer.
 # If the probe fails, read the log, fix CLAUDE_FLAGS in the plist, re-run. Do
-# not "fix" it by widening permissions.
+# not "fix" it by widening permissions beyond the git/gh allowlist below.
+#
+# WHY --allowedTools IS NOT OPTIONAL (verified 2026-08-17, not assumed):
+#   --permission-mode acceptEdits auto-approves *file edits* only. Every git
+#   operation is a Bash call, and in headless -p mode a Bash call needing
+#   approval is DENIED outright — there is no terminal to ask. Measured:
+#     acceptEdits alone           → "git add -A, git commit" require approval → denied
+#     + --allowedTools Bash(git:*) → commit succeeds
+#   Read-only git (status/log/diff) is auto-approved either way, which is why a
+#   probe that only *reads* proves nothing. Without this allowlist the healer
+#   would edit files it could never commit — silently doing half its job.
+#   A project .claude/settings.json allowlist does NOT substitute: it is ignored
+#   unless the workspace has been trusted interactively, and it fails silently.
 
 set -u
 
 HUB_REPO="${HUB_REPO:-$HOME/Projects/mission-control}"
 SCAN_ROOT="${SCAN_ROOT:-$HOME/Projects}"
 CLAUDE_BIN="${CLAUDE_BIN:-$(command -v claude 2>/dev/null || echo '')}"
-CLAUDE_FLAGS="${CLAUDE_FLAGS:---permission-mode acceptEdits --max-turns 60}"
-MAX_SECONDS="${MAX_SECONDS:-900}"
+CLAUDE_FLAGS="${CLAUDE_FLAGS:---permission-mode acceptEdits --allowedTools Bash(git:*) Bash(gh:*) --max-turns 60}"
+MAX_SECONDS="${MAX_SECONDS:-1800}"
 DRY_RUN="${DRY_RUN:-0}"
 
 LOCKDIR="/tmp/mission-heal.lock"
@@ -107,7 +119,7 @@ snapshot_heads() {
     [ -d "$expanded/.git" ] || continue
     printf '%s\t%s\n' "$expanded" "$(git -C "$expanded" rev-parse HEAD 2>/dev/null || echo '?')" >> "$1"
   done <<EOF
-$(awk -F'|' '/^\| / { gsub(/^ +| +$/, "", $5); if ($5 ~ /^~/) print $5 }' "$HUB_REPO/INDEX.md" 2>/dev/null)
+$(awk -F'|' '/^\| / { gsub(/^ +| +$/, "", $5); if ($5 ~ /^~/ && !seen[$5]++) print $5 }' "$HUB_REPO/INDEX.md" 2>/dev/null)
 EOF
 }
 
@@ -117,18 +129,49 @@ log "recorded HEADs for $(wc -l < "$BEFORE" | tr -d ' ') enrolled repos"
 # ------------------------------------------------------------------- flag probe
 # The cheapest possible real call. If the CLI has moved on, this is where we
 # find out — before anything has been written.
+#
+# The probe must exercise a *write*, in a throwaway repo, and then verify the
+# result by reading it back off disk — never by believing the run's own report.
+# That is this project's own hardest-won lesson (LEARNINGS, 2026-08-17: "a write
+# is only proven by reading it back from the target"). A probe that asks for a
+# sentence proves only that the model can talk; read-only git is auto-approved
+# even when every write would be denied, so it would pass while the real run
+# silently failed to commit anything.
+
+PROBE_DIR="$(mktemp -d)"
+trap 'rmdir "$LOCKDIR" 2>/dev/null; rm -f "$BEFORE" "$AFTER"; rm -rf "$PROBE_DIR"' EXIT
+
+git -C "$PROBE_DIR" init -q 2>/dev/null
+git -C "$PROBE_DIR" config user.email "healer@localhost"
+git -C "$PROBE_DIR" config user.name "mission healer probe"
+printf 'probe\n' > "$PROBE_DIR/probe.txt"
 
 log "probing headless flags: $CLAUDE_FLAGS"
-if ! PROBE="$(cd "$HUB_REPO" && "$CLAUDE_BIN" -p "Reply with exactly: PROBE_OK" $CLAUDE_FLAGS 2>&1)"; then
-  log "ERROR: probe call failed. Output follows — likely a bad flag or expired auth:"
+# set -f: CLAUDE_FLAGS is expanded unquoted on purpose (it carries several
+# words), which would otherwise let a stray file name glob-match "Bash(git:*)".
+set -f
+PROBE_RC=0
+PROBE="$(cd "$PROBE_DIR" && "$CLAUDE_BIN" -p "Run this bash command: git add -A && git commit -m PROBE_OK. Then stop." $CLAUDE_FLAGS 2>&1)" || PROBE_RC=$?
+set +f
+
+if [ "$PROBE_RC" -ne 0 ]; then
+  log "ERROR: probe call failed (rc=$PROBE_RC). Output follows — likely a bad flag or expired auth:"
   printf '%s\n' "$PROBE" | sed 's/^/       /'
   exit 1
 fi
-if ! printf '%s' "$PROBE" | grep -q 'PROBE_OK'; then
-  log "WARNING: probe ran but did not answer as asked. Output:"
+
+# The verification that matters: did a commit actually land?
+if [ "$(git -C "$PROBE_DIR" log -1 --format='%s' 2>/dev/null)" != "PROBE_OK" ]; then
+  log "ERROR: the probe session could not commit. The healer can edit files but not"
+  log "       save them, which would leave every repair half-done and unpushed."
+  log "       Almost always this means --allowedTools no longer covers git:"
+  log "       current flags: $CLAUDE_FLAGS"
+  log "       Fix CLAUDE_FLAGS in the plist. Do NOT widen to --dangerously-skip-permissions."
+  log "       Probe session output follows:"
   printf '%s\n' "$PROBE" | sed 's/^/       /'
+  exit 1
 fi
-log "probe OK"
+log "probe OK — headless session can commit"
 
 if [ "$DRY_RUN" = "1" ]; then
   log "DRY_RUN=1 — pre-flight and probe passed, skipping the healing run"
@@ -182,6 +225,7 @@ log "starting healing run (max ${MAX_SECONDS}s)"
 RUN_LOG="$(mktemp)"
 (
   cd "$HUB_REPO" || exit 1
+  set -f   # see the probe: CLAUDE_FLAGS is expanded unquoted by design
   "$CLAUDE_BIN" -p "$PROMPT" $CLAUDE_FLAGS
 ) > "$RUN_LOG" 2>&1 &
 RUN_PID=$!
@@ -208,7 +252,17 @@ rm -f "$RUN_LOG"
 # ----------------------------------------------------------------- after audit
 # The script cannot stop a bad edit. It can make sure one is never quiet.
 
+# Two allowlists, because the hub and a project repo are not the same thing.
+# In a PROJECT repo the healer owns only the mission namespace.
+# In the HUB it is *required* to edit the registry — charter steps 1 and 3 are
+# "apply the roster ticks" and "update INDEX.md" — so auditing the hub against
+# the project allowlist flagged the healer for doing exactly what it was told.
+# That made a successful run indistinguishable from a rogue one: a quiet day
+# passed and a productive day exited 1. (Found by the 2026-08-17 audit.)
 ALLOW_RE='^(\.mission/|CLAUDE\.md$)'
+HUB_ALLOW_RE='^(\.mission/|CLAUDE\.md$|INDEX\.md$|CANDIDATES\.md$|BOARD\.md$|snapshot/)'
+HUB_CANON="$(cd "$HUB_REPO" 2>/dev/null && pwd -P || echo "$HUB_REPO")"
+
 snapshot_heads "$AFTER"
 VIOLATIONS=0
 CHANGED=0
@@ -218,10 +272,19 @@ while IFS=$'\t' read -r repo old; do
   [ -z "$new" ] && continue
   [ "$old" = "$new" ] && continue
   CHANGED=$((CHANGED + 1))
-  log "changed: $repo  $old -> $new"
+
+  repo_canon="$(cd "$repo" 2>/dev/null && pwd -P || echo "$repo")"
+  if [ "$repo_canon" = "$HUB_CANON" ]; then
+    this_allow="$HUB_ALLOW_RE"
+    log "changed: $repo (hub)  $old -> $new"
+  else
+    this_allow="$ALLOW_RE"
+    log "changed: $repo  $old -> $new"
+  fi
+
   while IFS= read -r f; do
     [ -z "$f" ] && continue
-    if ! printf '%s' "$f" | grep -Eq "$ALLOW_RE"; then
+    if ! printf '%s' "$f" | grep -Eq "$this_allow"; then
       log "  ERROR: touched outside the allowlist: $f"
       VIOLATIONS=$((VIOLATIONS + 1))
     fi
@@ -229,6 +292,18 @@ while IFS=$'\t' read -r repo old; do
 $(git -C "$repo" diff --name-only "$old".."$new" 2>/dev/null)
 EOF
 done < "$BEFORE"
+
+# A repo enrolled DURING the run has no before-HEAD, so the loop above never
+# sees it — and enrolment is the path that writes most. Silence there would be
+# the audit's blind spot, so name them explicitly rather than imply "all clear".
+while IFS=$'\t' read -r repo new; do
+  [ -z "$repo" ] && continue
+  if ! grep -Fq "$repo	" "$BEFORE"; then
+    log "NOTE: $repo appeared in INDEX.md during this run (newly enrolled) — no"
+    log "      before-HEAD existed, so its contents were NOT audited. Check by hand:"
+    log "      git -C \"$repo\" show --stat $new"
+  fi
+done < "$AFTER"
 
 log "audit: $CHANGED repos changed, $VIOLATIONS allowlist violations"
 

@@ -30,10 +30,21 @@ DRY_RUN=1 healer/mission-heal.sh
 ```
 
 That dry run is the whole risk, front-loaded. It checks the clone, checks push
-auth non-interactively, finds `claude`, and makes one real throwaway call to
-verify the headless flags. **If it fails, it tells you which of those it was.**
+auth non-interactively, finds `claude`, and then — in a throwaway git repo it
+creates and deletes — makes a real headless session **commit something**, and
+verifies that commit by reading it back off disk rather than believing the
+session's own report. **If it fails, it tells you which of those it was.**
 Flag names move between Claude Code versions; fix `CLAUDE_FLAGS` in the plist if
 the probe rejects them, and do not widen permissions to make an error go away.
+
+The probe is deliberately a *write*. Until 2026-08-17 it asked the session to
+reply with a word, which it always could — while every git command it needed was
+being denied. `--permission-mode acceptEdits` covers file edits only; a Bash call
+that needs approval in headless mode is refused outright, with no terminal to ask.
+So `CLAUDE_FLAGS` now carries `--allowedTools Bash(git:*) Bash(gh:*)`, and the
+probe proves it. A project `.claude/settings.json` allowlist is **not** a
+substitute — it is ignored unless the workspace has been trusted interactively,
+and it fails silently when it is not.
 
 ```sh
 # 2. One real run, watched, with you present
@@ -75,6 +86,15 @@ each enrolled repo's HEAD from before to after and logs `ERROR` for any path
 outside that allowlist. It cannot prevent a bad edit — it guarantees a bad edit
 is never quiet. Nothing is ever force-pushed, so anything it did is revertable.
 
+The **hub** is audited against its own, wider allowlist — `INDEX.md`,
+`CANDIDATES.md`, `BOARD.md`, `snapshot/**`, `.mission/**` — because updating the
+registry is a charter step, not a transgression. Until 2026-08-17 the hub was
+audited as though it were a project repo, so any run that actually healed
+something ended `ERROR ... exit 1` for doing what it was told; only a run that
+changed nothing could pass. And a repo enrolled *during* a run has no
+before-HEAD to diff, so the audit now names it as **not audited** rather than
+folding it into a clean total.
+
 ## Stop / uninstall
 
 ```sh
@@ -85,7 +105,7 @@ rm ~/Library/LaunchAgents/com.adrianludum.mission-healer.plist
 ## Config
 
 Env vars, override in the plist: `HUB_REPO`, `SCAN_ROOT`, `CLAUDE_BIN`,
-`CLAUDE_FLAGS`, `MAX_SECONDS` (default 900, hard kill), `DRY_RUN=1`.
+`CLAUDE_FLAGS`, `MAX_SECONDS` (default 1800, hard kill), `DRY_RUN=1`.
 
 ## Known trap, inherited
 
