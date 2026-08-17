@@ -104,3 +104,29 @@ remote; all four were diffed and carry **no unique content** — only deletions 
 state-file text — so they are safe to delete, and they are the same class of stranded branch that
 caused the duplicate-Routine incident. Separately, 45 of the 50 commits are reporter snapshots
 (24/day and growing), so `git log` no longer shows the project's real history without a path filter.
+
+## Testing the fixes changed two of them (2026-08-17, audit night)
+
+Fixing the four audit findings produced its own small lesson: **two of the fixes were wrong until
+they were run.**
+
+`file_mtime()` was written as `stat -f %m || stat -c %Y` — BSD form, GNU fallback. On GNU, `stat -f`
+does not fail: `-f` means *filesystem*, so it succeeds and prints a multi-line report. The `||`
+never fired, that report flowed into `$(( ... ))`, and every age came out empty with
+`File: unbound variable` on stderr. A fallback chain that assumes the wrong tool *errors* is not a
+fallback; both branches now check the result is an integer. And the reporter's "scan failed" stub
+turned out to be unreachable — `scan_repo` ended in an assignment, so it could never return
+non-zero — which means a genuinely unreadable repo had always been reporting confident zeroes.
+
+Both were caught in a two-minute fixture run. The healer's permission defect was caught the same
+way: the claim "acceptEdits does not cover Bash" was *measured* against the real CLI (denied), and
+so was the fix (`--allowedTools Bash(git:*)` — allowed), and so was the rejected alternative (a
+project `.claude/settings.json` allowlist is **ignored unless the workspace has been trusted
+interactively**, and says nothing when it is not). Three claims, three tests, one of them
+overturning the obvious-looking answer.
+
+This is the same lesson as "an agent log entry is a claim, not a receipt", arriving one level down:
+**a fix is a claim too.** The healer's new probe is that lesson written into the code — it commits
+to a throwaway repo and then reads the commit back, rather than asking a session whether it worked.
+Confirmed by running the new probe against the old flags: it fails, loudly, with the reason. Had it
+existed a day earlier, the defect could never have shipped.
