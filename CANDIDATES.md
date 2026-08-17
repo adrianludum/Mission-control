@@ -63,9 +63,8 @@ Ticking these is allowed — `/roster` will tell you what it hit and stop that p
       Next.js marketing site, clean tree, 944M. **Folder name is a Finder duplicate** (" 2") — rename before enrolling so `INDEX.md` does not carry it.
 - [ ] **new-ludum** — `~/Projects/new-ludum` — `adrianludum/new-ludum`
       Monorepo skeleton (`apps/`, `packages/`, `discovery/`). **Confirm it is not superseded by Ludum v2** before enrolling.
-- [x] **Campaign CRM** — `~/Projects/ludum-campaigns` *or* `~/Projects/ludum-outreach` — `adrianludum/Campaign_CRM`
-      **Both folders are working copies of the same remote**, on different feature branches 3 months apart. Pick which is canonical, merge or retire the other, then enrol once. **owner: Adrian**
-      *Ticked 2026-08-12; `/roster` stopped it here rather than guess — enrolment (seed + index) runs automatically once the canonical folder is decided.*
+- [x] **Campaign CRM** — `~/Projects/ludum-outreach` — `adrianludum/Campaign_CRM`
+      **Canonical folder decided 2026-08-17 (Decision 9.8): `ludum-outreach`.** `ludum-campaigns` retires unmerged — zero unique commits, and its branch tip is a 92,947-line mass deletion that must never reach `main`. Enrolment (seed + index) is now mechanical and only waits on a session with push rights to `adrianludum/*`.
 
 ## Nested repos — surveyed, undecided
 
