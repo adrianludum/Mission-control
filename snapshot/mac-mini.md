@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-18T15:24:17Z*
+*Generated: 2026-08-18T16:24:31Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 34*
@@ -196,7 +196,7 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 0 |
+| Uncommitted | 8 |
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/language.git) |
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-18T15:37:21+01:00 — reporter: snapshot 2026-08-18T14:37:16Z |
+| Last commit | 2026-08-18T16:24:29+01:00 — reporter: snapshot 2026-08-18T15:24:17Z |
 
 ## new-ludum-website 2
 
