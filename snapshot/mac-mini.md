@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-19T16:27:18Z*
+*Generated: 2026-08-19T17:27:26Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -64,8 +64,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 0 |
-| Untracked | 2 |
+| Uncommitted | 5 |
+| Untracked | 5 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/appludumv4.git) |
 | Last commit | 2026-08-11T12:21:42+01:00 — mission-control: enrol — seed .mission/ |
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-19T16:27:17+01:00 — reporter: snapshot 2026-08-19T15:27:11Z |
+| Last commit | 2026-08-19T17:27:25+01:00 — reporter: snapshot 2026-08-19T16:27:18Z |
 
 ## new-ludum-website 2
 
