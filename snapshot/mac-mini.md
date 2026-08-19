@@ -1,8 +1,8 @@
 # Mac mini snapshot
-*Generated: 2026-08-19T15:27:11Z*
+*Generated: 2026-08-19T16:27:18Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
-*Repos found: 34*
+*Repos found: 35*
 
 ## Chief of Staff
 
@@ -58,6 +58,17 @@
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/WorldRowingResults.git) |
 | Last commit | 2026-08-14T10:55:26+01:00 — mission: outage closed — fix deployed, live site verified |
+
+## app-ludum
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 2 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/appludumv4.git) |
+| Last commit | 2026-08-11T12:21:42+01:00 — mission-control: enrol — seed .mission/ |
 
 ## app.ludum
 
@@ -277,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-19T15:27:09+01:00 — reporter: snapshot 2026-08-19T14:27:04Z |
+| Last commit | 2026-08-19T16:27:17+01:00 — reporter: snapshot 2026-08-19T15:27:11Z |
 
 ## new-ludum-website 2
 
