@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-08-20T10:29:27Z*
+*Generated: 2026-08-20T11:29:34Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -68,7 +68,7 @@
 | Untracked | 5 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/appludumv4.git) |
-| Last commit | 2026-08-11T12:21:42+01:00 — mission-control: enrol — seed .mission/ |
+| Last commit | 2026-08-20T11:57:07+01:00 — Fix schedule duplication, multi-object JSON parsing, generic titles (v20/prompt 2.1.0) |
 
 ## app.ludum
 
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-08-20T10:29:25+01:00 — reporter: snapshot 2026-08-20T09:29:20Z |
+| Last commit | 2026-08-20T11:29:33+01:00 — reporter: snapshot 2026-08-20T10:29:27Z |
 
 ## new-ludum-website 2
 
