@@ -14,3 +14,4 @@ Cooling period before re-raising a still-true condition: **14 days**.
 | unpushed-branches:training-status | Training Status | 2026-08-21 | 2026-08-21 | 3 local branches exist only on the mac mini, no matching ref on origin: fix/build-26-release-guard (current checkout, dirty), merge/resting-measurements, mission/seed-on-main |
 | unpushed-commits:ulbc-salesforce | ULBC-salesforce | 2026-08-22 | 2026-08-22 | main is 3 commits ahead of origin, unpushed since last commit 2026-08-14 — no remote copy of that work |
 | uncommitted:language | Learn a Language | 2026-08-22 | 2026-08-22 | 10 uncommitted files, sitting since last commit 2026-08-12 — no commit or push activity since |
+| unpushed-commits:familysite | Trip HQ | 2026-08-26 | 2026-08-26 | mac mini's main 1 commit ahead of origin since 2026-08-17 (never pushed); origin has since advanced with different commits (verified live), so this is a genuine divergence, not a stale scan |
