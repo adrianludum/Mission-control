@@ -15,3 +15,6 @@ Cooling period before re-raising a still-true condition: **14 days**.
 | unpushed-commits:ulbc-salesforce | ULBC-salesforce | 2026-08-22 | 2026-08-22 | main is 3 commits ahead of origin, unpushed since last commit 2026-08-14 — no remote copy of that work |
 | uncommitted:language | Learn a Language | 2026-08-22 | 2026-08-22 | 10 uncommitted files, sitting since last commit 2026-08-12 — no commit or push activity since |
 | unpushed-commits:familysite | Trip HQ | 2026-08-26 | 2026-08-26 | mac mini's main 1 commit ahead of origin since 2026-08-17 (never pushed); origin has since advanced with different commits (verified live), so this is a genuine divergence, not a stale scan |
+| blocker-14d:imagesai-real-library | imagesAi | 2026-08-27 | 2026-08-27 | owner:Adrian, open since 2026-08-11 — needs a real photo library to test against before deciding whether it beats the PhotoShelter/Canto incumbent |
+| blocker-14d:language-m0-apikeys | Learn a Language | 2026-08-27 | 2026-08-27 | owner:Adrian, open since 2026-08-12 — M0 needs API keys supplied and the in-car test run before it can proceed |
+| blocker-14d:drone-phase0-shoot | Drone Rowing Analysis | 2026-08-27 | 2026-08-27 | owner:Adrian, open since 2026-08-12 — Phase-0 shoot (eight + 8-seat Peach + Mini 5 Pro) needs booking; it's the kill-or-continue gate for the project |
