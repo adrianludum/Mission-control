@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-09-13T11:38:31Z*
+*Generated: 2026-09-29T02:57:52Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -42,7 +42,7 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 0 |
+| Uncommitted | 1 |
 | Untracked | 1 |
 | Unpushed | main: 3 ahead |
 | Remote | origin (https://github.com/adrianludum/ULBC-Salesforce.git) |
@@ -64,11 +64,11 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 5 |
-| Untracked | 5 |
+| Uncommitted | 0 |
+| Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/appludumv4.git) |
-| Last commit | 2026-08-20T11:57:07+01:00 — Fix schedule duplication, multi-object JSON parsing, generic titles (v20/prompt 2.1.0) |
+| Last commit | 2026-09-17T15:54:31+01:00 — v40 + handover: stacked layout, project state doc |
 
 ## app.ludum
 
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-09-13T11:38:30+01:00 — reporter: snapshot 2026-09-13T10:38:24Z |
+| Last commit | 2026-09-13T12:38:37+01:00 — reporter: snapshot 2026-09-13T11:38:31Z |
 
 ## new-ludum-website 2
 
@@ -382,9 +382,9 @@
 
 | Fact | Value |
 | --- | --- |
-| Branch | fix/build-26-release-guard |
-| Uncommitted | 1 |
-| Untracked | 5 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; fix/build-26-release-guard: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
+| Branch | redesign/v2 |
+| Uncommitted | 2 |
+| Untracked | 4 |
+| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-08-17T08:07:51Z — fix: block offline release builds — tripwire, guard test, supported build script |
+| Last commit | 2026-09-28T15:20:42Z — Merge resolution: keep the release guard with the redesign; build 27 |
