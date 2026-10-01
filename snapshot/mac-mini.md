@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-01T09:33:19Z*
+*Generated: 2026-10-01T10:33:28Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-01T09:33:17+01:00 — reporter: snapshot 2026-10-01T08:33:11Z |
+| Last commit | 2026-10-01T10:33:26+01:00 — reporter: snapshot 2026-10-01T09:33:19Z |
 
 ## new-ludum-website 2
 
@@ -387,4 +387,4 @@
 | Untracked | 4 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-01T07:05:44Z — Build 31 for TestFlight (30 is already on TestFlight) |
+| Last commit | 2026-10-01T09:56:08Z — Runbook: Mac mini signing, SSH keychain, upload pitfalls; next build 32 |
