@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-05T16:01:04Z*
+*Generated: 2026-10-05T17:01:11Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-05T16:01:02+01:00 — reporter: snapshot 2026-10-05T15:00:56Z |
+| Last commit | 2026-10-05T17:01:09+01:00 — reporter: snapshot 2026-10-05T16:01:04Z |
 
 ## new-ludum-website 2
 
@@ -387,4 +387,4 @@
 | Untracked | 4 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-05T16:07:13+01:00 — Docs: Ludum app-connect is live on prod (verified) |
+| Last commit | 2026-10-05T17:43:41+01:00 — Docs: v0.9 worker deployed and all athletes recomputed |
