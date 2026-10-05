@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-05T12:00:32Z*
+*Generated: 2026-10-05T13:00:39Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-05T12:00:30+01:00 — reporter: snapshot 2026-10-05T11:00:25Z |
+| Last commit | 2026-10-05T13:00:37+01:00 — reporter: snapshot 2026-10-05T12:00:32Z |
 
 ## new-ludum-website 2
 
@@ -383,8 +383,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | redesign/v2 |
-| Uncommitted | 2 |
+| Uncommitted | 3 |
 | Untracked | 4 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/training-data-analysis-changes-cdb246: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
+| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-10-01T11:54:59Z — Fix the end of a session hanging on "Saving your session…" |
