@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-05T07:59:55Z*
+*Generated: 2026-10-05T09:00:08Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-05T08:45:03+01:00 — reporter: snapshot 2026-10-05T07:44:57Z |
+| Last commit | 2026-10-05T09:00:06+01:00 — reporter: snapshot 2026-10-05T07:59:55Z |
 
 ## new-ludum-website 2
 
@@ -387,4 +387,4 @@
 | Untracked | 4 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-01T10:57:02Z — Web deploy runbook: deploying from the Mac mini with npx vercel |
+| Last commit | 2026-10-01T11:54:59Z — Fix the end of a session hanging on "Saving your session…" |
