@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-07T13:06:38Z*
+*Generated: 2026-10-07T14:06:45Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-07T13:06:36+01:00 — reporter: snapshot 2026-10-07T12:06:29Z |
+| Last commit | 2026-10-07T14:06:43+01:00 — reporter: snapshot 2026-10-07T13:06:38Z |
 
 ## new-ludum-website 2
 
@@ -387,4 +387,4 @@
 | Untracked | 4 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-07T12:45:31+01:00 — PM5 runs the programmed workout; the app follows it and assembles the session |
+| Last commit | 2026-10-07T14:16:36+01:00 — PM5-run sessions: place pieces from the on-time PM edges; Ludum sample distance and stroke ids |
