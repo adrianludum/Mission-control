@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-07T16:07:41Z*
+*Generated: 2026-10-07T17:07:49Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -286,9 +286,9 @@
 | Branch | claude/mission-control-setup-wnn4tr |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/mission-control-setup-wnn4tr: 1 ahead |
+| Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-07T16:06:59+01:00 — reporter: snapshot 2026-10-07T15:06:52Z |
+| Last commit | 2026-10-07T17:07:47+01:00 — reporter: snapshot 2026-10-07T16:07:41Z |
 
 ## new-ludum-website 2
 
@@ -383,8 +383,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | feature/team-tests |
-| Uncommitted | 3 |
-| Untracked | 4 |
+| Uncommitted | 4 |
+| Untracked | 7 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/team-tests: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-10-07T14:16:36+01:00 — PM5-run sessions: place pieces from the on-time PM edges; Ludum sample distance and stroke ids |
