@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-07T15:06:52Z*
+*Generated: 2026-10-07T16:07:41Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -286,9 +286,9 @@
 | Branch | claude/mission-control-setup-wnn4tr |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | none |
+| Unpushed | claude/mission-control-setup-wnn4tr: 1 ahead |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-07T15:06:51+01:00 — reporter: snapshot 2026-10-07T14:06:45Z |
+| Last commit | 2026-10-07T16:06:59+01:00 — reporter: snapshot 2026-10-07T15:06:52Z |
 
 ## new-ludum-website 2
 
