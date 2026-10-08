@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-08T08:09:47Z*
+*Generated: 2026-10-08T09:09:57Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-08T08:09:46+01:00 — reporter: snapshot 2026-10-08T07:09:38Z |
+| Last commit | 2026-10-08T09:09:55+01:00 — reporter: snapshot 2026-10-08T08:09:47Z |
 
 ## new-ludum-website 2
 
@@ -385,6 +385,6 @@
 | Branch | feature/team-tests |
 | Uncommitted | 3 |
 | Untracked | 4 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/team-tests: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
+| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-10-08T09:03:40+01:00 — Team Tests SQL: explicit table grants for signed-in users |
