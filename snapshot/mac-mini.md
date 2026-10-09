@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-09T12:13:19Z*
+*Generated: 2026-10-09T13:13:27Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-09T12:13:18+01:00 — reporter: snapshot 2026-10-09T11:13:11Z |
+| Last commit | 2026-10-09T13:13:25+01:00 — reporter: snapshot 2026-10-09T12:13:19Z |
 
 ## new-ludum-website 2
 
@@ -383,8 +383,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | redesign/v2 |
-| Uncommitted | 2 |
-| Untracked | 6 |
+| Uncommitted | 0 |
+| Untracked | 0 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; worktree-agent-a0b71291bfc0d829e: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-09T13:12:55+01:00 — Docs: Team Tests overview; Podfile.lock with the notification pods |
+| Last commit | 2026-10-09T13:25:52+01:00 — Ignore .env* files (keep local secrets out of git) |
