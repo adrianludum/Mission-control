@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-09T03:12:11Z*
+*Generated: 2026-10-09T04:12:18Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-09T03:12:09+01:00 — reporter: snapshot 2026-10-09T02:12:03Z |
+| Last commit | 2026-10-09T04:12:17+01:00 — reporter: snapshot 2026-10-09T03:12:11Z |
 
 ## new-ludum-website 2
 
@@ -385,6 +385,6 @@
 | Branch | feature/team-tests |
 | Uncommitted | 3 |
 | Untracked | 6 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; worktree-agent-a0b71291bfc0d829e: no upstream |
+| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; worktree-agent-a0b71291bfc0d829e: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-08T16:29:51+01:00 — Team Tests: Row tab cards, Ready to start, test results screen |
+| Last commit | 2026-10-09T04:45:06+01:00 — Team Tests: morning check-in reminder, only with a DRV-style code |
