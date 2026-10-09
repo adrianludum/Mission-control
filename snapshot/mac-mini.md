@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-09T11:13:11Z*
+*Generated: 2026-10-09T12:13:19Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-09T11:13:10+01:00 — reporter: snapshot 2026-10-09T10:13:04Z |
+| Last commit | 2026-10-09T12:13:18+01:00 — reporter: snapshot 2026-10-09T11:13:11Z |
 
 ## new-ludum-website 2
 
@@ -382,9 +382,9 @@
 
 | Fact | Value |
 | --- | --- |
-| Branch | feature/team-tests |
-| Uncommitted | 5 |
+| Branch | redesign/v2 |
+| Uncommitted | 2 |
 | Untracked | 6 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; worktree-agent-a0b71291bfc0d829e: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-09T12:10:39+01:00 — Team Tests results: label the last-60 s and whole-piece columns |
+| Last commit | 2026-10-09T13:12:55+01:00 — Docs: Team Tests overview; Podfile.lock with the notification pods |
