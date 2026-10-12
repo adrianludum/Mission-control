@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-12T10:22:06Z*
+*Generated: 2026-10-12T11:22:14Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-12T10:22:05+01:00 — reporter: snapshot 2026-10-12T09:21:58Z |
+| Last commit | 2026-10-12T11:22:12+01:00 — reporter: snapshot 2026-10-12T10:22:06Z |
 
 ## new-ludum-website 2
 
@@ -382,9 +382,9 @@
 
 | Fact | Value |
 | --- | --- |
-| Branch | coach/web |
+| Branch | redesign/v2 |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; coach/web: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; worktree-agent-a0b71291bfc0d829e: no upstream |
+| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; coach/web: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; redesign/v2: 1 ahead; worktree-agent-a0b71291bfc0d829e: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-12T10:14:30+01:00 — Coach side: squad views, access tiers, admin page, feedback mode |
+| Last commit | 2026-10-12T12:01:48+01:00 — Build 42: Row tab steps, run-mode explainer, PM5 firmware check |
