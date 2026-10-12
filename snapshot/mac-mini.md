@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-12T19:23:17Z*
+*Generated: 2026-10-12T20:23:24Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-12T19:23:15+01:00 — reporter: snapshot 2026-10-12T18:23:09Z |
+| Last commit | 2026-10-12T20:23:23+01:00 — reporter: snapshot 2026-10-12T19:23:17Z |
 
 ## new-ludum-website 2
 
@@ -382,9 +382,9 @@
 
 | Fact | Value |
 | --- | --- |
-| Branch | claude/measures-tier |
+| Branch | claude/external-testing-env-setup-cvoisp |
 | Uncommitted | 1 |
 | Untracked | 0 |
 | Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; coach/web: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; redesign/v2: 2 ahead; worktree-agent-a0b71291bfc0d829e: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-12T12:32:36Z — Measures tier: read the app's wellness_checkins; squad-scoped event reads |
+| Last commit | 2026-10-12T16:30:28Z — External testing: coach email invites, squad-scoped coach access, in-app sign-up code |
