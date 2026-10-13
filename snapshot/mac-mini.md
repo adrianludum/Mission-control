@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-13T17:26:10Z*
+*Generated: 2026-10-13T18:26:18Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-13T17:26:08+01:00 — reporter: snapshot 2026-10-13T16:26:01Z |
+| Last commit | 2026-10-13T18:26:16+01:00 — reporter: snapshot 2026-10-13T17:26:10Z |
 
 ## new-ludum-website 2
 
@@ -385,6 +385,6 @@
 | Branch | claude/external-testing-env-setup-cvoisp |
 | Uncommitted | 3 |
 | Untracked | 0 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; coach/web: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; redesign/v2: 2 ahead; worktree-agent-a0b71291bfc0d829e: no upstream |
+| Unpushed | claude/app-spec-review-950708: no upstream; claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; redesign/v2: 2 ahead; worktree-agent-a0b71291bfc0d829e: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-13T15:48:17+01:00 — Android applicationId back to com.ludum.training_status |
+| Last commit | 2026-10-13T19:11:57+01:00 — Coach tiers enforced: coach_can_read admin-only; docs for deploys and dev branch |
