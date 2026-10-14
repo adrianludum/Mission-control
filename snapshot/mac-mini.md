@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-14T10:29:00Z*
+*Generated: 2026-10-14T11:29:08Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-14T10:28:59+01:00 — reporter: snapshot 2026-10-14T09:28:52Z |
+| Last commit | 2026-10-14T11:29:06+01:00 — reporter: snapshot 2026-10-14T10:29:00Z |
 
 ## new-ludum-website 2
 
@@ -387,4 +387,4 @@
 | Untracked | 0 |
 | Unpushed | claude/app-spec-review-950708: no upstream; claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; redesign/v2: 2 ahead; worktree-agent-a0b71291bfc0d829e: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-13T19:11:57+01:00 — Coach tiers enforced: coach_can_read admin-only; docs for deploys and dev branch |
+| Last commit | 2026-10-14T11:49:48+01:00 — Android: fast BLE link before programming the PM5; build 48 |
