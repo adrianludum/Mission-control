@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-15T09:32:07Z*
+*Generated: 2026-10-15T10:32:15Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-15T09:32:05+01:00 — reporter: snapshot 2026-10-15T08:31:59Z |
+| Last commit | 2026-10-15T10:32:13+01:00 — reporter: snapshot 2026-10-15T09:32:07Z |
 
 ## new-ludum-website 2
 
@@ -383,8 +383,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | claude/external-testing-env-setup-cvoisp |
-| Uncommitted | 3 |
+| Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/app-spec-review-950708: no upstream; claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; redesign/v2: 2 ahead; worktree-agent-a0b71291bfc0d829e: no upstream |
+| Unpushed | claude/app-spec-review-950708: no upstream; claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/testing-feedback-issues-5c105d: no upstream; claude/zen-burnell-eb9ed6: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; worktree-agent-a0b71291bfc0d829e: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-14T13:29:13+01:00 — Profile survives a new phone: pull before onboarding, never push blanks; DOB stays on its day; build 49 |
+| Last commit | 2026-10-15T11:02:58+01:00 — Docs: Android/Play runbook, store listing assets, builds 48-49; Android release script |
