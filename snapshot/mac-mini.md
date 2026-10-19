@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-19T09:44:33Z*
+*Generated: 2026-10-19T10:44:40Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-19T09:44:31+01:00 — reporter: snapshot 2026-10-19T08:44:26Z |
+| Last commit | 2026-10-19T10:44:39+01:00 — reporter: snapshot 2026-10-19T09:44:33Z |
 
 ## new-ludum-website 2
 
@@ -387,4 +387,4 @@
 | Untracked | 0 |
 | Unpushed | claude/app-spec-review-950708: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-sandbox-sync-issue-kts95w: ? ahead; claude/measures-tier: ? ahead; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/testing-feedback-issues-5c105d: no upstream; claude/zen-burnell-eb9ed6: no upstream; coach/web: ? ahead; feature/live-screens: ? ahead; feature/session-times: ? ahead; feature/team-tests: ? ahead; fix/build-26-release-guard: ? ahead; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; worktree-agent-a0b71291bfc0d829e: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-16T13:32:28Z — Build 56: clear local data on sign-out; merge outstanding branches |
+| Last commit | 2026-10-16T15:02:07Z — mission: branch clean-up is Adrian's to run (cloud can't delete branches) |
