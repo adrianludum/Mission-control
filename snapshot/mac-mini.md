@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-20T12:48:04Z*
+*Generated: 2026-10-20T13:48:12Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-20T12:48:02+01:00 — reporter: snapshot 2026-10-20T11:47:56Z |
+| Last commit | 2026-10-20T13:48:10+01:00 — reporter: snapshot 2026-10-20T12:48:04Z |
 
 ## new-ludum-website 2
 
@@ -383,8 +383,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 1 |
+| Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/app-rename-float-af3638: no upstream; claude/app-spec-review-950708: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/float-app-comparison-5882f1: no upstream; claude/flutter-app-endpoint-b67a13: ? ahead; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: ? ahead; fix/ludum-local-time: ? ahead; float/web-copy: no upstream; main: 3 ahead; mission/seed-on-main: no upstream; wip/ux-review-2026-10: no upstream |
+| Unpushed | claude/app-rename-float-af3638: no upstream; claude/app-spec-review-950708: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/float-app-comparison-5882f1: no upstream; claude/flutter-app-endpoint-b67a13: ? ahead; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: ? ahead; fix/ludum-connect-fresh-login: no upstream; fix/ludum-local-time: ? ahead; float/web-copy: no upstream; mission/seed-on-main: no upstream; wip/ux-review-2026-10: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-20T13:28:14+01:00 — Float build 2: finish the UX review work |
+| Last commit | 2026-10-20T14:36:31+01:00 — Ludum connect: always ask who is connecting |
