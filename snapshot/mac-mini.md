@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-20T14:48:20Z*
+*Generated: 2026-10-20T15:48:28Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-20T14:48:18+01:00 — reporter: snapshot 2026-10-20T13:48:12Z |
+| Last commit | 2026-10-20T15:48:26+01:00 — reporter: snapshot 2026-10-20T14:48:20Z |
 
 ## new-ludum-website 2
 
@@ -385,6 +385,6 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/app-rename-float-af3638: no upstream; claude/app-spec-review-950708: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/float-app-comparison-5882f1: no upstream; claude/flutter-app-endpoint-b67a13: ? ahead; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-android-bugs-79b667: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: ? ahead; fix/ludum-local-time: ? ahead; float/web-copy: no upstream; main: 1 ahead; mission/seed-on-main: no upstream; wip/ux-review-2026-10: no upstream |
+| Unpushed | claude/app-rename-float-af3638: no upstream; claude/app-spec-review-950708: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/float-app-comparison-5882f1: no upstream; claude/flutter-app-endpoint-b67a13: ? ahead; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-android-bugs-79b667: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: ? ahead; fix/ludum-local-time: ? ahead; float/web-copy: no upstream; mission/seed-on-main: no upstream; wip/ux-review-2026-10: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-20T15:36:26+01:00 — docs: the worker only moved to live Ludum on 20 Oct |
+| Last commit | 2026-10-20T16:02:42+01:00 — Merge branch 'claude/ludum-android-bugs-79b667' |
