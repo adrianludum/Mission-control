@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-20T10:47:45Z*
+*Generated: 2026-10-20T11:47:56Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,7 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-20T10:47:44+01:00 — reporter: snapshot 2026-10-20T09:47:38Z |
+| Last commit | 2026-10-20T11:47:54+01:00 — reporter: snapshot 2026-10-20T10:47:45Z |
 
 ## new-ludum-website 2
 
@@ -383,8 +383,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 39 |
-| Untracked | 2 |
-| Unpushed | claude/app-rename-float-af3638: no upstream; claude/app-spec-review-950708: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/flutter-app-endpoint-b67a13: ? ahead; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: ? ahead; fix/ludum-local-time: ? ahead; mission/seed-on-main: no upstream |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | claude/app-rename-float-af3638: no upstream; claude/app-spec-review-950708: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/flutter-app-endpoint-b67a13: ? ahead; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: ? ahead; fix/ludum-local-time: ? ahead; float/web-copy: no upstream; mission/seed-on-main: no upstream; wip/ux-review-2026-10: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-19T13:55:02Z — Build 59: reset a forgotten password in the app with an emailed code |
+| Last commit | 2026-10-20T12:21:12+01:00 — float-migration: web copy waits on float/web-copy |
