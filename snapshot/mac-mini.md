@@ -1,8 +1,8 @@
 # Mac mini snapshot
-*Generated: 2026-10-22T06:53:35Z*
+*Generated: 2026-10-22T07:53:43Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
-*Repos found: 35*
+*Repos found: 34*
 
 ## Chief of Staff
 
@@ -208,7 +208,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 10 |
-| Untracked | 0 |
+| Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/language.git) |
 | Last commit | 2026-08-12T16:29:38+01:00 — checkpoint: refresh .mission state after committing app/ and server/ |
@@ -288,18 +288,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-22T06:53:34+01:00 — reporter: snapshot 2026-10-22T05:53:28Z |
-
-## new-ludum-website 2
-
-| Fact | Value |
-| --- | --- |
-| Branch | fix/pricing-annual-and-telemetry |
-| Uncommitted | 1 |
-| Untracked | 11 |
-| Unpushed | none |
-| Remote | origin (https://github.com/adrianludum/ludum-website.git) |
-| Last commit | 2026-06-15T10:48:55+01:00 — Fix pricing page inconsistencies (annual discount + Telemetry card) |
+| Last commit | 2026-10-22T07:53:41+01:00 — reporter: snapshot 2026-10-22T06:53:35Z |
 
 ## new-ludum
 
