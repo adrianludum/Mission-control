@@ -1,8 +1,8 @@
 # Mac mini snapshot
-*Generated: 2026-10-22T07:53:43Z*
+*Generated: 2026-10-22T08:53:50Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
-*Repos found: 34*
+*Repos found: 35*
 
 ## Chief of Staff
 
@@ -257,6 +257,17 @@
 | Remote | origin (https://github.com/adrianludum/Campaign_CRM.git) |
 | Last commit | 2026-03-20T10:18:27Z — fix: send.js now respects phase_id — prevents cross-phase sends |
 
+## ludum-website-site
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 1 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/ludum-website.git) |
+| Last commit | 2026-06-15T10:48:55+01:00 — Fix pricing page inconsistencies (annual discount + Telemetry card) |
+
 ## ludumevents-marketing
 
 | Fact | Value |
@@ -288,7 +299,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-22T07:53:41+01:00 — reporter: snapshot 2026-10-22T06:53:35Z |
+| Last commit | 2026-10-22T08:53:49+01:00 — reporter: snapshot 2026-10-22T07:53:43Z |
 
 ## new-ludum
 
