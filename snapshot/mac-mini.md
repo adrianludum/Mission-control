@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-26T13:05:09Z*
+*Generated: 2026-10-26T14:05:16Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -299,7 +299,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-26T12:05:08Z — reporter: snapshot 2026-10-26T12:05:03Z |
+| Last commit | 2026-10-26T13:05:14Z — reporter: snapshot 2026-10-26T13:05:09Z |
 
 ## new-ludum
 
@@ -387,4 +387,4 @@
 | Untracked | 0 |
 | Unpushed | claude/app-rename-float-af3638: no upstream; claude/app-spec-review-950708: no upstream; claude/coaches-website-workflow-ff282d: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/flutter-app-endpoint-b67a13: ? ahead; claude/hopeful-bardeen-0f1c65: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-android-bugs-79b667: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: ? ahead; fix/ludum-local-time: ? ahead; float/web-copy: no upstream; mission/seed-on-main: no upstream; wip/ux-review-2026-10: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-26T13:03:15Z — Docs: DFA alpha1 status after Kay's feedback |
+| Last commit | 2026-10-26T13:08:31Z — Merge Part A: squad switch to hide 'compared to last session' during tests |
