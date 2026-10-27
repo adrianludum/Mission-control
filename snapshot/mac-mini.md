@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-10-27T08:07:22Z*
+*Generated: 2026-10-27T09:07:29Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -299,7 +299,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-10-27T07:07:20Z — reporter: snapshot 2026-10-27T07:07:15Z |
+| Last commit | 2026-10-27T08:07:27Z — reporter: snapshot 2026-10-27T08:07:22Z |
 
 ## new-ludum
 
@@ -385,6 +385,6 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/app-rename-float-af3638: no upstream; claude/app-spec-review-950708: no upstream; claude/coaches-website-workflow-ff282d: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/flutter-app-endpoint-b67a13: ? ahead; claude/hopeful-bardeen-0f1c65: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-android-bugs-79b667: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: ? ahead; fix/ludum-local-time: ? ahead; float/web-copy: no upstream; mission/seed-on-main: no upstream; wip/ux-review-2026-10: no upstream |
+| Unpushed | claude/app-rename-float-af3638: no upstream; claude/app-spec-review-950708: no upstream; claude/fatigue-research-summary-cd6ff0: no upstream; claude/flutter-app-endpoint-b67a13: ? ahead; claude/hopeful-bardeen-0f1c65: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/ludum-android-bugs-79b667: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; feature/live-screens: ? ahead; fix/ludum-local-time: ? ahead; float/web-copy: no upstream; mission/seed-on-main: no upstream; wip/ux-review-2026-10: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-10-26T17:38:26Z — Docs: worker deployed (revision 00039, R-R dedupe + session_hrvt) |
