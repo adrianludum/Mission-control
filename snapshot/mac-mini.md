@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-02T16:24:49Z*
+*Generated: 2026-11-02T17:24:56Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/float-site.git) |
-| Last commit | 2026-11-02T15:43:59Z — Legal pages: no space before punctuation after links |
+| Last commit | 2026-11-02T16:38:02Z — Support and delete-account pages; footer links stay on floatrowing.com |
 
 ## ludumevents-marketing
 
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-02T15:24:47Z — reporter: snapshot 2026-11-02T15:24:42Z |
+| Last commit | 2026-11-02T16:24:55Z — reporter: snapshot 2026-11-02T16:24:49Z |
 
 ## new-ludum
 
@@ -398,4 +398,4 @@
 | Untracked | 0 |
 | Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-02T16:01:43Z — Log Concept2's reason when the Logbook token exchange fails; Float terms + privacy updates |
+| Last commit | 2026-11-02T17:21:31Z — Store screenshots: iPhone 6.9" set (1320 × 2868), the size App Store Connect requires |
