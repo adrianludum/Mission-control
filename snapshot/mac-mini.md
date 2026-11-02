@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-02T11:24:13Z*
+*Generated: 2026-11-02T12:24:20Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -299,7 +299,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-02T10:24:12Z — reporter: snapshot 2026-11-02T10:24:07Z |
+| Last commit | 2026-11-02T11:24:19Z — reporter: snapshot 2026-11-02T11:24:13Z |
 
 ## new-ludum
 
@@ -385,6 +385,6 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/logbook-stroke-data-integration-e5bc82: no upstream; float/web-copy: no upstream |
+| Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-02T11:20:34Z — Admin: delete a squad (type its name to confirm) |
+| Last commit | 2026-11-02T12:14:10Z — Store review: release notes for build 11 |
