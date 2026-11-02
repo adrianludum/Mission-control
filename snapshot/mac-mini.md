@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-02T08:23:53Z*
+*Generated: 2026-11-02T09:24:00Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -299,7 +299,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-02T07:23:51Z — reporter: snapshot 2026-11-02T07:23:46Z |
+| Last commit | 2026-11-02T08:23:58Z — reporter: snapshot 2026-11-02T08:23:53Z |
 
 ## new-ludum
 
@@ -385,6 +385,6 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | claude/logbook-stroke-data-integration-e5bc82: no upstream; float/web-copy: no upstream; main: 11 ahead |
+| Unpushed | claude/logbook-stroke-data-integration-e5bc82: no upstream; float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-30T12:00:17Z — Merge coach site workflow: invites, onboarding, roster, landing pages, HRVT |
+| Last commit | 2026-11-02T09:07:40Z — Get-started guide: coach site link is coach.ludum.com |
