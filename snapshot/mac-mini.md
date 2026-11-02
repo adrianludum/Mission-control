@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-02T10:24:07Z*
+*Generated: 2026-11-02T11:24:13Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -299,7 +299,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-02T09:24:05Z — reporter: snapshot 2026-11-02T09:24:00Z |
+| Last commit | 2026-11-02T10:24:12Z — reporter: snapshot 2026-11-02T10:24:07Z |
 
 ## new-ludum
 
@@ -387,4 +387,4 @@
 | Untracked | 0 |
 | Unpushed | claude/logbook-stroke-data-integration-e5bc82: no upstream; float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-02T10:17:36Z — Athlete invites say Float: email, join page, group-chat text |
+| Last commit | 2026-11-02T11:20:34Z — Admin: delete a squad (type its name to confirm) |
