@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-02T12:24:20Z*
+*Generated: 2026-11-02T13:24:28Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -299,7 +299,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-02T11:24:19Z — reporter: snapshot 2026-11-02T11:24:13Z |
+| Last commit | 2026-11-02T12:24:26Z — reporter: snapshot 2026-11-02T12:24:20Z |
 
 ## new-ludum
 
@@ -387,4 +387,4 @@
 | Untracked | 0 |
 | Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-02T12:14:10Z — Store review: release notes for build 11 |
+| Last commit | 2026-11-02T12:41:24Z — Play launch checklist for Float build 11 |
