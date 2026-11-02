@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-02T15:24:42Z*
+*Generated: 2026-11-02T16:24:49Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -277,7 +277,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/float-site.git) |
-| Last commit | 2026-11-02T14:04:36Z — Float site: first draft for floatrowing.com |
+| Last commit | 2026-11-02T15:43:59Z — Legal pages: no space before punctuation after links |
 
 ## ludumevents-marketing
 
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-02T14:24:40Z — reporter: snapshot 2026-11-02T14:24:35Z |
+| Last commit | 2026-11-02T15:24:47Z — reporter: snapshot 2026-11-02T15:24:42Z |
 
 ## new-ludum
 
@@ -398,4 +398,4 @@
 | Untracked | 0 |
 | Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-02T12:41:24Z — Play launch checklist for Float build 11 |
+| Last commit | 2026-11-02T16:01:43Z — Log Concept2's reason when the Logbook token exchange fails; Float terms + privacy updates |
