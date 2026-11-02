@@ -1,8 +1,8 @@
 # Mac mini snapshot
-*Generated: 2026-11-02T13:24:28Z*
+*Generated: 2026-11-02T14:24:35Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
-*Repos found: 35*
+*Repos found: 36*
 
 ## Chief of Staff
 
@@ -268,6 +268,17 @@
 | Remote | origin (https://github.com/adrianludum/ludum-website.git) |
 | Last commit | 2026-06-15T10:48:55+01:00 — Fix pricing page inconsistencies (annual discount + Telemetry card) |
 
+## ludum-website/float-site
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/float-site.git) |
+| Last commit | 2026-11-02T14:04:36Z — Float site: first draft for floatrowing.com |
+
 ## ludumevents-marketing
 
 | Fact | Value |
@@ -299,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-02T12:24:26Z — reporter: snapshot 2026-11-02T12:24:20Z |
+| Last commit | 2026-11-02T13:24:33Z — reporter: snapshot 2026-11-02T13:24:28Z |
 
 ## new-ludum
 
