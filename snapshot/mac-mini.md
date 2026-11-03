@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-03T16:27:36Z*
+*Generated: 2026-11-03T17:27:43Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-03T15:27:34Z — reporter: snapshot 2026-11-03T15:27:29Z |
+| Last commit | 2026-11-03T16:27:41Z — reporter: snapshot 2026-11-03T16:27:36Z |
 
 ## new-ludum
 
@@ -394,7 +394,7 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 3 |
+| Uncommitted | 4 |
 | Untracked | 2 |
 | Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
