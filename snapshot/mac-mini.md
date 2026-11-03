@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-03T15:27:29Z*
+*Generated: 2026-11-03T16:27:36Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-03T14:27:27Z — reporter: snapshot 2026-11-03T14:27:22Z |
+| Last commit | 2026-11-03T15:27:34Z — reporter: snapshot 2026-11-03T15:27:29Z |
 
 ## new-ludum
 
@@ -394,8 +394,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 0 |
-| Untracked | 0 |
+| Uncommitted | 3 |
+| Untracked | 2 |
 | Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-11-02T17:21:31Z — Store screenshots: iPhone 6.9" set (1320 × 2868), the size App Store Connect requires |
