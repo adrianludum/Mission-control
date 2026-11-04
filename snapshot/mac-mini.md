@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-04T13:30:09Z*
+*Generated: 2026-11-04T14:30:16Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -275,9 +275,9 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | none |
+| Unpushed | main: 1 ahead |
 | Remote | origin (https://github.com/adrianludum/float-site.git) |
-| Last commit | 2026-11-02T16:38:02Z — Support and delete-account pages; footer links stay on floatrowing.com |
+| Last commit | 2026-11-04T14:21:46Z — Launch prep: indexable, store links, mobile menu, SEO, WebP, security meta |
 
 ## ludumevents-marketing
 
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-04T12:30:07Z — reporter: snapshot 2026-11-04T12:30:00Z |
+| Last commit | 2026-11-04T13:30:14Z — reporter: snapshot 2026-11-04T13:30:09Z |
 
 ## new-ludum
 
@@ -396,6 +396,6 @@
 | Branch | main |
 | Uncommitted | 4 |
 | Untracked | 2 |
-| Unpushed | float/web-copy: no upstream |
+| Unpushed | claude/float-website-launch-358897: no upstream; float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-11-02T17:21:31Z — Store screenshots: iPhone 6.9" set (1320 × 2868), the size App Store Connect requires |
