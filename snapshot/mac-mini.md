@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-04T16:30:31Z*
+*Generated: 2026-11-04T17:30:38Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-04T15:30:29Z — reporter: snapshot 2026-11-04T15:30:23Z |
+| Last commit | 2026-11-04T16:30:37Z — reporter: snapshot 2026-11-04T16:30:31Z |
 
 ## new-ludum
 
@@ -395,7 +395,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 0 |
-| Untracked | 0 |
+| Untracked | 2 |
 | Unpushed | claude/float-website-launch-358897: no upstream; float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-04T15:54:53Z — Coach site: athlete picker, assign panel; Float sign-up email; HR test squad seed |
+| Last commit | 2026-11-04T16:47:07Z — Move the phone database out of Documents into Application Support |
