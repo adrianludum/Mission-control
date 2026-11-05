@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-05T22:34:02Z*
+*Generated: 2026-11-05T23:34:09Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-05T21:34:00Z — reporter: snapshot 2026-11-05T21:33:55Z |
+| Last commit | 2026-11-05T22:34:07Z — reporter: snapshot 2026-11-05T22:34:02Z |
 
 ## new-ludum
 
@@ -396,6 +396,6 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 2 |
-| Unpushed | claude/float-website-launch-358897: no upstream; float/web-copy: no upstream |
+| Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-11-05T12:53:19Z — Coach site: athletes who left go on a Legacy tab |
