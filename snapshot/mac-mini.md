@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-05T12:32:51Z*
+*Generated: 2026-11-05T13:32:58Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-05T11:32:49Z — reporter: snapshot 2026-11-05T11:32:44Z |
+| Last commit | 2026-11-05T12:32:56Z — reporter: snapshot 2026-11-05T12:32:51Z |
 
 ## new-ludum
 
@@ -396,6 +396,6 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 2 |
-| Unpushed | claude/float-website-launch-358897: no upstream; float/web-copy: no upstream |
+| Unpushed | claude/athletes-legacy-tab: 1 ahead; claude/float-website-launch-358897: no upstream; float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-11-04T16:47:07Z — Move the phone database out of Documents into Application Support |
