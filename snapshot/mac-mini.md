@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-06T09:35:17Z*
+*Generated: 2026-11-06T10:35:24Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-06T08:35:15Z — reporter: snapshot 2026-11-06T08:35:10Z |
+| Last commit | 2026-11-06T09:35:22Z — reporter: snapshot 2026-11-06T09:35:17Z |
 
 ## new-ludum
 
@@ -398,4 +398,4 @@
 | Untracked | 0 |
 | Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-06T09:33:54Z — Team page: label the stroke download 'Strokes export' |
+| Last commit | 2026-11-06T10:28:03Z — Coach site: results from the Float app (records, session result, trend, squad records) |
