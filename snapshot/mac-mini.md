@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-06T07:35:03Z*
+*Generated: 2026-11-06T08:35:10Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-06T06:35:01Z — reporter: snapshot 2026-11-06T06:34:56Z |
+| Last commit | 2026-11-06T07:35:08Z — reporter: snapshot 2026-11-06T07:35:03Z |
 
 ## new-ludum
 
@@ -395,7 +395,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 0 |
-| Untracked | 2 |
+| Untracked | 0 |
 | Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-05T12:53:19Z — Coach site: athletes who left go on a Legacy tab |
+| Last commit | 2026-11-06T08:23:17Z — Design: after-session athlete feedback from the MSI paper (draft 4) |
