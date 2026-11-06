@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-06T15:35:58Z*
+*Generated: 2026-11-06T16:36:05Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-06T14:35:56Z — reporter: snapshot 2026-11-06T14:35:51Z |
+| Last commit | 2026-11-06T15:36:03Z — reporter: snapshot 2026-11-06T15:35:58Z |
 
 ## new-ludum
 
@@ -398,4 +398,4 @@
 | Untracked | 0 |
 | Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-06T15:27:24Z — Coach site: session Δ as + green faster / − red slower; clearer trend chart labels |
+| Last commit | 2026-11-06T16:01:02Z — Docs: Analysis by period (coach-side), PoC Club backprocess on pipe_v0.10 (worker-deploy) |
