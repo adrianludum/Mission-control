@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-06T08:35:10Z*
+*Generated: 2026-11-06T09:35:17Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-06T07:35:08Z — reporter: snapshot 2026-11-06T07:35:03Z |
+| Last commit | 2026-11-06T08:35:15Z — reporter: snapshot 2026-11-06T08:35:10Z |
 
 ## new-ludum
 
@@ -398,4 +398,4 @@
 | Untracked | 0 |
 | Unpushed | float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-06T08:23:17Z — Design: after-session athlete feedback from the MSI paper (draft 4) |
+| Last commit | 2026-11-06T09:33:54Z — Team page: label the stroke download 'Strokes export' |
