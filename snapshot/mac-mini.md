@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-10T10:46:28Z*
+*Generated: 2026-11-10T11:46:36Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -68,7 +68,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/appludumv4.git) |
-| Last commit | 2026-11-10T10:19:50Z — Keep private coach PDFs out of git (chrome-llm-demo/tests/private/) |
+| Last commit | 2026-11-10T11:07:09Z — Trainer v50: text -> calendar only (board first, no chat) |
 
 ## app.ludum
 
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-10T09:46:26Z — reporter: snapshot 2026-11-10T09:46:20Z |
+| Last commit | 2026-11-10T10:46:34Z — reporter: snapshot 2026-11-10T10:46:28Z |
 
 ## new-ludum
 
@@ -398,4 +398,4 @@
 | Untracked | 0 |
 | Unpushed | claude/kay-data-recovery-b4efa5: no upstream; float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-06T16:01:02Z — Docs: Analysis by period (coach-side), PoC Club backprocess on pipe_v0.10 (worker-deploy) |
+| Last commit | 2026-11-10T11:04:53Z — Strokes export: HR between pieces, one row a second through each rest |
