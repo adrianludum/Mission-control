@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-10T09:46:20Z*
+*Generated: 2026-11-10T10:46:28Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -66,9 +66,9 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | main: 1 ahead |
+| Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/appludumv4.git) |
-| Last commit | 2026-11-10T09:30:47Z — Bank trainer builds v41-v43 and v45; browser-ai-trainer.html is v45 |
+| Last commit | 2026-11-10T10:19:50Z — Keep private coach PDFs out of git (chrome-llm-demo/tests/private/) |
 
 ## app.ludum
 
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-10T08:46:19Z — reporter: snapshot 2026-11-10T08:46:14Z |
+| Last commit | 2026-11-10T09:46:26Z — reporter: snapshot 2026-11-10T09:46:20Z |
 
 ## new-ludum
 
@@ -396,6 +396,6 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | float/web-copy: no upstream |
+| Unpushed | claude/kay-data-recovery-b4efa5: no upstream; float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
 | Last commit | 2026-11-06T16:01:02Z — Docs: Analysis by period (coach-side), PoC Club backprocess on pipe_v0.10 (worker-deploy) |
