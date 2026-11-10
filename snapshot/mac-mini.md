@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-10T08:46:14Z*
+*Generated: 2026-11-10T09:46:20Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -66,9 +66,9 @@
 | Branch | main |
 | Uncommitted | 0 |
 | Untracked | 0 |
-| Unpushed | none |
+| Unpushed | main: 1 ahead |
 | Remote | origin (https://github.com/adrianludum/appludumv4.git) |
-| Last commit | 2026-09-17T15:54:31+01:00 — v40 + handover: stacked layout, project state doc |
+| Last commit | 2026-11-10T09:30:47Z — Bank trainer builds v41-v43 and v45; browser-ai-trainer.html is v45 |
 
 ## app.ludum
 
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-10T07:46:12Z — reporter: snapshot 2026-11-10T07:46:05Z |
+| Last commit | 2026-11-10T08:46:19Z — reporter: snapshot 2026-11-10T08:46:14Z |
 
 ## new-ludum
 
