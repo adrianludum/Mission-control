@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-11T09:49:17Z*
+*Generated: 2026-11-11T10:49:25Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 36*
@@ -310,7 +310,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-11T08:49:15Z — reporter: snapshot 2026-11-11T08:49:08Z |
+| Last commit | 2026-11-11T09:49:23Z — reporter: snapshot 2026-11-11T09:49:17Z |
 
 ## new-ludum
 
@@ -398,4 +398,4 @@
 | Untracked | 0 |
 | Unpushed | claude/kay-data-recovery-b4efa5: no upstream; float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-11-10T11:04:53Z — Strokes export: HR between pieces, one row a second through each rest |
+| Last commit | 2026-11-11T09:54:58Z — Coach site: body mass from the latest check-in, hydration colour-coded |
