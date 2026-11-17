@@ -1,5 +1,9 @@
 # Mac mini snapshot
+<<<<<<< Updated upstream
 *Generated: 2026-10-12T06:21:36Z*
+=======
+*Generated: 2026-11-17T08:07:09Z*
+>>>>>>> Stashed changes
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 35*
@@ -288,6 +292,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
+<<<<<<< Updated upstream
 | Last commit | 2026-10-12T06:21:34+01:00 — reporter: snapshot 2026-10-12T05:21:29Z |
 
 ## new-ludum-website 2
@@ -300,6 +305,9 @@
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/ludum-website.git) |
 | Last commit | 2026-06-15T10:48:55+01:00 — Fix pricing page inconsistencies (annual discount + Telemetry card) |
+=======
+| Last commit | 2026-11-17T07:07:07Z — reporter: snapshot 2026-11-17T07:07:02Z |
+>>>>>>> Stashed changes
 
 ## new-ludum
 
