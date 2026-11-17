@@ -1,12 +1,8 @@
 # Mac mini snapshot
-<<<<<<< Updated upstream
-*Generated: 2026-10-12T06:21:36Z*
-=======
-*Generated: 2026-11-17T08:07:09Z*
->>>>>>> Stashed changes
+*Generated: 2026-11-17T09:07:17Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
-*Repos found: 35*
+*Repos found: 36*
 
 ## Chief of Staff
 
@@ -72,7 +68,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/appludumv4.git) |
-| Last commit | 2026-09-17T15:54:31+01:00 — v40 + handover: stacked layout, project state doc |
+| Last commit | 2026-11-10T11:07:09Z — Trainer v50: text -> calendar only (board first, no chat) |
 
 ## app.ludum
 
@@ -212,7 +208,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 10 |
-| Untracked | 0 |
+| Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/language.git) |
 | Last commit | 2026-08-12T16:29:38+01:00 — checkpoint: refresh .mission state after committing app/ and server/ |
@@ -261,6 +257,28 @@
 | Remote | origin (https://github.com/adrianludum/Campaign_CRM.git) |
 | Last commit | 2026-03-20T10:18:27Z — fix: send.js now respects phase_id — prevents cross-phase sends |
 
+## ludum-website-site
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 1 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/ludum-website.git) |
+| Last commit | 2026-06-15T10:48:55+01:00 — Fix pricing page inconsistencies (annual discount + Telemetry card) |
+
+## ludum-website/float-site
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/float-site.git) |
+| Last commit | 2026-11-04T14:21:46Z — Launch prep: indexable, store links, mobile menu, SEO, WebP, security meta |
+
 ## ludumevents-marketing
 
 | Fact | Value |
@@ -292,33 +310,18 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-<<<<<<< Updated upstream
-| Last commit | 2026-10-12T06:21:34+01:00 — reporter: snapshot 2026-10-12T05:21:29Z |
-
-## new-ludum-website 2
-
-| Fact | Value |
-| --- | --- |
-| Branch | fix/pricing-annual-and-telemetry |
-| Uncommitted | 1 |
-| Untracked | 11 |
-| Unpushed | none |
-| Remote | origin (https://github.com/adrianludum/ludum-website.git) |
-| Last commit | 2026-06-15T10:48:55+01:00 — Fix pricing page inconsistencies (annual discount + Telemetry card) |
-=======
-| Last commit | 2026-11-17T07:07:07Z — reporter: snapshot 2026-11-17T07:07:02Z |
->>>>>>> Stashed changes
+| Last commit | 2026-11-17T08:07:15Z — reporter: snapshot 2026-11-17T08:07:09Z |
 
 ## new-ludum
 
 | Fact | Value |
 | --- | --- |
-| Branch | main |
-| Uncommitted | 0 |
-| Untracked | 3 |
+| Branch | claude/gifted-curie-e6vbgk |
+| Uncommitted | 3 |
+| Untracked | 2 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-06-12T11:30:44+01:00 — Sync: commit local changes |
+| Last commit | 2026-11-16T17:00:04Z — Graphify: knowledge graph of the repo in graphify-out/ |
 
 ## pdf-editor
 
@@ -337,7 +340,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 0 |
-| Untracked | 0 |
+| Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/BoatHUB.git) |
 | Last commit | 2026-08-13T14:46:59+01:00 — docs: rewrite the deploy runbook for the new ordering |
@@ -390,9 +393,9 @@
 
 | Fact | Value |
 | --- | --- |
-| Branch | coach/web |
-| Uncommitted | 7 |
-| Untracked | 22 |
-| Unpushed | claude/laughing-gagarin-37920f: no upstream; claude/logbook-stroke-data-integration-e5bc82: no upstream; claude/rowing-machine-athlete-benefits-852503: no upstream; claude/sports-feedback-system-design-010b24: no upstream; claude/zen-burnell-eb9ed6: no upstream; coach/web: no upstream; merge/resting-measurements: no upstream; mission/seed-on-main: no upstream; worktree-agent-a0b71291bfc0d829e: no upstream |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | claude/kay-data-recovery-b4efa5: no upstream; float/web-copy: no upstream |
 | Remote | origin (https://github.com/adrianludum/training-status.git) |
-| Last commit | 2026-10-09T13:25:52+01:00 — Ignore .env* files (keep local secrets out of git) |
+| Last commit | 2026-11-11T09:54:58Z — Coach site: body mass from the latest check-in, hydration colour-coded |
