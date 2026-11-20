@@ -1,8 +1,8 @@
 # Mac mini snapshot
-*Generated: 2026-11-20T14:16:48Z*
+*Generated: 2026-11-20T15:16:55Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
-*Repos found: 36*
+*Repos found: 37*
 
 ## Chief of Staff
 
@@ -257,6 +257,17 @@
 | Remote | origin (https://github.com/adrianludum/Campaign_CRM.git) |
 | Last commit | 2026-03-20T10:18:27Z — fix: send.js now respects phase_id — prevents cross-phase sends |
 
+## ludum-stopwatch
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 0 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/ludum-stopwatch.git) |
+| Last commit | 2026-11-20T14:40:52Z — Add Stopwatch logo files (Hands mark, all brand colourways) |
+
 ## ludum-website-site
 
 | Fact | Value |
@@ -310,7 +321,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-20T13:16:47Z — reporter: snapshot 2026-11-20T13:16:41Z |
+| Last commit | 2026-11-20T14:16:54Z — reporter: snapshot 2026-11-20T14:16:48Z |
 
 ## new-ludum
 
