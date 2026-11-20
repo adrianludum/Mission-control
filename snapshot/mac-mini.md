@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-20T16:17:03Z*
+*Generated: 2026-11-20T17:17:10Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 37*
@@ -208,7 +208,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 10 |
-| Untracked | 1 |
+| Untracked | 3 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/language.git) |
 | Last commit | 2026-08-12T16:29:38+01:00 — checkpoint: refresh .mission state after committing app/ and server/ |
@@ -262,7 +262,7 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 0 |
+| Uncommitted | 1 |
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/ludum-stopwatch.git) |
@@ -321,7 +321,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-20T15:17:01Z — reporter: snapshot 2026-11-20T15:16:55Z |
+| Last commit | 2026-11-20T16:17:08Z — reporter: snapshot 2026-11-20T16:17:03Z |
 
 ## new-ludum
 
