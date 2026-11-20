@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-20T17:17:10Z*
+*Generated: 2026-11-20T18:17:17Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 37*
@@ -262,8 +262,8 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 1 |
-| Untracked | 0 |
+| Uncommitted | 4 |
+| Untracked | 3 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/ludum-stopwatch.git) |
 | Last commit | 2026-11-20T14:40:52Z — Add Stopwatch logo files (Hands mark, all brand colourways) |
@@ -321,7 +321,7 @@
 | Untracked | 0 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-20T16:17:08Z — reporter: snapshot 2026-11-20T16:17:03Z |
+| Last commit | 2026-11-20T17:17:16Z — reporter: snapshot 2026-11-20T17:17:10Z |
 
 ## new-ludum
 
