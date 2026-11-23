@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-23T12:25:29Z*
+*Generated: 2026-11-23T13:25:36Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 37*
@@ -9,7 +9,7 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 0 |
+| Uncommitted | 1 |
 | Untracked | 3 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/the-chief.git) |
@@ -153,7 +153,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 0 |
-| Untracked | 1 |
+| Untracked | 2 |
 | Unpushed | main: 1 ahead |
 | Remote | origin (https://github.com/adrianludum/familysite.git) |
 | Last commit | 2026-08-17T11:18:41Z — What's on + Travel trip calendars, event images, shared event toolbars, AI event autofill |
@@ -229,7 +229,7 @@
 | Fact | Value |
 | --- | --- |
 | Branch | feature/auto-scheduler-contact-picker |
-| Uncommitted | 0 |
+| Uncommitted | 1 |
 | Untracked | 3 |
 | Unpushed | main: no upstream |
 | Remote | origin (https://github.com/adrianludum/Campaign_CRM.git) |
@@ -306,7 +306,7 @@
 | Fact | Value |
 | --- | --- |
 | Branch | main |
-| Uncommitted | 0 |
+| Uncommitted | 1 |
 | Untracked | 3 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/makealevelseasy.git) |
@@ -318,10 +318,10 @@
 | --- | --- |
 | Branch | claude/mission-control-setup-wnn4tr |
 | Uncommitted | 0 |
-| Untracked | 0 |
+| Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-23T11:25:27Z — reporter: snapshot 2026-11-23T11:25:21Z |
+| Last commit | 2026-11-23T12:25:34Z — reporter: snapshot 2026-11-23T12:25:29Z |
 
 ## new-ludum
 
