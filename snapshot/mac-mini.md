@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-23T14:25:43Z*
+*Generated: 2026-11-23T15:25:52Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 37*
@@ -321,18 +321,18 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-23T13:25:41Z — reporter: snapshot 2026-11-23T13:25:36Z |
+| Last commit | 2026-11-23T14:25:50Z — reporter: snapshot 2026-11-23T14:25:43Z |
 
 ## new-ludum
 
 | Fact | Value |
 | --- | --- |
-| Branch | claude/gifted-curie-e6vbgk |
-| Uncommitted | 3 |
-| Untracked | 2 |
+| Branch | claude/stoic-mayer-xtb2ak |
+| Uncommitted | 7 |
+| Untracked | 5 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-16T17:00:04Z — Graphify: knowledge graph of the repo in graphify-out/ |
+| Last commit | 2026-11-23T15:04:22Z — Timing app in Flutter: iPhone bundle name, build 2, launch screens |
 
 ## pdf-editor
 
