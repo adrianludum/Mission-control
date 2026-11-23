@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-23T15:25:52Z*
+*Generated: 2026-11-23T16:26:01Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 37*
@@ -285,7 +285,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 0 |
-| Untracked | 0 |
+| Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/float-site.git) |
 | Last commit | 2026-11-04T14:21:46Z — Launch prep: indexable, store links, mobile menu, SEO, WebP, security meta |
@@ -321,7 +321,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-23T14:25:50Z — reporter: snapshot 2026-11-23T14:25:43Z |
+| Last commit | 2026-11-23T15:25:59Z — reporter: snapshot 2026-11-23T15:25:52Z |
 
 ## new-ludum
 
