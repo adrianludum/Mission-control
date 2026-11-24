@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-24T15:35:06Z*
+*Generated: 2026-11-24T16:35:14Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 37*
@@ -321,7 +321,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-24T14:35:04Z — reporter: snapshot 2026-11-24T14:34:47Z |
+| Last commit | 2026-11-24T15:35:12Z — reporter: snapshot 2026-11-24T15:35:06Z |
 
 ## new-ludum
 
@@ -332,7 +332,7 @@
 | Untracked | 6 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-24T15:04:42Z — Timing app: keep only the Flutter app, build 0.2.0+4 |
+| Last commit | 2026-11-24T16:31:56Z — Timing app: one command to build both releases and open them for upload |
 
 ## pdf-editor
 
