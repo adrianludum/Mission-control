@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-24T13:28:44Z*
+*Generated: 2026-11-24T14:34:47Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 37*
@@ -321,7 +321,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-24T12:28:42Z — reporter: snapshot 2026-11-24T12:28:37Z |
+| Last commit | 2026-11-24T13:28:49Z — reporter: snapshot 2026-11-24T13:28:44Z |
 
 ## new-ludum
 
@@ -332,7 +332,7 @@
 | Untracked | 5 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-23T15:04:22Z — Timing app in Flutter: iPhone bundle name, build 2, launch screens |
+| Last commit | 2026-11-23T16:42:18Z — Connect live sharing to the Ludum Stopwatch Firebase project |
 
 ## pdf-editor
 
