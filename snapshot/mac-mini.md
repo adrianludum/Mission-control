@@ -1,8 +1,19 @@
 # Mac mini snapshot
-*Generated: 2026-11-26T06:40:22Z*
+*Generated: 2026-11-26T07:40:30Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
-*Repos found: 37*
+*Repos found: 38*
+
+## BoatHub
+
+| Fact | Value |
+| --- | --- |
+| Branch | main |
+| Uncommitted | 0 |
+| Untracked | 1 |
+| Unpushed | none |
+| Remote | origin (https://github.com/adrianludum/BoatHub.git) |
+| Last commit | 2026-11-25T07:48:46Z — Merge pull request #1 from adrianludum/chore/audit-deps-bundle |
 
 ## Chief of Staff
 
@@ -321,7 +332,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-26T05:40:20Z — reporter: snapshot 2026-11-26T05:40:15Z |
+| Last commit | 2026-11-26T06:40:28Z — reporter: snapshot 2026-11-26T06:40:22Z |
 
 ## new-ludum
 
@@ -332,7 +343,7 @@
 | Untracked | 6 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-24T16:31:56Z — Timing app: one command to build both releases and open them for upload |
+| Last commit | 2026-11-25T17:01:41Z — Timing app: Race Day page link |
 
 ## pdf-editor
 
