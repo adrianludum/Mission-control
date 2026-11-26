@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-26T15:41:34Z*
+*Generated: 2026-11-26T16:41:42Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 38*
@@ -332,7 +332,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-26T14:41:32Z — reporter: snapshot 2026-11-26T14:41:25Z |
+| Last commit | 2026-11-26T15:41:40Z — reporter: snapshot 2026-11-26T15:41:34Z |
 
 ## new-ludum
 
@@ -343,7 +343,7 @@
 | Untracked | 7 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-26T15:38:23Z — Timing app: 0 crews for a Ludum session with none, and two phones on one code with Ludum |
+| Last commit | 2026-11-26T15:51:59Z — Timing app: take the new session's own id from create-session, not its template's |
 
 ## pdf-editor
 
