@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-26T09:40:46Z*
+*Generated: 2026-11-26T10:40:54Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 38*
@@ -332,18 +332,18 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-26T08:40:44Z — reporter: snapshot 2026-11-26T08:40:38Z |
+| Last commit | 2026-11-26T09:40:52Z — reporter: snapshot 2026-11-26T09:40:46Z |
 
 ## new-ludum
 
 | Fact | Value |
 | --- | --- |
-| Branch | claude/ios-app-rebuild-vutcq2 |
-| Uncommitted | 7 |
-| Untracked | 6 |
+| Branch | claude/happy-galileo-nxfj2m |
+| Uncommitted | 8 |
+| Untracked | 7 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-25T17:01:41Z — Timing app: Race Day page link |
+| Last commit | 2026-11-25T09:54:30Z — Timing app: optional sign-in to Ludum, Today in Ludum, and Send to Ludum |
 
 ## pdf-editor
 
