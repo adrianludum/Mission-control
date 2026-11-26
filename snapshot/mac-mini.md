@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-26T11:41:01Z*
+*Generated: 2026-11-26T12:41:10Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 38*
@@ -332,18 +332,18 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-26T10:40:59Z — reporter: snapshot 2026-11-26T10:40:54Z |
+| Last commit | 2026-11-26T11:41:08Z — reporter: snapshot 2026-11-26T11:41:01Z |
 
 ## new-ludum
 
 | Fact | Value |
 | --- | --- |
 | Branch | claude/happy-galileo-nxfj2m |
-| Uncommitted | 8 |
+| Uncommitted | 7 |
 | Untracked | 7 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-25T09:54:30Z — Timing app: optional sign-in to Ludum, Today in Ludum, and Send to Ludum |
+| Last commit | 2026-11-26T12:38:52Z — Timing app: 1.1.0+6 is built on the Mac, so the next release is build 7 |
 
 ## pdf-editor
 
