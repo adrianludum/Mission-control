@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-26T16:41:42Z*
+*Generated: 2026-11-26T17:41:49Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 38*
@@ -332,18 +332,18 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-26T15:41:40Z — reporter: snapshot 2026-11-26T15:41:34Z |
+| Last commit | 2026-11-26T16:41:47Z — reporter: snapshot 2026-11-26T16:41:42Z |
 
 ## new-ludum
 
 | Fact | Value |
 | --- | --- |
 | Branch | claude/happy-galileo-nxfj2m |
-| Uncommitted | 7 |
+| Uncommitted | 8 |
 | Untracked | 7 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-26T15:51:59Z — Timing app: take the new session's own id from create-session, not its template's |
+| Last commit | 2026-11-26T16:10:08Z — Timing app: choose the crews' weight class from Ludum's list |
 
 ## pdf-editor
 
