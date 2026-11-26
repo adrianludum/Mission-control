@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-26T13:41:17Z*
+*Generated: 2026-11-26T14:41:25Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 38*
@@ -13,7 +13,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/BoatHub.git) |
-| Last commit | 2026-11-26T10:50:33Z — Merge pull request #3 from adrianludum/chore/remove-consent |
+| Last commit | 2026-11-26T12:04:34Z — Merge pull request #4 from adrianludum/fix/walter-modem-port |
 
 ## Chief of Staff
 
@@ -332,7 +332,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-26T12:41:16Z — reporter: snapshot 2026-11-26T12:41:10Z |
+| Last commit | 2026-11-26T13:41:23Z — reporter: snapshot 2026-11-26T13:41:17Z |
 
 ## new-ludum
 
@@ -343,7 +343,7 @@
 | Untracked | 7 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-26T12:38:52Z — Timing app: 1.1.0+6 is built on the Mac, so the next release is build 7 |
+| Last commit | 2026-11-26T14:39:13Z — Timing app: fall back to /api/v2/ where Ludum staging has no route |
 
 ## pdf-editor
 
