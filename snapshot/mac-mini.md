@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-26T14:41:25Z*
+*Generated: 2026-11-26T15:41:34Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 38*
@@ -332,7 +332,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-26T13:41:23Z — reporter: snapshot 2026-11-26T13:41:17Z |
+| Last commit | 2026-11-26T14:41:32Z — reporter: snapshot 2026-11-26T14:41:25Z |
 
 ## new-ludum
 
@@ -343,7 +343,7 @@
 | Untracked | 7 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-26T14:39:13Z — Timing app: fall back to /api/v2/ where Ludum staging has no route |
+| Last commit | 2026-11-26T15:38:23Z — Timing app: 0 crews for a Ludum session with none, and two phones on one code with Ludum |
 
 ## pdf-editor
 
