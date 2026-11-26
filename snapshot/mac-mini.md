@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-26T10:40:54Z*
+*Generated: 2026-11-26T11:41:01Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 38*
@@ -13,7 +13,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/BoatHub.git) |
-| Last commit | 2026-11-25T07:48:46Z — Merge pull request #1 from adrianludum/chore/audit-deps-bundle |
+| Last commit | 2026-11-26T10:50:33Z — Merge pull request #3 from adrianludum/chore/remove-consent |
 
 ## Chief of Staff
 
@@ -332,7 +332,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-26T09:40:52Z — reporter: snapshot 2026-11-26T09:40:46Z |
+| Last commit | 2026-11-26T10:40:59Z — reporter: snapshot 2026-11-26T10:40:54Z |
 
 ## new-ludum
 
