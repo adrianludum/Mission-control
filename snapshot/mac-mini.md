@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-27T13:44:23Z*
+*Generated: 2026-11-27T14:44:30Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 38*
@@ -13,7 +13,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/BoatHub.git) |
-| Last commit | 2026-11-26T12:04:34Z — Merge pull request #4 from adrianludum/fix/walter-modem-port |
+| Last commit | 2026-11-27T14:15:09Z — Merge pull request #6 from adrianludum/feat/hub-sign-in |
 
 ## Chief of Staff
 
@@ -332,7 +332,7 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-27T12:44:21Z — reporter: snapshot 2026-11-27T12:44:16Z |
+| Last commit | 2026-11-27T13:44:28Z — reporter: snapshot 2026-11-27T13:44:23Z |
 
 ## new-ludum
 
