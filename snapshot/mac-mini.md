@@ -1,5 +1,5 @@
 # Mac mini snapshot
-*Generated: 2026-11-27T16:44:48Z*
+*Generated: 2026-11-27T17:44:56Z*
 *Host: Adrians-Mac-mini*
 *Scan root: /Users/adriancassidyhome/Projects*
 *Repos found: 38*
@@ -219,7 +219,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 10 |
-| Untracked | 3 |
+| Untracked | 4 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/language.git) |
 | Last commit | 2026-08-12T16:29:38+01:00 — checkpoint: refresh .mission state after committing app/ and server/ |
@@ -274,7 +274,7 @@
 | --- | --- |
 | Branch | main |
 | Uncommitted | 4 |
-| Untracked | 3 |
+| Untracked | 4 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/ludum-stopwatch.git) |
 | Last commit | 2026-11-20T14:40:52Z — Add Stopwatch logo files (Hands mark, all brand colourways) |
@@ -332,18 +332,18 @@
 | Untracked | 1 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/Mission-control.git) |
-| Last commit | 2026-11-27T15:44:44Z — reporter: snapshot 2026-11-27T15:44:38Z |
+| Last commit | 2026-11-27T16:44:54Z — reporter: snapshot 2026-11-27T16:44:48Z |
 
 ## new-ludum
 
 | Fact | Value |
 | --- | --- |
-| Branch | claude/happy-galileo-nxfj2m |
-| Uncommitted | 8 |
-| Untracked | 7 |
+| Branch | claude/loving-bohr-cgwdz0 |
+| Uncommitted | 9 |
+| Untracked | 10 |
 | Unpushed | none |
 | Remote | origin (https://github.com/adrianludum/new-ludum.git) |
-| Last commit | 2026-11-26T16:10:08Z — Timing app: choose the crews' weight class from Ludum's list |
+| Last commit | 2026-11-27T17:14:58Z — Timing app website: the Play app signing key fingerprints in assetlinks.json |
 
 ## pdf-editor
 
